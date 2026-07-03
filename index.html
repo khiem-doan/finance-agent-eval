@@ -517,7 +517,7 @@ dataset-QA findings.">
     <div class="kicker rv">03 &middot; The evidence, turn by turn</div>
     <h2 class="rv">The agent had the answer at step 15. It never said it.</h2>
     <div class="punchline rv"><b>The punchline up front:</b> on the TKO task, Gemini 3.5 Flash retrieves
-    the consideration from the 8-K at step 15 of 50, about 110 seconds in: <b>$3.30 billion all-in</b>
+    the consideration from the 8-K at step 15 of 50, about 110 seconds in by wall clock: <b>$3.30 billion all-in</b>
     (the answer key's $3.25B closing consideration plus the $50M purchase-price adjustment). It then
     spends the remaining 35 turns re-searching its own answer for reassurance and hits the turn cap
     without ever submitting. Strict fail. The gap is not finance knowledge; it is knowing when you are
@@ -609,7 +609,7 @@ dataset-QA findings.">
       <div class="excard" data-mode="step-limit-giveup">
         <div class="mode">step-limit-giveup &middot; Gemini 3.5 Flash &middot; task 7</div>
         <h4>The agent had the answer at step 15 and never said it</h4>
-        <p>TKO / Endeavor consideration: at step 15 of 50 the agent retrieves the consideration from the 8-K: $3.30 billion all-in (the key&#x27;s $3.25B closing consideration plus the $50M adjustment). It then spends the remaining 35 turns web-searching its own answer for reassurance (query strings literally contain &#x27;3.30 billion OR 3.3 billion OR 3,300 million&#x27;) and hits the turn cap without ever calling submit. 317 seconds, 50 tool calls, the correct answer in hand about 110 seconds in, graded fail.</p>
+        <p>TKO / Endeavor consideration: at step 15 of 50 the agent retrieves the consideration from the 8-K: $3.30 billion all-in (the key&#x27;s $3.25B closing consideration plus the $50M adjustment). It then spends the remaining 35 turns web-searching its own answer for reassurance (query strings literally contain &#x27;3.30 billion OR 3.3 billion OR 3,300 million&#x27;) and hits the turn cap without ever calling submit. 317 seconds, 50 tool calls, the answer in hand about 110 seconds in (wall clock), graded fail.</p>
         <details><summary>full trajectory evidence</summary><pre># Trajectory: What was the total consideration cost TKO paid to acquired Endeavor assets measured at transaction close?
 
 **Outcome:** failure
@@ -3870,7 +3870,7 @@ The company noted that inventory levels increased in their Mini Mill segment due
   </div>
 </section>
 <footer><div class="wrap">
-Generated 2026-07-03 17:09 &middot; static site, no build step: view source &middot;
+Generated 2026-07-03 17:43 &middot; static site, no build step: view source &middot;
 deck: press P or the Present button &middot; PDF: slides.pdf &middot;
 evidence: /data &middot; Khiem Doan
 </div></footer>
@@ -3913,7 +3913,7 @@ evidence: /data &middot; Khiem Doan
         own answer; the query strings literally contain <em>"3.30 billion" OR "3.3 billion" OR
         "3,300 million"</em>.</div></div>
       <div class="beat"><div class="no">4</div><div>Step 50: turn cap. No submission. Graded fail.
-        317 seconds, 50 tool calls, the answer in hand about 110 seconds in.</div></div>
+        317 seconds, 50 tool calls, the answer in hand about 110 seconds in (wall clock).</div></div>
     </div>
     <p><strong>The gap is not finance knowledge. It is knowing when you are done:</strong>
     verify-then-commit is a trainable behavior with a deterministic reward. The same give-up family
@@ -4011,7 +4011,7 @@ evidence: /data &middot; Khiem Doan
         own answer; the query strings literally contain <em>"3.30 billion" OR "3.3 billion" OR
         "3,300 million"</em>.</div></div>
       <div class="beat"><div class="no">4</div><div>Step 50: turn cap. No submission. Graded fail.
-        317 seconds, 50 tool calls, the answer in hand about 110 seconds in.</div></div>
+        317 seconds, 50 tool calls, the answer in hand about 110 seconds in (wall clock).</div></div>
     </div>
     <p><strong>The gap is not finance knowledge. It is knowing when you are done:</strong>
     verify-then-commit is a trainable behavior with a deterministic reward. The same give-up family
