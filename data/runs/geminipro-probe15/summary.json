@@ -1,0 +1,50 @@
+{
+  "graded": 14,
+  "attempted": 15,
+  "naive_accuracy_strict": 0.357,
+  "strict_over_all_attempted": 0.333,
+  "mean_partial_score": 0.443,
+  "per_category_strict": {
+    "Adjustments": {
+      "n": 1,
+      "passed": 0
+    },
+    "Beat or Miss": {
+      "n": 3,
+      "passed": 1
+    },
+    "Complex Retrieval": {
+      "n": 1,
+      "passed": 0
+    },
+    "Financial Modeling": {
+      "n": 2,
+      "passed": 0
+    },
+    "Market Analysis": {
+      "n": 1,
+      "passed": 0
+    },
+    "Numerical Reasoning": {
+      "n": 2,
+      "passed": 1
+    },
+    "Qualitative Retrieval": {
+      "n": 2,
+      "passed": 2
+    },
+    "Quantitative Retrieval": {
+      "n": 1,
+      "passed": 1
+    },
+    "Trends": {
+      "n": 1,
+      "passed": 0
+    }
+  },
+  "run_outcomes": {
+    "success": 14,
+    "fail": 1
+  },
+  "judge_model": "gpt-5.4-mini"
+}

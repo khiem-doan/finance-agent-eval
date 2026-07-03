@@ -1,0 +1,69 @@
+{
+  "note": "nano-full tasks originally judged by gpt-5.4-mini via OpenRouter, re-judged via direct OpenAI API. Same model, two transports.",
+  "sample_indices": [
+    2,
+    8,
+    16,
+    21,
+    34,
+    41
+  ],
+  "strict_agreement": "6/6",
+  "partial_exact_agreement": "6/6",
+  "rows": [
+    {
+      "idx": 2,
+      "category": "Beat or Miss",
+      "openrouter_strict": 1,
+      "direct_strict": 1,
+      "openrouter_partial": 1.0,
+      "direct_partial": 1.0,
+      "strict_agree": true
+    },
+    {
+      "idx": 8,
+      "category": "Beat or Miss",
+      "openrouter_strict": 1,
+      "direct_strict": 1,
+      "openrouter_partial": 1.0,
+      "direct_partial": 1.0,
+      "strict_agree": true
+    },
+    {
+      "idx": 16,
+      "category": "Trends",
+      "openrouter_strict": 1,
+      "direct_strict": 1,
+      "openrouter_partial": 1.0,
+      "direct_partial": 1.0,
+      "strict_agree": true
+    },
+    {
+      "idx": 21,
+      "category": "Numerical Reasoning",
+      "openrouter_strict": 1,
+      "direct_strict": 1,
+      "openrouter_partial": 1.0,
+      "direct_partial": 1.0,
+      "strict_agree": true
+    },
+    {
+      "idx": 34,
+      "category": "Adjustments",
+      "openrouter_strict": 1,
+      "direct_strict": 1,
+      "openrouter_partial": 1.0,
+      "direct_partial": 1.0,
+      "strict_agree": true
+    },
+    {
+      "idx": 41,
+      "category": "Market Analysis",
+      "openrouter_strict": 0,
+      "direct_strict": 0,
+      "openrouter_partial": 0.6,
+      "direct_partial": 0.6,
+      "strict_agree": true
+    }
+  ]
+}

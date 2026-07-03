@@ -1,0 +1,156 @@
+{
+  "run": "nano-full",
+  "n": 18,
+  "strict_agreement": 1.0,
+  "mean_abs_partial_diff": 0.033,
+  "judges": {
+    "primary": "openai/gpt-5.4-mini",
+    "second": "gemini-2.5-flash"
+  },
+  "rows": [
+    {
+      "question": "Compare the FY24 dividend payout ratio of Coca-Cola (KO) to that of its competit",
+      "category": "Market Analysis",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.6,
+      "gemini_partial": 0.6
+    },
+    {
+      "question": "What was the total consideration cost TKO paid to acquired Endeavor assets measu",
+      "category": "Quantitative Retrieval",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "Does Workday (NASDAQ: WDAY) report a gross or net retention metric in its annual",
+      "category": "Qualitative Retrieval",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "Summarize the key terms of the Series D mandatory convertible preferred stock (s",
+      "category": "Complex Retrieval",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.727,
+      "gemini_partial": 0.818
+    },
+    {
+      "question": "Calculate the inventory turnover for US Steel in FY2024.",
+      "category": "Numerical Reasoning",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.333,
+      "gemini_partial": 0.333
+    },
+    {
+      "question": "How many basis points did MU beat or miss its Q3 2024 GAAP gross margin guidance",
+      "category": "Beat or Miss",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "Who is the current CFO of Airbnb (NASDAQ: ABNB)?",
+      "category": "Qualitative Retrieval",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "What price was RDFN acquired at? (include price per share, equity value and ente",
+      "category": "Quantitative Retrieval",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.333,
+      "gemini_partial": 0.667
+    },
+    {
+      "question": "Of AMZN, META, or GOOG, who plans to spend the most in capex in 2025?",
+      "category": "Complex Retrieval",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.75,
+      "gemini_partial": 0.75
+    },
+    {
+      "question": "What are Netflix's (NASDAQ: NFLX) Total Projected Material Cash Requirements for",
+      "category": "Quantitative Retrieval",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.0,
+      "gemini_partial": 0.0
+    },
+    {
+      "question": "Did TJX beat or miss its Q4 FY 2025 pre-tax margin guidance? Express result as B",
+      "category": "Beat or Miss",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "In 2024, what was Airbnb's (NASDAQ: ABNB) adjustment for Stock-based Compensatio",
+      "category": "Adjustments",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "How did Lyft's Q4'24 Adjusted EBITDA margin (adjusted EBITDA / Gross Bookings) c",
+      "category": "Beat or Miss",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.0,
+      "gemini_partial": 0.0
+    },
+    {
+      "question": "As of December 2024, what has been Zillow's (NASDAQ:Z) acquisition strategy over",
+      "category": "Market Analysis",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.333,
+      "gemini_partial": 0.167
+    },
+    {
+      "question": "How has Airbnb's Annual Take Rate (Revenue/Gross Booking Value) Trended from FY ",
+      "category": "Trends",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "What was ORCL's effective tax rate for the fiscal year ended 5/31/2024 and how d",
+      "category": "Numerical Reasoning",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.0,
+      "gemini_partial": 0.0
+    },
+    {
+      "question": "How has US Steel addressed its planned merger with Nippton Steel and its effect ",
+      "category": "Market Analysis",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.0,
+      "gemini_partial": 0.0
+    },
+    {
+      "question": "In 2024, what was the Average Nights per Booking for Airbnb (NASDAQ: ABNB) in th",
+      "category": "Quantitative Retrieval",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    }
+  ]
+}

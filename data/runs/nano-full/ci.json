@@ -1,0 +1,70 @@
+{
+  "run": "nano-full",
+  "n_graded": 50,
+  "strict_mean": 0.52,
+  "naive_ci_halfwidth": 0.14,
+  "cluster_ci": {
+    "mean": 0.52,
+    "ci_low": 0.362,
+    "ci_high": 0.654,
+    "half_width": 0.146,
+    "n_clusters": 38,
+    "n_boot": 2000
+  },
+  "per_category": [
+    {
+      "category": "Adjustments",
+      "n": 4,
+      "passed": 2,
+      "note": "n<5: not statistical"
+    },
+    {
+      "category": "Beat or Miss",
+      "n": 7,
+      "passed": 4,
+      "note": ""
+    },
+    {
+      "category": "Complex Retrieval",
+      "n": 3,
+      "passed": 1,
+      "note": "n<5: not statistical"
+    },
+    {
+      "category": "Financial Modeling",
+      "n": 4,
+      "passed": 0,
+      "note": "n<5: not statistical"
+    },
+    {
+      "category": "Market Analysis",
+      "n": 3,
+      "passed": 0,
+      "note": "n<5: not statistical"
+    },
+    {
+      "category": "Numerical Reasoning",
+      "n": 8,
+      "passed": 5,
+      "note": ""
+    },
+    {
+      "category": "Qualitative Retrieval",
+      "n": 9,
+      "passed": 7,
+      "note": ""
+    },
+    {
+      "category": "Quantitative Retrieval",
+      "n": 9,
+      "passed": 6,
+      "note": ""
+    },
+    {
+      "category": "Trends",
+      "n": 3,
+      "passed": 1,
+      "note": "n<5: not statistical"
+    }
+  ]
+}

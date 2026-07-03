@@ -1,0 +1,64 @@
+{
+  "run": "gemini-or-full",
+  "n_graded": 25,
+  "strict_mean": 0.12,
+  "naive_ci_halfwidth": 0.13,
+  "cluster_ci": {
+    "mean": 0.12,
+    "ci_low": 0.0,
+    "ci_high": 0.25,
+    "half_width": 0.125,
+    "n_clusters": 21,
+    "n_boot": 2000
+  },
+  "per_category": [
+    {
+      "category": "Adjustments",
+      "n": 1,
+      "passed": 0,
+      "note": "n<5: not statistical"
+    },
+    {
+      "category": "Beat or Miss",
+      "n": 3,
+      "passed": 0,
+      "note": "n<5: not statistical"
+    },
+    {
+      "category": "Complex Retrieval",
+      "n": 2,
+      "passed": 0,
+      "note": "n<5: not statistical"
+    },
+    {
+      "category": "Financial Modeling",
+      "n": 3,
+      "passed": 0,
+      "note": "n<5: not statistical"
+    },
+    {
+      "category": "Market Analysis",
+      "n": 2,
+      "passed": 0,
+      "note": "n<5: not statistical"
+    },
+    {
+      "category": "Numerical Reasoning",
+      "n": 5,
+      "passed": 0,
+      "note": ""
+    },
+    {
+      "category": "Qualitative Retrieval",
+      "n": 5,
+      "passed": 0,
+      "note": ""
+    },
+    {
+      "category": "Quantitative Retrieval",
+      "n": 4,
+      "passed": 3,
+      "note": "n<5: not statistical"
+    }
+  ]
+}

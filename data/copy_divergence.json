@@ -1,0 +1,269 @@
+{
+  "note": "HF release vs the copy vendored in the official vals-ai/finance-agent repo. Questions matched exactly (normalized) then leftovers fuzzy-paired (difflib >= 0.6 = reworded same task). Rubrics compared SEMANTICALLY (parsed operator+criteria sets), answers compared whitespace-normalized.",
+  "n_hf": 50,
+  "n_csv": 50,
+  "n_exact_question_match": 42,
+  "n_reworded_questions": 7,
+  "n_unpaired_hf": 1,
+  "n_unpaired_csv": 1,
+  "n_divergent_of_exact_matches": 23,
+  "divergent": [
+    {
+      "question": "As of Dec 31, 2024, what was Warner Discovery's (NASDQ: WBD) Total Restructuring Costs incurred as a result of its 2022 ",
+      "fields": [
+        "Question Type"
+      ],
+      "hf_answer_head": "$4.7 Billion",
+      "csv_answer_head": "$4.7 Billion"
+    },
+    {
+      "question": "As of FY 2024, what are the terms of the Junior Subordinated Debentures in the Allstate Corporation's (NYSE: ALL) capita",
+      "fields": [
+        "Question Type"
+      ],
+      "hf_answer_head": "As of December 31, 2024, the Company had outstanding $500 million of Series A 6.500% Fixed-to-Floating Rate Junior Subordinated Debentures (\u201cJunior Subordinated Debentures\u201d). The scheduled maturity da",
+      "csv_answer_head": "As of December 31, 2024, the Company had outstanding $500 million of Series A 6.500% Fixed-to-Floating Rate Junior Subordinated Debentures (\u201cJunior Subordinated Debentures\u201d). The scheduled maturity da"
+    },
+    {
+      "question": "As of June 30, 2024, what % of Microsoft's (NASDAQ: MSFT) full-time employees are located outside of the United State? (",
+      "fields": [
+        "Answer"
+      ],
+      "hf_answer_head": "45% (102,000/228,000)",
+      "csv_answer_head": "45% (102,000/228,000) of Microsoft's full-time employees are located outside of the United States as of June 30, 2024."
+    },
+    {
+      "question": "As of March 10, 2025, what is the face value of Salesforce's debt excluding their sustainability notes?",
+      "fields": [
+        "Answer"
+      ],
+      "hf_answer_head": "$7.5 Billion",
+      "csv_answer_head": "Salesforce's debt excluding sustainability notes is $7.5 billion as of March 10, 2025"
+    },
+    {
+      "question": "Assume BROS grows revenue by 30% CAGR and gross margins compress by 500bps from YE 2024. What is BROS gross profit in 20",
+      "fields": [
+        "Question Type"
+      ],
+      "hf_answer_head": "$467 million",
+      "csv_answer_head": "$467 million"
+    },
+    {
+      "question": "Calculate the inventory turnover for US Steel in FY2024.",
+      "fields": [
+        "Answer",
+        "Rubric"
+      ],
+      "hf_answer_head": "CoS: $14,060 Avg. Inventory: $2,168 Inventory Turnover = 6.49",
+      "csv_answer_head": "2024 Inventory turnover is equal to COGS over average inventory. $14,060M / (($2,168 + $2,128) / 2) = 6.55. Average inventory should be used for the year - 2.168B is end of period inventory, should be"
+    },
+    {
+      "question": "Does Workday (NASDAQ: WDAY) report a gross or net retention metric in its annual or quarterly reporting? If so, provide ",
+      "fields": [
+        "Question Type"
+      ],
+      "hf_answer_head": "Workday tracks and reports on Gross Revenue Retention Rate. The company defines Gross Revenue Retention Rate as the percentage of recurring revenue retained from existing customers and is calculated b",
+      "csv_answer_head": "Workday tracks and reports on Gross Revenue Retention Rate. The company defines Gross Revenue Retention Rate as the percentage of recurring revenue retained from existing customers and is calculated b"
+    },
+    {
+      "question": "For loanDepot (NYSE: LDI) what is the breakdown of loan originations between purchases and refinancings for the last 9 m",
+      "fields": [
+        "Question Type"
+      ],
+      "hf_answer_head": "Purchase: $12,057,993 Refinance: $5,250,321 In thousands",
+      "csv_answer_head": "Purchase: $12,057,993 Refinance: $5,250,321 In thousands"
+    },
+    {
+      "question": "How many common stock shares are outstanding for ABNB? Format \"Class X: X shares\" add line break.",
+      "fields": [
+        "Question Type"
+      ],
+      "hf_answer_head": "Common shares outstanding Class A: 432,876,657 shares Class B: 188,462,942 shares Class C: 0 Class H: 9,200,000 shares",
+      "csv_answer_head": "Common shares outstanding Class A: 432,876,657 shares Class B: 188,462,942 shares Class C: 0 Class H: 9,200,000 shares"
+    },
+    {
+      "question": "In 2024, what was the Average Nights per Booking for Airbnb (NASDAQ: ABNB) in the Asia Pacific region?",
+      "fields": [
+        "Question Type"
+      ],
+      "hf_answer_head": "Asia Pacific - 3.3 Nights per Booking",
+      "csv_answer_head": "Asia Pacific - 3.3 Nights per Booking"
+    },
+    {
+      "question": "In 2024, who was Nominated to Serve on BBSI's (NASDAQ: BBSI) Board of Directors? ",
+      "fields": [
+        "Question Type"
+      ],
+      "hf_answer_head": "Thomas Carley Joseph Clabby Thomas Cusick Gary Kramer Anthony Meeker Carla Moradi Alexandra Morehouse Vincent Price",
+      "csv_answer_head": "Thomas Carley Joseph Clabby Thomas Cusick Gary Kramer Anthony Meeker Carla Moradi Alexandra Morehouse Vincent Price"
+    },
+    {
+      "question": "List the Operating KPIs Spirit Airlines (NYSE: SAVE) tracked in FY 2024. Provide the KPI and FY 2024 Total.",
+      "fields": [
+        "Answer",
+        "Rubric",
+        "Question Type"
+      ],
+      "hf_answer_head": "Average aircraft: 209.9 Aircraft at end of period: 213 Average daily aircraft utilization (hours): 9.9 Departures: 288,180 Passenger flight segments (PFSs): 44,180,000 Revenue passenger miles (RPMs): ",
+      "csv_answer_head": "Average aircraft: 209.9 Aircraft at end of period: 213 Average daily aircraft utilization (hours): 9.9 Departures: 288,180 Passenger flight segments (PFSs): 44,180,000 Revenue passenger miles (RPMs): "
+    },
+    {
+      "question": "Summarize the regulatory risks Paylocity's (NASDAQ: PCTY) lists in its FY 2024 10-K. ",
+      "fields": [
+        "Question Type"
+      ],
+      "hf_answer_head": "- The global data privacy regulatory environment is evolving, impacting HCM and payroll providers. - Federal and state laws, including FTC rules, HIPAA, CCPA/CPRA, BIPA, and state breach notification ",
+      "csv_answer_head": "- The global data privacy regulatory environment is evolving, impacting HCM and payroll providers. - Federal and state laws, including FTC rules, HIPAA, CCPA/CPRA, BIPA, and state breach notification "
+    },
+    {
+      "question": "What are Netflix's (NASDAQ: NFLX) Total Projected Material Cash Requirements for 2025?",
+      "fields": [
+        "Question Type"
+      ],
+      "hf_answer_head": "$14,426,266,000",
+      "csv_answer_head": "$14,426,266,000"
+    },
+    {
+      "question": "What financial metrics does Delta Airlines (NYSE: DAL) guide on in its quarterly earnings reports? ",
+      "fields": [
+        "Question Type"
+      ],
+      "hf_answer_head": "Delta Airlines provides quarterly guidance and full FY guidance. For the Quarter, Delta provides guidance for Total Revenue YoY Growth, Operating Margin, and Earnings Per Share For the Full FY, Delta ",
+      "csv_answer_head": "Delta Airlines provides quarterly guidance and full FY guidance. For the Quarter, Delta provides guidance for Total Revenue YoY Growth, Operating Margin, and Earnings Per Share For the Full FY, Delta "
+    },
+    {
+      "question": "What is Shift4's vendor concentration risk as of Dec 31, 2024? ",
+      "fields": [
+        "Question Type"
+      ],
+      "hf_answer_head": "The Company\u2019s merchant processing activity in North America is facilitated by one vendor. The Company believes that this vendor maintains appropriate backup systems and alternative arrangements to avo",
+      "csv_answer_head": "The Company\u2019s merchant processing activity in North America is facilitated by one vendor. The Company believes that this vendor maintains appropriate backup systems and alternative arrangements to avo"
+    },
+    {
+      "question": "What is the maximum dilutive impact in number of shares of Snapchat's outstanding convertible notes as of 12/31/2024?",
+      "fields": [
+        "Question Type"
+      ],
+      "hf_answer_head": "85,945,127 shares if all converts were converted (including out of the money converts)",
+      "csv_answer_head": "85,945,127 shares if all converts were converted (including out of the money converts)"
+    },
+    {
+      "question": "What is the total amount of director compensation (in dollars) that was paid to the directors of 3D Systems in 2023?",
+      "fields": [
+        "Answer"
+      ],
+      "hf_answer_head": "$2,263,113",
+      "csv_answer_head": "The total amount of directors compensations paid by 3D Systems in 2023 was $2,263,113."
+    },
+    {
+      "question": "What portion of Uber\u2019s 2024 revenue growth was driven by take-rate expansion versus volume growth?",
+      "fields": [
+        "Question Type"
+      ],
+      "hf_answer_head": "Take Rate: 2023: 27.04% 2024: 27.02% Take rate was virtually flat from 2023 to 2024. Overall revenue growth was 18%, driven by the 18% gross bookings growth YoY (25% in mobility, 17% in delivery and 2",
+      "csv_answer_head": "Take Rate: 2023: 27.04% 2024: 27.02% Take rate was virtually flat from 2023 to 2024. Overall revenue growth was 18%, driven by the 18% gross bookings growth YoY (25% in mobility, 17% in delivery and 2"
+    },
+    {
+      "question": "What price was RDFN acquired at? (include price per share, equity value and enterprise value)",
+      "fields": [
+        "Answer",
+        "Rubric",
+        "Question Type"
+      ],
+      "hf_answer_head": "0.7926 shares of Rocket Companies class A stock per share of Redfin, which represents an equity value of $1.75 billion, and a total enterprise value of $2.4 billion",
+      "csv_answer_head": "0.7926 shares of Rocket Companies class A stock per share of Redfin, which represents an equity value of $1.75 billion, and a total enterprise value of $2.4 billion at $12.50 per share"
+    },
+    {
+      "question": "What was FND same-store sales growth in Q4 2024?",
+      "fields": [
+        "Answer",
+        "Question Type"
+      ],
+      "hf_answer_head": "-0.8%",
+      "csv_answer_head": "FND same-store sales growth in Q4 2024 is -0.8%"
+    },
+    {
+      "question": "What was the total consideration cost TKO paid to acquired Endeavor assets measured at transaction close?",
+      "fields": [
+        "Question Type"
+      ],
+      "hf_answer_head": "$3.25 Billion",
+      "csv_answer_head": "$3.25 Billion"
+    },
+    {
+      "question": "When is production expected to begin in J M Smucker's (NYSE: SJ) new distribution center in McCalla, Alabama?",
+      "fields": [
+        "Question Type"
+      ],
+      "hf_answer_head": "Production expected to begin in 2025",
+      "csv_answer_head": "Production expected to begin in 2025"
+    }
+  ],
+  "reworded": [
+    {
+      "hf_question": "Approximate Zillow's Free Cash Flow as CFO - Capex. What is the trend of FCF margin over the last 3 years?",
+      "csv_question": "Approximate Zillow's Free Cash Flow as CFO - Capex. What was the trend of FCF margin from FY2022 to FY2024?",
+      "similarity": 0.84,
+      "fields_also_divergent": []
+    },
+    {
+      "hf_question": "Calculate the 3 year revenue CAGR for Palantir Technologies.",
+      "csv_question": "Calculate the 2 year revenue CAGR for Palantir Technologies from 2022 to 2024.",
+      "similarity": 0.86,
+      "fields_also_divergent": [
+        "Answer",
+        "Rubric"
+      ]
+    },
+    {
+      "hf_question": "How has US Steel addressed its planned merger with Nippton Steel and its effect on its business operations?",
+      "csv_question": "How has US Steel addressed its planned merger with Nippon Steel and its effect on its business operations?",
+      "similarity": 1.0,
+      "fields_also_divergent": [
+        "Answer",
+        "Rubric"
+      ]
+    },
+    {
+      "hf_question": "How many times has General Mills beaten Adjusted Diluted EPS guidance in the past 2 years and what is the guidance for 2025?",
+      "csv_question": "How many times has General Mills beaten Adjusted Diluted EPS guidance in the last two years (FY2023 and FY2024) and what is the guidance for",
+      "similarity": 0.9,
+      "fields_also_divergent": [
+        "Answer",
+        "Rubric"
+      ]
+    },
+    {
+      "hf_question": "In fiscal 2024, what percentage of Cloudflare's (NYSE: NET) customers were derived from channel partners?",
+      "csv_question": "In fiscal 2024, what percentage of Cloudflare's (NYSE: NET) revenue was derived from channel partners?",
+      "similarity": 0.92,
+      "fields_also_divergent": [
+        "Answer",
+        "Rubric",
+        "Question Type"
+      ]
+    },
+    {
+      "hf_question": "What is the total value of MSCI's operating leases (in $'s, thousands) that are maturing in the next three years? What percentage?",
+      "csv_question": "As of April 07, 2025, what is the total value of MSCI's operating leases (in $'s, thousands) that are maturing in the next three years? What",
+      "similarity": 0.92,
+      "fields_also_divergent": [
+        "Answer"
+      ]
+    },
+    {
+      "hf_question": "Who is the current CFO of Airbnb (NASDAQ: ABNB)?",
+      "csv_question": "Who is the CFO of Airbnb (NASDAQ: ABNB) as of April 07, 2025?",
+      "similarity": 0.73,
+      "fields_also_divergent": [
+        "Question Type"
+      ]
+    }
+  ],
+  "unpaired_hf_questions": [
+    "Assuming normal March seasonality over last three years, will TSM beat or miss Q2 guidance and by how much?\nShow work."
+  ],
+  "unpaired_csv_questions": [
+    "It is currently March 11th, 2025. February financials for TSM have been released as of March 10, 2025. Assuming revenue "
+  ]
+}
