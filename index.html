@@ -1127,8 +1127,8 @@ While Cloudflare acknowledges channel partners (including managed service provid
       </div>
       <div class="excard" data-mode="context-loss">
         <div class="mode">context-loss &middot; Claude Sonnet 4.5 &middot; task 48</div>
-        <h4>Right guidance retrieved, wrong figure promoted</h4>
-        <p>General Mills EPS guidance: the agent retrieves the correct initial FY2025 guidance ($4.47-$4.57) and includes it in the answer body, but the headline leads with the latest revised figure and the beat history is framed against analyst estimates where the rubric counts beats against original guidance. Right data in hand, wrong emphasis and convention: the failure class that looks perfect on the surface.</p>
+        <h4>Right guidance retrieved, wrong claims graded</h4>
+        <p>General Mills EPS guidance: the agent lists the correct initial FY2025 guidance ($4.47-$4.57) in its own guidance-evolution section, but leads with beating analyst estimates in all 8 quarters, where the rubric counts beats against original guidance, and treats the latest revised range as the operative figure. Right figure in the body, wrong framing and figure selection graded: the failure class that looks perfect on the surface.</p>
         <details><summary>full trajectory evidence</summary><pre># Trajectory: How many times has General Mills beaten Adjusted Diluted EPS guidance in the past 2 years and what is the guidance for 2025?
 
 **Outcome:** success
@@ -2671,8 +2671,8 @@ The 2020‑2023 window captures the post‑IPO surge, while the 2022‑2025 wind
       </div>
       <div class="excard" data-mode="partial-answer">
         <div class="mode">partial-answer &middot; gpt-5.4-nano &middot; task 45</div>
-        <h4>A coverage failure wearing a suit</h4>
-        <p>Zillow acquisition strategy: the rubric wants Follow Up Boss, Spruce, and Aryeo with prices. The agent gets Follow Up Boss&#x27;s details wrong, never mentions Spruce or Aryeo, and spends its word count on Virtual Staging AI, which the rubric never asked about. Thorough-looking, silently missing two of three required items. Partial-answer: 17 classified instances, second only to retrieval-miss (19).</p>
+        <h4>All the names, none of the prices</h4>
+        <p>Zillow acquisition strategy: the rubric wants Follow Up Boss, Spruce, and Aryeo with purchase prices. The agent names and dates all three, adds a fourth acquisition nobody asked about, states no prices ($399M, $19M, $35M all missing), and its revenue narrative runs the wrong direction against the reference. Every price check fails individually; the contradiction flag fires on the trend. Partial-answer&#x27;s canonical form: 17 classified instances, second only to retrieval-miss (19).</p>
         <details><summary>full trajectory evidence</summary><pre># Trajectory: As of December 2024, what has been Zillow&#x27;s (NASDAQ:Z) acquisition strategy over the past 2 years and how does it align with the company&#x27;s evolving revenue mix?
 
 **Outcome:** success
@@ -3870,7 +3870,7 @@ The company noted that inventory levels increased in their Mini Mill segment due
   </div>
 </section>
 <footer><div class="wrap">
-Generated 2026-07-04 01:19 &middot; static site, no build step: view source &middot;
+Generated 2026-07-04 01:34 &middot; static site, no build step: view source &middot;
 deck: press P or the Present button &middot; PDF: slides.pdf &middot;
 evidence: /data &middot; Khiem Doan
 </div></footer>
