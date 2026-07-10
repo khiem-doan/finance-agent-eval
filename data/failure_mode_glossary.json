@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "as_of_date": "2026-07-09",
+  "modes": [
+    {
+      "mode": "methodology-mismatch",
+      "short_label": "Basis selection",
+      "finance_label": "Uses the wrong filing basis, period, metric, or convention.",
+      "ai_lab_label": "Specification adherence failure after evidence acquisition.",
+      "plain_definition": "The model has enough evidence, but answers under a different rule than the prompt or filing requires.",
+      "examples": [
+        "TKO: retrieved filing consideration, then substituted a spot-price valuation.",
+        "Palantir: used a different CAGR base year.",
+        "General Mills: used revised guidance when the task required original guidance."
+      ],
+      "product": "Basis-selection reward pack with atomic checks for metric, period, filing vintage, and allowed convention."
+    },
+    {
+      "mode": "partial-answer",
+      "short_label": "Completeness",
+      "finance_label": "Confidently omits a required field, term, trend, or investor framing.",
+      "ai_lab_label": "Coverage and omission-control failure.",
+      "plain_definition": "The answer sounds useful, but one required part is missing or the investor comparison is incomplete.",
+      "examples": [
+        "Delta: useful guidance breakdown, missing year-over-year EPS framing.",
+        "Zillow: acquisition facts landed, trend direction missed.",
+        "KKR: most preferred-stock terms landed, one required term missing."
+      ],
+      "product": "Completeness verifier with per-field checks, dealbreaker omissions, and investor-framing assertions."
+    },
+    {
+      "mode": "retrieval-miss",
+      "short_label": "Evidence retrieval",
+      "finance_label": "Stops before collecting every filing, period, or exhibit needed.",
+      "ai_lab_label": "Tool-use coverage failure in the evidence-acquisition phase.",
+      "plain_definition": "The model answers from an incomplete evidence set, often by using endpoints or adjacent filings instead of the full source chain.",
+      "examples": [
+        "Netflix: pulled endpoint years but missed the intervening ARPU values.",
+        "Merger close-status tasks: announcement found, closing filing missed."
+      ],
+      "product": "Retrieval-coverage pack that scores whether every required source entered the transcript before final answer."
+    },
+    {
+      "mode": "stale-reference-answer",
+      "short_label": "Key freshness",
+      "finance_label": "Benchmark answer key is stale or the as-of date is underspecified.",
+      "ai_lab_label": "Ground-truth drift and dataset QA defect.",
+      "plain_definition": "The model can be right about the current event record and still fail because the key froze an older state.",
+      "examples": [
+        "US Steel: models narrated the later signed-deal and regulatory timeline while the key expected an earlier rejected-offer state."
+      ],
+      "product": "Quarterly key-refresh and expert adjudication workflow with explicit as-of dates."
+    }
+  ]
+}

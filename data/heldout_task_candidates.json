@@ -1,0 +1,264 @@
+{
+  "schema_version": 1,
+  "as_of_date": "2026-07-08",
+  "note": "Candidate held-out tasks tied to the same taxonomy used by failure_instances.json. These are task specs, not released benchmark keys.",
+  "categories": [
+    {
+      "mode": "methodology-mismatch",
+      "label": "Basis selection",
+      "observed_frontier_examples": ["TKO valuation-basis precedence", "Palantir base-year anchoring", "General Mills guidance vintage", "Boeing tax-shield convention"],
+      "candidates": [
+        {
+          "id": "heldout-snowflake-product-revenue-cagr",
+          "title": "Snowflake product revenue CAGR, FY2022 base to FY2025 end",
+          "prompt": "Calculate Snowflake's three-year product revenue CAGR from fiscal 2022 to fiscal 2025. Use product revenue, not total revenue, and state the base year, end year, formula, and result.",
+          "preserved_decision_boundary": "Use the requested base-year anchor and metric rather than silently choosing a different revenue line or start year.",
+          "why_this_tests_the_mode": "Same narrow mechanism as Palantir: correct filing retrieval is not enough if the model changes the CAGR window or metric.",
+          "answer_key_seed": "FY2022 product revenue was $1,140.5 million and FY2025 product revenue was $3,462.4 million, so the three-year CAGR is about 44.8%.",
+          "atomic_rubric_checks": [
+            "Uses product revenue, not total revenue.",
+            "Uses FY2022 as the base year and FY2025 as the end year.",
+            "Shows or states the CAGR formula over three periods.",
+            "Reports a result within a small rounding tolerance of 44.8%.",
+            "Cites the Snowflake 10-K tables used for the revenue figures."
+          ],
+          "contradiction_check": "Fails if the answer uses FY2021, total revenue, a two-year period, or describes a different growth rate as the requested result.",
+          "sources": [
+            {
+              "label": "Snowflake FY2025 Form 10-K",
+              "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014725000052/snow-20250131.htm",
+              "citation_note": "Revenue table shows FY2025 product revenue of $3,462.422 million and comparative FY2024/FY2023 figures."
+            },
+            {
+              "label": "Snowflake FY2024 Form 10-K",
+              "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014724000101/snow-20240131.htm",
+              "citation_note": "Key business metrics table shows FY2022 product revenue of $1,140.5 million."
+            }
+          ]
+        },
+        {
+          "id": "heldout-nvidia-gaap-gross-margin-outlook",
+          "title": "NVIDIA Q4 FY2025 GAAP gross margin versus Q3 FY2025 outlook",
+          "prompt": "Did NVIDIA's Q4 FY2025 GAAP gross margin beat, miss, or meet the midpoint of management's Q3 FY2025 outlook? Use GAAP gross margin only and separate the non-GAAP distractor.",
+          "preserved_decision_boundary": "Follow the requested accounting convention and outlook basis instead of substituting the adjacent non-GAAP number.",
+          "why_this_tests_the_mode": "Same narrow mechanism as TKO and Boeing: the filings contain multiple plausible conventions, and the model must choose the one requested.",
+          "answer_key_seed": "Q3 FY2025 outlook gave Q4 FY2025 GAAP gross margin of 73.0%, plus or minus 50 bps. Actual Q4 FY2025 GAAP gross margin was 73.0%, so it met the midpoint.",
+          "atomic_rubric_checks": [
+            "Uses the Q3 FY2025 outlook for Q4 FY2025.",
+            "Uses GAAP gross margin, not non-GAAP gross margin.",
+            "Identifies the 73.0% outlook midpoint.",
+            "Identifies actual Q4 FY2025 GAAP gross margin of 73.0%.",
+            "States meet or in line with midpoint, not beat or miss."
+          ],
+          "contradiction_check": "Fails if it compares to non-GAAP, uses the Q1 FY2026 outlook, or calls a midpoint match a beat or miss.",
+          "sources": [
+            {
+              "label": "NVIDIA Q3 FY2025 CFO commentary",
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000315/q3fy25cfocommentary.htm",
+              "citation_note": "Outlook states Q4 FY2025 GAAP gross margin of 73.0%, plus or minus 50 bps."
+            },
+            {
+              "label": "NVIDIA Q4 FY2025 earnings release",
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000021/q4fy25pr.htm",
+              "citation_note": "Q4 FY2025 GAAP table reports gross margin of 73.0%."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "partial-answer",
+      "label": "Completeness",
+      "observed_frontier_examples": ["KKR missing redemption or exact offering size", "Delta guidance framing omission", "Zillow causal-window omission"],
+      "candidates": [
+        {
+          "id": "heldout-ansys-synopsys-merger-consideration",
+          "title": "Ansys and Synopsys final merger consideration",
+          "prompt": "Summarize the final consideration and listing consequences in Synopsys's acquisition of Ansys. Include close date, cash amount, stock ratio, fractional-share treatment, delisting, and any change from the originally reported exchange ratio.",
+          "preserved_decision_boundary": "Answer every requested merger-term field rather than stopping after the headline consideration.",
+          "why_this_tests_the_mode": "Same narrow mechanism as KKR: a multi-part finance summary where one omitted boilerplate term can change strict scoring.",
+          "answer_key_seed": "The merger closed on July 17, 2025. Each Ansys share converted into 0.3399 Synopsys shares plus $199.91 cash; no fractional Synopsys shares were issued, with cash paid in lieu. Ansys common stock was suspended and delisted from Nasdaq.",
+          "atomic_rubric_checks": [
+            "States the July 17, 2025 closing date.",
+            "Reports the 0.3399 Synopsys exchange ratio.",
+            "Reports the $199.91 cash amount.",
+            "States that no fractional shares were issued and cash was paid in lieu.",
+            "States that Ansys common stock was suspended and delisted.",
+            "Mentions the exchange-ratio adjustment from the previously reported ratio if discussing deal mechanics."
+          ],
+          "contradiction_check": "Fails if it gives only the original announced terms, omits the fractional-share treatment, or says Ansys remained publicly listed after closing.",
+          "sources": [
+            {
+              "label": "Ansys closing Form 8-K",
+              "url": "https://www.sec.gov/Archives/edgar/data/1013462/000114036125026141/ef20052066_8k.htm",
+              "citation_note": "Closing 8-K gives effective date, final 0.3399 stock ratio, $199.91 cash amount, fractional-share treatment, and Nasdaq delisting."
+            }
+          ]
+        },
+        {
+          "id": "heldout-coinbase-2029-2032-convertible-notes",
+          "title": "Coinbase 2029 and 2032 convertible note terms",
+          "prompt": "Summarize Coinbase's August 2025 convertible senior notes offering. Include principal by tranche, coupon, maturity, seniority, capped-call treatment, expected net proceeds, and stated use of proceeds.",
+          "preserved_decision_boundary": "Checklist every security-term field rather than summarizing only size and maturity.",
+          "why_this_tests_the_mode": "Same narrow mechanism as KKR: the model must enumerate terms across the press release and later filing rather than omit capped calls or use of proceeds.",
+          "answer_key_seed": "Coinbase priced $1.3 billion of 0% notes due 2029 and $1.3 billion of 0% notes due 2032. They are senior unsecured obligations. Expected net proceeds were about $2.56 billion before any option exercise. Later 10-Q disclosure gives capped-call costs of $86.1 million and $138.1 million for the 2029 and 2032 notes.",
+          "atomic_rubric_checks": [
+            "Reports $1.3 billion principal for each tranche.",
+            "Reports 0% regular interest.",
+            "Reports October 1, 2029 and October 1, 2032 maturities.",
+            "States that the notes are senior unsecured obligations.",
+            "Mentions capped-call transactions and their purpose or cost.",
+            "Reports expected net proceeds of about $2.56 billion before full option exercise.",
+            "Summarizes stated use of proceeds."
+          ],
+          "contradiction_check": "Fails if it reports the older 2030 note terms, omits capped calls, or treats capped calls as note terms rather than separate transactions.",
+          "sources": [
+            {
+              "label": "Coinbase pricing Form 8-K exhibit",
+              "url": "https://www.sec.gov/Archives/edgar/data/1679788/000167978825000167/pressreleasepricing.htm",
+              "citation_note": "Pricing release gives tranche size, 0% coupon, maturities, seniority, expected net proceeds, and use of proceeds."
+            },
+            {
+              "label": "Coinbase Q3 2025 Form 10-Q",
+              "url": "https://www.sec.gov/Archives/edgar/data/1679788/000167978825000208/coin-20250930.htm",
+              "citation_note": "Debt note describes capped-call transactions, strike prices, cap price, and purpose."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "retrieval-miss",
+      "label": "Evidence retrieval",
+      "observed_frontier_examples": ["Netflix multi-period retrieval miss"],
+      "candidates": [
+        {
+          "id": "heldout-hashicorp-ibm-acquisition",
+          "title": "HashiCorp acquisition by IBM",
+          "prompt": "For IBM's acquisition of HashiCorp, identify the close date, per-share price, enterprise value net of cash, and the strategic rationale stated when the transaction was announced.",
+          "preserved_decision_boundary": "Find the closing filing and the announcement exhibit instead of answering from a stale announcement only.",
+          "why_this_tests_the_mode": "Same broad retrieval family as Netflix: the correct answer requires multiple primary documents, and a single adjacent source leaves fields missing.",
+          "answer_key_seed": "HashiCorp closed on February 27, 2025. IBM agreed to acquire HashiCorp for $35 per share in cash, representing $6.4 billion enterprise value net of cash. The announcement framed the deal around hybrid cloud, AI, Red Hat, watsonx, security, automation, and consulting synergies.",
+          "atomic_rubric_checks": [
+            "Finds the February 27, 2025 closing 8-K.",
+            "Reports the $35.00 per share cash consideration.",
+            "Reports $6.4 billion enterprise value net of cash.",
+            "States close date separately from announcement date.",
+            "Summarizes at least two strategic-rationale points from the announcement exhibit."
+          ],
+          "contradiction_check": "Fails if it says the deal was merely pending as of the answer date, omits enterprise value, or treats the announcement date as the close date.",
+          "sources": [
+            {
+              "label": "HashiCorp closing Form 8-K",
+              "url": "https://www.sec.gov/Archives/edgar/data/1720671/000119312525037910/d898526d8k.htm",
+              "citation_note": "Closing 8-K states February 27, 2025 consummation."
+            },
+            {
+              "label": "HashiCorp merger announcement exhibit",
+              "url": "https://www.sec.gov/Archives/edgar/data/1720671/000119312524114310/d804229dex991.htm",
+              "citation_note": "Announcement gives $35 per share, $6.4 billion enterprise value net of cash, and strategic rationale."
+            }
+          ]
+        },
+        {
+          "id": "heldout-smartsheet-blackstone-vista-acquisition",
+          "title": "Smartsheet acquisition by Blackstone and Vista",
+          "prompt": "For the take-private acquisition of Smartsheet by Blackstone and Vista, identify per-share consideration, transaction value, close date, delisting status, and the stated product or investment rationale.",
+          "preserved_decision_boundary": "Use the closing 8-K and closing press release, not only the original merger agreement.",
+          "why_this_tests_the_mode": "Same broad retrieval family as multi-source merger tasks: the model must retrieve the final status and not stop at one document.",
+          "answer_key_seed": "The acquisition closed on January 22, 2025. Smartsheet holders received $56.50 per share in cash, the transaction was valued at approximately $8.4 billion, and Smartsheet stock ceased trading and was no longer listed on NYSE.",
+          "atomic_rubric_checks": [
+            "Reports the $56.50 per share cash consideration.",
+            "Reports the approximately $8.4 billion transaction value.",
+            "Reports the January 22, 2025 close date.",
+            "States that Smartsheet ceased trading and was no longer NYSE-listed.",
+            "Summarizes the rationale around enterprise work management, AI-enabled user experiences, and long-term investment."
+          ],
+          "contradiction_check": "Fails if it leaves the deal pending, omits delisting, or gives only announcement-date terms without close status.",
+          "sources": [
+            {
+              "label": "Smartsheet merger Form 8-K",
+              "url": "https://www.sec.gov/Archives/edgar/data/1366561/000162828024041152/smar-20240924.htm",
+              "citation_note": "Merger agreement filing gives $56.50 cash consideration."
+            },
+            {
+              "label": "Smartsheet closing Form 8-K",
+              "url": "https://www.sec.gov/Archives/edgar/data/1366561/000162828025002104/smartsheet-8xk12225.htm",
+              "citation_note": "Closing filing gives January 22, 2025 closing and delisting status."
+            },
+            {
+              "label": "Smartsheet closing press release exhibit",
+              "url": "https://www.sec.gov/Archives/edgar/data/1366561/000162828025002101/exhibit991-closing8xk.htm",
+              "citation_note": "Press release gives approximately $8.4 billion transaction value, delisting, and strategic rationale."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "stale-reference-answer",
+      "label": "Key freshness",
+      "observed_frontier_examples": ["US Steel / Nippon Steel stale reference answer"],
+      "candidates": [
+        {
+          "id": "heldout-capital-one-discover-closing-status",
+          "title": "Capital One and Discover closing status",
+          "prompt": "As of July 8, 2026, what is the current status of Capital One's acquisition of Discover, and what consideration did Discover common stockholders receive? Include close date, exchange ratio, and fractional-share treatment.",
+          "preserved_decision_boundary": "Use the current closing record rather than an earlier pending-deal or approval-stage state.",
+          "why_this_tests_the_mode": "Same narrow mechanism as US Steel: event-driven finance facts decay, so the key must force an as-of date and current filing check.",
+          "answer_key_seed": "The transaction closed on May 18, 2025. Discover common stock converted into 1.0192 Capital One shares per Discover share. Capital One did not issue fractional shares and paid cash in lieu.",
+          "atomic_rubric_checks": [
+            "Uses an explicit as-of date.",
+            "States that the transaction closed, not that it is pending.",
+            "Reports the May 18, 2025 closing date.",
+            "Reports the 1.0192 exchange ratio.",
+            "Mentions cash in lieu of fractional shares."
+          ],
+          "contradiction_check": "Fails if it says the deal remains pending, omits the exchange ratio, or reports only regulatory approval status.",
+          "sources": [
+            {
+              "label": "Capital One successor closing Form 8-K",
+              "url": "https://www.sec.gov/Archives/edgar/data/1393612/000119312525122107/d928199d8k.htm",
+              "citation_note": "Closing 8-K states May 18, 2025 closing and 1.0192 exchange ratio."
+            },
+            {
+              "label": "Discover definitive proxy",
+              "url": "https://www.sec.gov/Archives/edgar/data/1393612/000119312525002190/d896014ddefm14a.htm",
+              "citation_note": "Proxy states 1.0192 exchange ratio and cash in lieu of fractional shares."
+            }
+          ]
+        },
+        {
+          "id": "heldout-hpe-juniper-closing-status",
+          "title": "HPE and Juniper closing status",
+          "prompt": "As of July 8, 2026, summarize HPE's acquisition of Juniper Networks. Include close date, consideration per share, aggregate consideration, final listing status, and the strategic rationale stated at closing.",
+          "preserved_decision_boundary": "Use the closing 8-K and closing exhibit rather than an earlier DOJ-challenge or pending-deal state.",
+          "why_this_tests_the_mode": "Same narrow mechanism as US Steel: a stale key or stale retrieval path can turn a correct current-state answer into a graded miss.",
+          "answer_key_seed": "The transaction closed on July 2, 2025. Juniper holders received $40.00 per share in cash, aggregate consideration was about $13.4 billion, Juniper became a wholly owned HPE subsidiary, and Juniper shares ceased trading and were no longer listed on NYSE.",
+          "atomic_rubric_checks": [
+            "Uses an explicit as-of date.",
+            "States the July 2, 2025 close date.",
+            "Reports $40.00 per share cash consideration.",
+            "Reports approximately $13.4 billion aggregate consideration.",
+            "States Juniper became a wholly owned HPE subsidiary.",
+            "States shares ceased trading and were no longer listed.",
+            "Summarizes strategic rationale around AI-native networking, hybrid cloud, and HPE networking scale."
+          ],
+          "contradiction_check": "Fails if it treats the DOJ challenge as unresolved after the close, omits listing status, or reports only the January 2024 announcement.",
+          "sources": [
+            {
+              "label": "HPE closing Form 8-K",
+              "url": "https://www.sec.gov/Archives/edgar/data/1645590/000114036125024519/ef20051378_8k.htm",
+              "citation_note": "Closing filing gives July 2, 2025 close date, $40.00 cash consideration, aggregate consideration, and wholly owned subsidiary status."
+            },
+            {
+              "label": "HPE closing press release exhibit",
+              "url": "https://www.sec.gov/Archives/edgar/data/1645590/000114036125024519/ef20051378_ex99-1.htm",
+              "citation_note": "Press release gives strategic rationale, final listing status, and closing framing."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

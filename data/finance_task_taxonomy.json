@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "as_of_date": "2026-07-09",
+  "note": "Analyst-workflow taxonomy for the 50 public Finance Agent tasks. This is distinct from failure mode taxonomy: task type says what finance work was requested; failure mode says why a model missed it.",
+  "categories": [
+    {
+      "key": "ma-transaction-terms",
+      "label": "M&A and transaction terms",
+      "definition": "Deal status, consideration, closing mechanics, listing consequences, acquisition rationale, and transaction-related costs."
+    },
+    {
+      "key": "guidance-earnings",
+      "label": "Guidance and earnings",
+      "definition": "Beat or miss versus guidance, guidance vintage, midpoint math, and earnings-release metric framing."
+    },
+    {
+      "key": "multi-year-kpi-trends",
+      "label": "Multi-year trends and KPIs",
+      "definition": "Reported operating metrics, unit economics, multi-period trends, CAGR, take rate, same-store sales, and other period-over-period measures."
+    },
+    {
+      "key": "financial-modeling-scenarios",
+      "label": "Financial modeling and scenarios",
+      "definition": "Forward estimates, scenario math, seasonality assumptions, refinancing impact, gross-profit projection, and decomposition of growth drivers."
+    },
+    {
+      "key": "capital-structure-securities",
+      "label": "Capital structure and securities",
+      "definition": "Debt, shares outstanding, convertibles, preferred securities, leases, cash requirements, and other financing obligations."
+    },
+    {
+      "key": "filing-disclosure-risk",
+      "label": "Filing disclosure and risk",
+      "definition": "Qualitative filing facts, risk factors, governance facts, management roles, regulatory risk, and disclosure definitions."
+    },
+    {
+      "key": "market-peer-analysis",
+      "label": "Market and peer analysis",
+      "definition": "Cross-company comparisons, peer ranking, capex comparison, market positioning, and strategic analysis."
+    },
+    {
+      "key": "adjustments-nongaap",
+      "label": "Adjustments and non-GAAP bridges",
+      "definition": "GAAP to non-GAAP adjustments, restructuring costs, adjusted EBITDA bridges, SBC, and one-time or pro forma items."
+    }
+  ],
+  "tasks": [
+    {"idx": 0, "category": "ma-transaction-terms", "rationale": "Merger status and operating impact."},
+    {"idx": 1, "category": "multi-year-kpi-trends", "rationale": "Netflix ARPU trend across 2019 to 2024."},
+    {"idx": 2, "category": "guidance-earnings", "rationale": "Beat or miss versus pre-tax margin guidance."},
+    {"idx": 3, "category": "guidance-earnings", "rationale": "Revenue guidance ranges across quarters."},
+    {"idx": 4, "category": "filing-disclosure-risk", "rationale": "Board nominee disclosure."},
+    {"idx": 5, "category": "market-peer-analysis", "rationale": "Capex comparison across mega-cap peers."},
+    {"idx": 6, "category": "filing-disclosure-risk", "rationale": "Current CFO fact retrieval."},
+    {"idx": 7, "category": "ma-transaction-terms", "rationale": "Acquisition consideration measured at transaction close."},
+    {"idx": 8, "category": "guidance-earnings", "rationale": "Beat or miss versus gross margin guidance."},
+    {"idx": 9, "category": "multi-year-kpi-trends", "rationale": "Three-year revenue CAGR."},
+    {"idx": 10, "category": "capital-structure-securities", "rationale": "Share class and share-count disclosure."},
+    {"idx": 11, "category": "financial-modeling-scenarios", "rationale": "Seasonality-based beat or miss estimate."},
+    {"idx": 12, "category": "filing-disclosure-risk", "rationale": "Director compensation disclosure."},
+    {"idx": 13, "category": "multi-year-kpi-trends", "rationale": "FCF and FCF margin trend."},
+    {"idx": 14, "category": "multi-year-kpi-trends", "rationale": "Inventory turnover ratio from fiscal-year values."},
+    {"idx": 15, "category": "capital-structure-securities", "rationale": "Mandatory convertible preferred stock terms."},
+    {"idx": 16, "category": "multi-year-kpi-trends", "rationale": "Annual take-rate trend."},
+    {"idx": 17, "category": "filing-disclosure-risk", "rationale": "Retention metric disclosure and definition."},
+    {"idx": 18, "category": "capital-structure-securities", "rationale": "Operating lease maturities and percentage."},
+    {"idx": 19, "category": "multi-year-kpi-trends", "rationale": "Effective tax rate and year-over-year change."},
+    {"idx": 20, "category": "filing-disclosure-risk", "rationale": "Vendor concentration risk disclosure."},
+    {"idx": 21, "category": "multi-year-kpi-trends", "rationale": "Gross booking value per room night."},
+    {"idx": 22, "category": "filing-disclosure-risk", "rationale": "Expected production timing from disclosure."},
+    {"idx": 23, "category": "capital-structure-securities", "rationale": "Debt face value excluding sustainability notes."},
+    {"idx": 24, "category": "filing-disclosure-risk", "rationale": "Regulatory risks from 10-K risk factors."},
+    {"idx": 25, "category": "filing-disclosure-risk", "rationale": "Employee-location disclosure."},
+    {"idx": 26, "category": "capital-structure-securities", "rationale": "Junior subordinated debenture terms."},
+    {"idx": 27, "category": "capital-structure-securities", "rationale": "Projected material cash requirements."},
+    {"idx": 28, "category": "multi-year-kpi-trends", "rationale": "Operating KPI list and FY2024 totals."},
+    {"idx": 29, "category": "capital-structure-securities", "rationale": "Convertible-note dilution impact."},
+    {"idx": 30, "category": "financial-modeling-scenarios", "rationale": "Forward gross profit projection under assumptions."},
+    {"idx": 31, "category": "multi-year-kpi-trends", "rationale": "Loan origination mix over recent periods."},
+    {"idx": 32, "category": "financial-modeling-scenarios", "rationale": "Debt refinancing impact scenario."},
+    {"idx": 33, "category": "filing-disclosure-risk", "rationale": "Channel-partner disclosure."},
+    {"idx": 34, "category": "adjustments-nongaap", "rationale": "Largest adjusted EBITDA add-back."},
+    {"idx": 35, "category": "ma-transaction-terms", "rationale": "Acquisition price, equity value, and enterprise value."},
+    {"idx": 36, "category": "adjustments-nongaap", "rationale": "Merger-related restructuring costs."},
+    {"idx": 37, "category": "guidance-earnings", "rationale": "Adjusted EBITDA margin versus prior guidance."},
+    {"idx": 38, "category": "guidance-earnings", "rationale": "Quarterly guidance metric taxonomy and framing."},
+    {"idx": 39, "category": "adjustments-nongaap", "rationale": "Adjusted EBITDA reconciliation."},
+    {"idx": 40, "category": "multi-year-kpi-trends", "rationale": "Same-store sales metric."},
+    {"idx": 41, "category": "market-peer-analysis", "rationale": "Dividend payout ratio peer ranking."},
+    {"idx": 42, "category": "financial-modeling-scenarios", "rationale": "Revenue growth decomposition into take-rate and volume."},
+    {"idx": 43, "category": "multi-year-kpi-trends", "rationale": "Regional average nights per booking KPI."},
+    {"idx": 44, "category": "adjustments-nongaap", "rationale": "Stock-based compensation adjustment."},
+    {"idx": 45, "category": "ma-transaction-terms", "rationale": "Acquisition strategy and revenue-trend fit."},
+    {"idx": 46, "category": "guidance-earnings", "rationale": "Payment volume versus guidance midpoint."},
+    {"idx": 47, "category": "guidance-earnings", "rationale": "Full-year result versus prior-quarter guidance."},
+    {"idx": 48, "category": "guidance-earnings", "rationale": "EPS guidance beat history and guidance vintage."},
+    {"idx": 49, "category": "guidance-earnings", "rationale": "Non-GAAP gross-profit guide beat or miss."}
+  ]
+}

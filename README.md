@@ -11,8 +11,11 @@ Live site: https://khiem-doan.github.io/finance-agent-eval/
 - `slides.pdf` - the 5-slide walkthrough deck
 - `data/` - the evidence files every number on the site traces to: per-run
   summaries and cluster-bootstrap CIs, per-task costs, the identical-20-task
-  frontier slice, judge cross-family/transport checks, and a semantic diff of
-  the benchmark's two public copies.
+  frontier slice, judge cross-family/transport checks, a semantic diff of
+  the benchmark's two public copies, the task-type taxonomy and failure-mode
+  glossary, the per-trace failure instances behind the failure stack, the
+  held-out task candidates (specs with SEC citations and atomic checks), the
+  lab proposal content, and the market-thesis source list.
 
 Built by Khiem Doan. External reference numbers (the benchmark paper's human
 baseline, public leaderboard figures) are labeled as external wherever cited.
