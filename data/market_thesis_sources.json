@@ -9,7 +9,7 @@
       "source": "World Economic Forum, Artificial Intelligence in Financial Services, 2025",
       "url": "https://reports.weforum.org/docs/WEF_Artificial_Intelligence_in_Financial_Services_2025.pdf",
       "detail": "WEF reports $35B of AI spend by financial services firms in 2023, projected to reach $97B by 2027 across banking, insurance, capital markets, and payments.",
-      "pitch_use": "This is the budget pool. The pitch should not sound like a toy benchmark for hard questions. It is a due-diligence and research reliability problem inside a sector already spending heavily."
+      "pitch_use": "This is the budget pool: a due-diligence and research-reliability problem inside a sector already spending heavily on AI."
     },
     {
       "metric": "$200B-$340B",
@@ -17,7 +17,7 @@
       "source": "McKinsey, Capturing the full value of generative AI in banking",
       "url": "https://www.mckinsey.com/industries/financial-services/our-insights/capturing-the-full-value-of-generative-ai-in-banking",
       "detail": "McKinsey estimates gen AI could add $200B to $340B in annual value to banking, equal to 9% to 15% of operating profits, largely from productivity.",
-      "pitch_use": "This is the value pool. A finance-agent model that reliably performs analyst-grade filing work competes for productivity and decision-support spend, not trivia spend."
+      "pitch_use": "This is the value pool: a finance-agent model that reliably performs analyst-grade filing work competes for productivity and decision-support spend."
     },
     {
       "metric": "927",
@@ -25,7 +25,7 @@
       "source": "Vals AI, Finance Agent v2",
       "url": "https://www.vals.ai/benchmarks/fabv2",
       "detail": "Finance Agent v2 has 927 expert-reviewed questions across public, private validation, and held-out test splits, and tests entry-level financial analyst work on public company filings.",
-      "pitch_use": "This proves a private finance-eval market already exists and that labs care about analyst-grade public-filing tasks."
+      "pitch_use": "Private expert-reviewed finance evals already exist, and labs already care about analyst-grade public-filing tasks."
     },
     {
       "metric": "$25.66 and 16.8 min",
@@ -33,7 +33,7 @@
       "source": "Finance Agent Benchmark paper",
       "url": "https://arxiv.org/pdf/2508.00828",
       "detail": "The paper reports human experts at 16.8 minutes and $25.66 per task, while the most expensive model in that paper averaged 3.1 minutes and $3.78.",
-      "pitch_use": "This is the displacement math. The run does not need to prove full autonomy today. It shows that the cost and latency gap is already big enough that accuracy is the bottleneck."
+      "pitch_use": "The cost and latency gap is already large enough that accuracy is the bottleneck for production adoption."
     },
     {
       "metric": "train/dev/sealed",
@@ -41,7 +41,7 @@
       "source": "OpenAI reinforcement fine-tuning guide",
       "url": "https://developers.openai.com/api/docs/guides/reinforcement-fine-tuning",
       "detail": "OpenAI describes RFT as using a programmable grader to score candidate responses, designate validation data, monitor checkpoints, and optimize toward high-scoring outputs.",
-      "pitch_use": "Rubrics do not magically improve models. Rubrics improve models when they become rewards, rejection filters, checkpoint gates, or regression tests."
+      "pitch_use": "Programmable graders improve models when they become rewards, rejection filters, checkpoint gates, or regression tests."
     },
     {
       "metric": "task, trial, grader, transcript, harness",
@@ -49,7 +49,7 @@
       "source": "Anthropic, Demystifying evals for AI agents",
       "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
       "detail": "Anthropic defines agent evals around tasks, trials, graders, transcripts, outcomes, and harnesses, which map directly to this finance-agent pilot.",
-      "pitch_use": "This lets the Anthropic pitch use their own eval vocabulary instead of arbitrary labels."
+      "pitch_use": "The pilot maps directly to agent-eval primitives: tasks, trials, graders, transcripts, outcomes, and harnesses."
     }
   ],
   "applications": [
@@ -61,5 +61,5 @@
     "portfolio-company KPI and risk monitoring",
     "finance-agent post-training and private eval procurement"
   ],
-  "expert_difficulty_note": "Do not claim a measured percent of experts who can answer these questions unless we run an expert panel. The defensible statement is that Vals targeted work expected of second or third-year investment-banking analysts in v2, the v1 paper used human experts as a baseline, and the tasks require current filings, source chaining, finance convention selection, and precise arithmetic."
+  "expert_difficulty_note": "These tasks map to analyst-grade finance workflows: current filings, source chaining, basis selection, precise arithmetic, and judgment about which convention controls the answer."
 }
