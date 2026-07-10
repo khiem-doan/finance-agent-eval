@@ -7,7 +7,7 @@
       "short_label": "Basis selection",
       "finance_label": "Uses the wrong filing basis, period, metric, or convention.",
       "ai_lab_label": "Specification adherence failure after evidence acquisition.",
-      "plain_definition": "The model has enough evidence, but answers under a different rule than the prompt or filing requires.",
+      "plain_definition": "The wrong thing is present: the model has the evidence, then answers under a different rule, basis, or framing than the one the prompt requires.",
       "examples": [
         "TKO: retrieved filing consideration, then substituted a spot-price valuation.",
         "Palantir: used a different CAGR base year.",
@@ -20,11 +20,11 @@
       "short_label": "Completeness",
       "finance_label": "Confidently omits a required field, term, trend, or investor framing.",
       "ai_lab_label": "Coverage and omission-control failure.",
-      "plain_definition": "The answer sounds useful, but one required part is missing or the investor comparison is incomplete.",
+      "plain_definition": "The right thing is absent: the answer is correct as far as it goes, but a required term, total, trend, or framing never appears.",
       "examples": [
         "Delta: useful guidance breakdown, missing year-over-year EPS framing.",
         "Zillow: acquisition facts landed, trend direction missed.",
-        "KKR: most preferred-stock terms landed, one required term missing."
+        "KKR: GPT-5.5 reported both share components separately but never the required total; Fable 5 covered nearly every term but never addressed redemption."
       ],
       "product": "Completeness verifier with per-field checks, dealbreaker omissions, and investor-framing assertions."
     },
@@ -33,7 +33,7 @@
       "short_label": "Evidence retrieval",
       "finance_label": "Stops before collecting every filing, period, or exhibit needed.",
       "ai_lab_label": "Tool-use coverage failure in the evidence-acquisition phase.",
-      "plain_definition": "The model answers from an incomplete evidence set, often by using endpoints or adjacent filings instead of the full source chain.",
+      "plain_definition": "The evidence never made it in hand: the model answers from an incomplete source set, often endpoints or adjacent filings instead of the full chain.",
       "examples": [
         "Netflix: pulled endpoint years but missed the intervening ARPU values.",
         "Merger close-status tasks: announcement found, closing filing missed."
@@ -45,7 +45,7 @@
       "short_label": "Key freshness",
       "finance_label": "Benchmark answer key is stale or the as-of date is underspecified.",
       "ai_lab_label": "Ground-truth drift and dataset QA defect.",
-      "plain_definition": "The model can be right about the current event record and still fail because the key froze an older state.",
+      "plain_definition": "The model is right, the key is stale: the answer matches the current event record and still fails because the benchmark froze an older state.",
       "examples": [
         "US Steel: models narrated the later signed-deal and regulatory timeline while the key expected an earlier rejected-offer state."
       ],
