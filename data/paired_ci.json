@@ -1,0 +1,31 @@
+{
+  "note": "Paired task-by-task strict-score difference (gpt55 - fable5) on the identical 20, company-clustered bootstrap (2,000 resamples, seed 20260710). Also: subset-vs-full representativeness for the two models with full-50 runs. Zero new model calls; computed from grades already on disk by analysis/paired_frontier_ci.py.",
+  "n_tasks": 20,
+  "n_clusters": 18,
+  "resamples": 2000,
+  "point_pts": 0.0,
+  "ci95_lo_pts": -15.0,
+  "ci95_hi_pts": 15.0,
+  "representativeness": [
+    {
+      "run": "gpt55-full",
+      "subset_passed": 12,
+      "subset_n": 20,
+      "subset_pct": 60.0,
+      "full_passed": 19,
+      "full_n": 30,
+      "full_pct": 63.3,
+      "gap_pts": 3.3
+    },
+    {
+      "run": "nano-full",
+      "subset_passed": 10,
+      "subset_n": 20,
+      "subset_pct": 50.0,
+      "full_passed": 26,
+      "full_n": 50,
+      "full_pct": 52.0,
+      "gap_pts": 2.0
+    }
+  ]
+}
