@@ -15,7 +15,8 @@ Live site: https://khiem-doan.github.io/finance-agent-eval/
   the benchmark's two public copies, the task-type taxonomy and failure-mode
   glossary, the per-trace failure instances behind the failure stack, the
   held-out task candidates (specs with SEC citations and atomic checks), the
-  lab proposal content, and the market-thesis source list.
+  lab proposal content, the market-thesis source list, and the two frontier
+  grading records (check-by-check judge output) behind the rubric scoreboards.
 
 Built by Khiem Doan. External reference numbers (the benchmark paper's human
 baseline, public leaderboard figures) are labeled as external wherever cited.
