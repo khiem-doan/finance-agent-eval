@@ -1,0 +1,70 @@
+{
+  "note": "gpt56sol-subset20 tasks originally judged by gpt-5.4-mini via OpenRouter, re-judged via direct OpenAI API. Same model, two transports.",
+  "run": "gpt56sol-subset20",
+  "sample_indices": [
+    3,
+    7,
+    25,
+    38,
+    43,
+    44
+  ],
+  "strict_agreement": "6/6",
+  "partial_exact_agreement": "6/6",
+  "rows": [
+    {
+      "idx": 3,
+      "category": "Complex Retrieval",
+      "openrouter_strict": 1,
+      "direct_strict": 1,
+      "openrouter_partial": 1.0,
+      "direct_partial": 1.0,
+      "strict_agree": true
+    },
+    {
+      "idx": 7,
+      "category": "Quantitative Retrieval",
+      "openrouter_strict": 0,
+      "direct_strict": 0,
+      "openrouter_partial": 0.0,
+      "direct_partial": 0.0,
+      "strict_agree": true
+    },
+    {
+      "idx": 25,
+      "category": "Numerical Reasoning",
+      "openrouter_strict": 1,
+      "direct_strict": 1,
+      "openrouter_partial": 1.0,
+      "direct_partial": 1.0,
+      "strict_agree": true
+    },
+    {
+      "idx": 38,
+      "category": "Qualitative Retrieval",
+      "openrouter_strict": 0,
+      "direct_strict": 0,
+      "openrouter_partial": 0.833,
+      "direct_partial": 0.833,
+      "strict_agree": true
+    },
+    {
+      "idx": 43,
+      "category": "Quantitative Retrieval",
+      "openrouter_strict": 1,
+      "direct_strict": 1,
+      "openrouter_partial": 1.0,
+      "direct_partial": 1.0,
+      "strict_agree": true
+    },
+    {
+      "idx": 44,
+      "category": "Adjustments",
+      "openrouter_strict": 0,
+      "direct_strict": 0,
+      "openrouter_partial": 0.0,
+      "direct_partial": 0.0,
+      "strict_agree": true
+    }
+  ]
+}
