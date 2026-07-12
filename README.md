@@ -1,6 +1,6 @@
 # Grading the Frontier on Finance Agent Work
 
-Interactive results site for an independent evaluation of 8 models on the
+Interactive results site for an independent evaluation of 9 models on the
 Vals AI Finance Agent benchmark's 50 public tasks: an adapted copy of the
 official harness, an independently validated LLM judge, a hand-classified
 failure taxonomy with full trajectory evidence, and measured per-task costs.
