@@ -20,26 +20,36 @@ generated and sealed, with Khiem's verdicts to be appended below when graded.
   all 10 tasks adversarially with quoted decisive evidence per check. Strict
   verdicts matched the sealed key 10/10. Check-level notes in section 4.
 - **Blind human hand-grade:** the 10-task pack (5 judge-pass / 5 judge-fail,
-  8 categories, order shuffled) is sealed in handgrade_key_sol.json and published
-  as a dropdown Google Sheet. IN PROGRESS; Khiem's column and ratification line
-  append below when graded.
+  8 categories, order shuffled) was graded blind by Khiem Doan in the published
+  Google Sheet on 2026-07-13, every check filled. Strict verdicts agreed with the
+  sealed key 10/10, and with the adversarial grader 10/10: three-way unanimity on
+  all ten strict verdicts.
 
 ## 2. Per-task table (adversarial vs sealed key)
 
-| Task | Category | Question | Adversarial strict | Khiem prelim | Judge strict (key) | Agree |
+| Task | Category | Question | Adversarial strict | Khiem strict | Judge strict (key) | Agree |
 |---|---|---|---|---|---|---|
-| 1 | Complex Retrieval | KKR Series D mandatory convertible terms | 0 | pending | 0 (partial 0.818) | YES |
-| 2 | Numerical Reasoning | Palantir 3-year revenue CAGR | 0 | pending | 0 (partial 0.333) | YES |
-| 3 | Numerical Reasoning | Microsoft % full-time employees in US | 1 | pending | 1 | YES |
-| 4 | Quantitative Retrieval | Airbnb 2024 average nights per booking | 1 | pending | 1 | YES |
-| 5 | Qualitative Retrieval | Shift4 vendor concentration risk | 1 | pending | 1 | YES |
-| 6 | Adjustments | Boeing net-income impact of +3pt refinancing | 0 | pending | 0 (partial 0.000) | YES |
-| 7 | Beat or Miss | Lyft Q4'24 Adjusted EBITDA margin vs guidance | 1 | pending | 1 | YES |
-| 8 | Quantitative Retrieval | TKO total consideration at transaction close | 0 | pending | 0 (partial 0.000) | YES |
-| 9 | Financial Modeling | Snap maximum dilutive shares from converts | 1 | pending | 1 | YES |
-| 10 | Market Analysis | Zillow acquisition strategy vs revenue mix | 0 | pending | 0 (partial 0.333) | YES |
+| 1 | Complex Retrieval | KKR Series D mandatory convertible terms | 0 | 0 | 0 (partial 0.818) | YES |
+| 2 | Numerical Reasoning | Palantir 3-year revenue CAGR | 0 | 0 | 0 (partial 0.333) | YES |
+| 3 | Numerical Reasoning | Microsoft % full-time employees in US | 1 | 1 | 1 | YES |
+| 4 | Quantitative Retrieval | Airbnb 2024 average nights per booking | 1 | 1 | 1 | YES |
+| 5 | Qualitative Retrieval | Shift4 vendor concentration risk | 1 | 1 | 1 | YES |
+| 6 | Adjustments | Boeing net-income impact of +3pt refinancing | 0 | 0 | 0 (partial 0.000) | YES |
+| 7 | Beat or Miss | Lyft Q4'24 Adjusted EBITDA margin vs guidance | 1 | 1 | 1 | YES |
+| 8 | Quantitative Retrieval | TKO total consideration at transaction close | 0 | 0 | 0 (partial 0.000) | YES |
+| 9 | Financial Modeling | Snap maximum dilutive shares from converts | 1 | 1 | 1 | YES |
+| 10 | Market Analysis | Zillow acquisition strategy vs revenue mix | 0 | 0 | 0 (partial 0.333) | YES |
 
-Adversarial-vs-key strict agreement: **10/10**.
+Adversarial-vs-key strict agreement: **10/10**. Human-vs-key strict agreement:
+**10/10** (every check-level dropdown filled; task-level notes recorded below).
+Three-way agreement (human, adversarial, sealed key): **10/10**.
+
+Khiem's grading notes flagged three tasks for expert review while still scoring
+them against the current key: task 2 (the CAGR-period definition), task 6 (the
+refinancing methodology), and task 8 (the requested-basis wording). Those are the
+same three ambiguities independently documented in sections 3 and 4 below: the
+blind human leg surfaced them without seeing the key, the cross-family split, or
+the adversarial notes.
 
 ## 3. Cross-family split adjudications (all three upheld)
 
@@ -120,6 +130,12 @@ compute).
 
 - Adversarial leg: COMPLETE, 10/10 vs sealed key, recorded above.
 - Cross-family and transport legs: COMPLETE, artifacts committed.
-- Blind human leg: PENDING. Khiem's per-task verdicts and the ratification line
-  append here when the Google Sheet is graded. Until then, the human leg of the
-  Sol lane is stated everywhere as "sealed pack in progress," never as a number.
+- Blind human leg: COMPLETE. Khiem Doan graded all 10 tasks blind in the
+  published Google Sheet on 2026-07-13 (every check dropdown filled, per-task
+  notes recorded) and confirmed in-session. Human-vs-key 10/10; three-way
+  unanimity across human, adversarial, and sealed key on all ten strict verdicts.
+
+**RATIFIED via the graded sheet plus in-session confirmation, Khiem Doan,
+2026-07-13.** All ten verdicts final as graded. The three tasks he flagged for
+expert review (2, 6, 8) stand as scored under the current key, with the flags
+preserved above as rubric-specification findings, consistent with sections 3-4.
