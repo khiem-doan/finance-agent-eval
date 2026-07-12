@@ -1,175 +1,194 @@
 {
-  "schema_version": 1,
-  "as_of_date": "2026-07-09",
-  "note": "Lab-specific proposal content for the site Pitch section. Task examples reference heldout_task_candidates.json by id so SEC citations and rubric checks stay single-sourced.",
-  "labs": [
+ "schema_version": 1,
+ "as_of_date": "2026-07-09",
+ "note": "Lab-specific proposal content for the site Pitch section. Task examples reference heldout_task_candidates.json by id so SEC citations and rubric checks stay single-sourced.",
+ "labs": [
+  {
+   "lab_key": "openai",
+   "label": "OpenAI proposal",
+   "model_key": "gpt55",
+   "model_label": "GPT-5.5",
+   "run_tag": "gpt55-full",
+   "headline": "Start with TKO: it solved it, then lost it.",
+   "thesis": "I would lead OpenAI with TKO because the trace is clean: GPT-5.5 found the filing value, then replaced the requested basis with a plausible spot-price valuation. That is not a retrieval problem. It is a basis-selection problem that can become a reward target. GPT-5.6 Sol, run on the identical twenty within 72 hours of its July 9 release, reproduced the map: 9/20 strict, all seven shared failures still failing, and the TKO basis substituted again with a new wrong number ($4.00B vs the filed $3.25B).",
+   "lead_failure": {
+    "failure_id": "gpt55-idx7-methodology-mismatch",
+    "title": "TKO valuation-basis precedence",
+    "screen_link": "#fail7=gpt55",
+    "soundbite": "Right retrieval, wrong basis, bad final decision.",
+    "why_it_matters": "This is close to a reward spec. The model had the answer in the trace, so the product is not more documents. It is a basis-preservation check that rewards the filing basis over adjacent plausible math. Two generations now make the same class of error on this task: GPT-5.5 substituted $3.92 billion, and GPT-5.6 Sol, four days after release, substituted $4.00 billion after searching the literal phrase 'aggregate value of $3.25 billion'."
+   },
+   "backup_failure": {
+    "failure_id": "gpt55-idx48-methodology-mismatch",
+    "title": "General Mills guidance vintage",
+    "screen_link": "#fail48=gpt55",
+    "soundbite": "It counted the beats, then used the wrong guidance vintage.",
+    "why_it_matters": "This backs up TKO with a second convention miss: the model must separate original guidance from later revised guidance before scoring beat or miss."
+   },
+   "pilot": {
+    "ask": "Run a two-week basis-selection and completeness pilot on a sealed finance-agent slice.",
+    "deliverables": [
+     "A 200-task dataset with 120 train, 20 dev, and 60 sealed eval tasks.",
+     "Reference answers with atomic rubrics and expert-adjudication notes.",
+     "Labeled trajectories with tool calls, evidence, output, and cost.",
+     "A versioned verifier and reward specification for convention and coverage failures.",
+     "A decision report comparing base and tuned models on the sealed split."
+    ],
+    "success_gate": "Fifteen-point absolute lift on the sealed slice, paired 95 percent lower bound above zero, improvement across multiple subtypes, no broader regression, and lower cost among correct completions."
+   },
+   "failure_modes": [
     {
-      "lab_key": "openai",
-      "label": "OpenAI proposal",
-      "model_key": "gpt55",
-      "model_label": "GPT-5.5",
-      "run_tag": "gpt55-full",
-      "headline": "Start with TKO: it solved it, then lost it.",
-      "thesis": "I would lead OpenAI with TKO because the trace is clean: GPT-5.5 found the filing value, then replaced the requested basis with a plausible spot-price valuation. That is not a retrieval problem. It is a basis-selection problem that can become a reward target.",
-      "lead_failure": {
-        "failure_id": "gpt55-idx7-methodology-mismatch",
-        "title": "TKO valuation-basis precedence",
-        "screen_link": "#fail7=gpt55",
-        "soundbite": "Right retrieval, wrong basis, bad final decision.",
-        "why_it_matters": "This is close to a reward spec. The model had the answer in the trace, so the product is not more documents. It is a basis-preservation check that rewards the filing basis over adjacent plausible math."
-      },
-      "backup_failure": {
-        "failure_id": "gpt55-idx48-methodology-mismatch",
-        "title": "General Mills guidance vintage",
-        "screen_link": "#fail48=gpt55",
-        "soundbite": "It counted the beats, then used the wrong guidance vintage.",
-        "why_it_matters": "This backs up TKO with a second convention miss: the model must separate original guidance from later revised guidance before scoring beat or miss."
-      },
-      "pilot": {
-        "ask": "Run a two-week basis-selection and completeness pilot on a sealed finance-agent slice.",
-        "deliverables": [
-          "A 200-task dataset with 120 train, 20 dev, and 60 sealed eval tasks.",
-          "Reference answers with atomic rubrics and expert-adjudication notes.",
-          "Labeled trajectories with tool calls, evidence, output, and cost.",
-          "A versioned verifier and reward specification for convention and coverage failures.",
-          "A decision report comparing base and tuned models on the sealed split."
-        ],
-        "success_gate": "Fifteen-point absolute lift on the sealed slice, paired 95 percent lower bound above zero, improvement across multiple subtypes, no broader regression, and lower cost among correct completions."
-      },
-      "failure_modes": [
-        {
-          "mode": "methodology-mismatch",
-            "label": "Basis selection",
-          "observed_count": 5,
-          "observed_tasks": [1, 7, 9, 32, 48],
-          "product": {
-              "title": "Basis-selection reward pack",
-          "what_we_build": "Tasks where the filing contains the authoritative value and the trace also contains a tempting alternate basis. The verifier checks whether the model follows the requested basis before computing.",
-            "fixes": [
-              "Valuation-basis precedence for merger consideration.",
-              "Base-year anchoring for CAGR tasks.",
-              "Guidance-vintage discipline for beat-or-miss tasks.",
-                "Tax and modeling basis selection."
-            ]
-          },
-          "example_task_ids": [
-            "heldout-snowflake-product-revenue-cagr",
-            "heldout-nvidia-gaap-gross-margin-outlook"
-          ]
-        },
-        {
-          "mode": "partial-answer",
-          "label": "Completeness",
-          "observed_count": 2,
-          "observed_tasks": [15, 45],
-          "product": {
-            "title": "Completeness and omission-control pack",
-            "what_we_build": "Multi-part finance tasks with strict term coverage. The verifier rewards every requested field and penalizes confident partial answers that omit one deal term, security term, or causal window.",
-            "fixes": [
-              "Security summaries that include exact offering size, restrictions, and redemption.",
-              "Merger summaries that include close date, consideration, fractional-share treatment, and delisting.",
-              "Causal-window answers that tie facts to the period the question asks about."
-            ]
-          },
-          "example_task_ids": [
-            "heldout-ansys-synopsys-merger-consideration",
-            "heldout-coinbase-2029-2032-convertible-notes"
-          ]
-        }
+     "mode": "methodology-mismatch",
+     "label": "Basis selection",
+     "observed_count": 5,
+     "observed_tasks": [
+      1,
+      7,
+      9,
+      32,
+      48
+     ],
+     "product": {
+      "title": "Basis-selection reward pack",
+      "what_we_build": "Tasks where the filing contains the authoritative value and the trace also contains a tempting alternate basis. The verifier checks whether the model follows the requested basis before computing. GPT-5.6 Sol reproduced this failure family on day three: the pack trains a discipline that has now outlived a model generation.",
+      "fixes": [
+       "Valuation-basis precedence for merger consideration.",
+       "Base-year anchoring for CAGR tasks.",
+       "Guidance-vintage discipline for beat-or-miss tasks.",
+       "Tax and modeling basis selection."
       ]
+     },
+     "example_task_ids": [
+      "heldout-snowflake-product-revenue-cagr",
+      "heldout-nvidia-gaap-gross-margin-outlook"
+     ]
     },
     {
-      "lab_key": "anthropic",
-      "label": "Anthropic proposal",
-      "model_key": "fable5",
-      "model_label": "Claude Fable 5",
-      "run_tag": "fable5-subset20",
-      "headline": "Start with Delta: facts landed, framing missed.",
-      "thesis": "I would lead Anthropic with Delta. Fable 5 built a strong guidance breakdown, but did not frame EPS guidance as year-over-year growth. The facts landed. The investor framing missed. Zillow is the backup because it shows the same omission pattern in acquisition strategy.",
-      "lead_failure": {
-        "failure_id": "fable5-idx38-partial-answer",
-        "title": "Delta guidance framing",
-        "screen_link": "#fail38=fable5",
-        "soundbite": "Facts landed, framing missed.",
-        "why_it_matters": "This is the kind of miss a finance customer feels. The answer sounds competent, but the decision comparison is incomplete because the required investor framing never gets stated."
-      },
-      "backup_failure": {
-        "failure_id": "fable5-idx45-partial-answer",
-        "title": "Zillow revenue-trend direction",
-        "screen_link": "#fail45=fable5",
-        "soundbite": "It had the acquisition facts and rationale, then missed the trend direction.",
-        "why_it_matters": "Zillow is the backup because it shows the same coverage discipline problem without relying on a benchmark-quality story."
-      },
-      "pilot": {
-        "ask": "Run a two-week framing, coverage, and retrieval pilot on Fable 5's highest observed miss families.",
-        "deliverables": [
-          "A 200-task dataset with 120 train, 20 dev, and 60 sealed eval tasks.",
-          "Reference answers with investor-framing checks and omission-sensitive rubrics.",
-          "Labeled trajectories that mark where facts entered context and where framing was lost.",
-          "A verifier package for completeness, trend direction, evidence retrieval, and basis selection.",
-          "A decision report comparing base and tuned models on the sealed split."
-        ],
-        "success_gate": "Fifteen-point absolute lift on the sealed slice, paired 95 percent lower bound above zero, improvement across coverage and convention subtypes, no retrieval regression, and lower cost among correct completions."
-      },
-      "failure_modes": [
-        {
-          "mode": "partial-answer",
-          "label": "Completeness and framing",
-          "observed_count": 3,
-          "observed_tasks": [15, 38, 45],
-          "product": {
-            "title": "Investor-framing and completeness pack",
-            "what_we_build": "Tasks where the model can find the facts but must preserve the exact investor comparison: year-over-year growth, trend direction, missing term, or causal window.",
-            "fixes": [
-              "Guidance answers that explicitly state the comparison the investor needs.",
-              "Acquisition-strategy answers that tie actions to the requested revenue trend.",
-              "Security-term summaries that do not stop after the salient economics."
-            ]
-          },
-          "example_task_ids": [
-            "heldout-ansys-synopsys-merger-consideration",
-            "heldout-coinbase-2029-2032-convertible-notes"
-          ]
-        },
-        {
-          "mode": "methodology-mismatch",
-          "label": "Basis selection",
-          "observed_count": 3,
-          "observed_tasks": [9, 32, 48],
-          "product": {
-            "title": "Basis-selection eval slice",
-            "what_we_build": "Tasks where multiple conventions are plausible and the model must pick the one requested by the prompt or filing. The rubric scores the decision boundary before the arithmetic.",
-            "fixes": [
-              "Base-year anchoring in CAGR calculations.",
-              "Scenario selection in refinancing math.",
-                "Original versus revised guidance selection."
-            ]
-          },
-          "example_task_ids": [
-            "heldout-snowflake-product-revenue-cagr",
-            "heldout-nvidia-gaap-gross-margin-outlook"
-          ]
-        },
-        {
-          "mode": "retrieval-miss",
-          "label": "Evidence retrieval",
-          "observed_count": 1,
-          "observed_tasks": [1],
-          "product": {
-            "title": "Multi-document retrieval coverage pack",
-            "what_we_build": "Tasks that require more than endpoint retrieval. The verifier checks whether every period or filing needed by the question actually entered context before answer generation.",
-            "fixes": [
-              "Multi-year trend retrieval with every period present.",
-              "Close-status retrieval that combines announcement and closing filings.",
-              "Penalty for answering from a single adjacent source when the prompt requires several."
-            ]
-          },
-          "example_task_ids": [
-            "heldout-hashicorp-ibm-acquisition",
-            "heldout-smartsheet-blackstone-vista-acquisition"
-          ]
-        }
+     "mode": "partial-answer",
+     "label": "Completeness",
+     "observed_count": 2,
+     "observed_tasks": [
+      15,
+      45
+     ],
+     "product": {
+      "title": "Completeness and omission-control pack",
+      "what_we_build": "Multi-part finance tasks with strict term coverage. The verifier rewards every requested field and penalizes confident partial answers that omit one deal term, security term, or causal window.",
+      "fixes": [
+       "Security summaries that include exact offering size, restrictions, and redemption.",
+       "Merger summaries that include close date, consideration, fractional-share treatment, and delisting.",
+       "Causal-window answers that tie facts to the period the question asks about."
       ]
+     },
+     "example_task_ids": [
+      "heldout-ansys-synopsys-merger-consideration",
+      "heldout-coinbase-2029-2032-convertible-notes"
+     ]
     }
-  ]
+   ]
+  },
+  {
+   "lab_key": "anthropic",
+   "label": "Anthropic proposal",
+   "model_key": "fable5",
+   "model_label": "Claude Fable 5",
+   "run_tag": "fable5-subset20",
+   "headline": "Start with Delta: facts landed, framing missed.",
+   "thesis": "I would lead Anthropic with Delta. Fable 5 built a strong guidance breakdown, but did not frame EPS guidance as year-over-year growth. The facts landed. The investor framing missed. Zillow is the backup because it shows the same omission pattern in acquisition strategy.",
+   "lead_failure": {
+    "failure_id": "fable5-idx38-partial-answer",
+    "title": "Delta guidance framing",
+    "screen_link": "#fail38=fable5",
+    "soundbite": "Facts landed, framing missed.",
+    "why_it_matters": "This is the kind of miss a finance customer feels. The answer sounds competent, but the decision comparison is incomplete because the required investor framing never gets stated."
+   },
+   "backup_failure": {
+    "failure_id": "fable5-idx45-partial-answer",
+    "title": "Zillow revenue-trend direction",
+    "screen_link": "#fail45=fable5",
+    "soundbite": "It had the acquisition facts and rationale, then missed the trend direction.",
+    "why_it_matters": "Zillow is the backup because it shows the same coverage discipline problem without relying on a benchmark-quality story."
+   },
+   "pilot": {
+    "ask": "Run a two-week framing, coverage, and retrieval pilot on Fable 5's highest observed miss families.",
+    "deliverables": [
+     "A 200-task dataset with 120 train, 20 dev, and 60 sealed eval tasks.",
+     "Reference answers with investor-framing checks and omission-sensitive rubrics.",
+     "Labeled trajectories that mark where facts entered context and where framing was lost.",
+     "A verifier package for completeness, trend direction, evidence retrieval, and basis selection.",
+     "A decision report comparing base and tuned models on the sealed split."
+    ],
+    "success_gate": "Fifteen-point absolute lift on the sealed slice, paired 95 percent lower bound above zero, improvement across coverage and convention subtypes, no retrieval regression, and lower cost among correct completions."
+   },
+   "failure_modes": [
+    {
+     "mode": "partial-answer",
+     "label": "Completeness and framing",
+     "observed_count": 3,
+     "observed_tasks": [
+      15,
+      38,
+      45
+     ],
+     "product": {
+      "title": "Investor-framing and completeness pack",
+      "what_we_build": "Tasks where the model can find the facts but must preserve the exact investor comparison: year-over-year growth, trend direction, missing term, or causal window.",
+      "fixes": [
+       "Guidance answers that explicitly state the comparison the investor needs.",
+       "Acquisition-strategy answers that tie actions to the requested revenue trend.",
+       "Security-term summaries that do not stop after the salient economics."
+      ]
+     },
+     "example_task_ids": [
+      "heldout-ansys-synopsys-merger-consideration",
+      "heldout-coinbase-2029-2032-convertible-notes"
+     ]
+    },
+    {
+     "mode": "methodology-mismatch",
+     "label": "Basis selection",
+     "observed_count": 3,
+     "observed_tasks": [
+      9,
+      32,
+      48
+     ],
+     "product": {
+      "title": "Basis-selection eval slice",
+      "what_we_build": "Tasks where multiple conventions are plausible and the model must pick the one requested by the prompt or filing. The rubric scores the decision boundary before the arithmetic.",
+      "fixes": [
+       "Base-year anchoring in CAGR calculations.",
+       "Scenario selection in refinancing math.",
+       "Original versus revised guidance selection."
+      ]
+     },
+     "example_task_ids": [
+      "heldout-snowflake-product-revenue-cagr",
+      "heldout-nvidia-gaap-gross-margin-outlook"
+     ]
+    },
+    {
+     "mode": "retrieval-miss",
+     "label": "Evidence retrieval",
+     "observed_count": 1,
+     "observed_tasks": [
+      1
+     ],
+     "product": {
+      "title": "Multi-document retrieval coverage pack",
+      "what_we_build": "Tasks that require more than endpoint retrieval. The verifier checks whether every period or filing needed by the question actually entered context before answer generation.",
+      "fixes": [
+       "Multi-year trend retrieval with every period present.",
+       "Close-status retrieval that combines announcement and closing filings.",
+       "Penalty for answering from a single adjacent source when the prompt requires several."
+      ]
+     },
+     "example_task_ids": [
+      "heldout-hashicorp-ibm-acquisition",
+      "heldout-smartsheet-blackstone-vista-acquisition"
+     ]
+    }
+   ]
+  }
+ ]
 }

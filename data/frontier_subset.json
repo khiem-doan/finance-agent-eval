@@ -1,5 +1,5 @@
 {
-  "note": "Identical 20 tasks, identical grader (gpt-5.4-mini). gpt55 sliced from its full-50 run; fable5/sonnet45 ran the subset directly.",
+  "note": "Identical 20 tasks, identical grader (gpt-5.4-mini). gpt55 sliced from its full-50 run; fable5/gpt56sol ran the subset directly.",
   "subset_indices": [
     0,
     1,
@@ -39,13 +39,13 @@
       "strict": 0.6,
       "mean_partial": 0.812
     },
-    "sonnet45": {
-      "label": "Claude Sonnet 4.5",
-      "run_tag": "claude-subset20",
+    "gpt56sol": {
+      "label": "GPT-5.6 Sol",
+      "run_tag": "gpt56sol-subset20",
       "graded": 20,
-      "passed": 10,
-      "strict": 0.5,
-      "mean_partial": 0.674
+      "passed": 9,
+      "strict": 0.45,
+      "mean_partial": 0.649
     }
   },
   "per_task": [
@@ -55,8 +55,8 @@
       "gpt55_partial": 0.5,
       "fable5_strict": 0,
       "fable5_partial": 0.5,
-      "sonnet45_strict": 0,
-      "sonnet45_partial": 0.5,
+      "gpt56sol_strict": 0,
+      "gpt56sol_partial": 0.5,
       "category": "Market Analysis",
       "question": "How has US Steel addressed its planned merger with Nippton Steel and its effect on its business operations?"
     },
@@ -66,8 +66,8 @@
       "gpt55_partial": 0.778,
       "fable5_strict": 0,
       "fable5_partial": 0.333,
-      "sonnet45_strict": 0,
-      "sonnet45_partial": 0.667,
+      "gpt56sol_strict": 0,
+      "gpt56sol_partial": 0.667,
       "category": "Trends",
       "question": "How has Netflix's (NASDAQ: NFLX) Average Revenue Per Paying User Changed from 2019 to 2024?"
     },
@@ -77,8 +77,8 @@
       "gpt55_partial": 1.0,
       "fable5_strict": 1,
       "fable5_partial": 1.0,
-      "sonnet45_strict": 1,
-      "sonnet45_partial": 1.0,
+      "gpt56sol_strict": 1,
+      "gpt56sol_partial": 1.0,
       "category": "Complex Retrieval",
       "question": "How large was the range (in % terms) for AMD's revenue guidance for Q2 2024, Q3 2024, Q4 2024, and Q1 2025?  Format answer as: \"Q[X] [YEAR]:"
     },
@@ -88,8 +88,8 @@
       "gpt55_partial": 1.0,
       "fable5_strict": 1,
       "fable5_partial": 1.0,
-      "sonnet45_strict": 1,
-      "sonnet45_partial": 1.0,
+      "gpt56sol_strict": 1,
+      "gpt56sol_partial": 1.0,
       "category": "Qualitative Retrieval",
       "question": "Who is the current CFO of Airbnb (NASDAQ: ABNB)?"
     },
@@ -99,8 +99,8 @@
       "gpt55_partial": 0.0,
       "fable5_strict": 1,
       "fable5_partial": 1.0,
-      "sonnet45_strict": 1,
-      "sonnet45_partial": 1.0,
+      "gpt56sol_strict": 0,
+      "gpt56sol_partial": 0.0,
       "category": "Quantitative Retrieval",
       "question": "What was the total consideration cost TKO paid to acquired Endeavor assets measured at transaction close?"
     },
@@ -110,8 +110,8 @@
       "gpt55_partial": 0.333,
       "fable5_strict": 0,
       "fable5_partial": 0.333,
-      "sonnet45_strict": 0,
-      "sonnet45_partial": 0.667,
+      "gpt56sol_strict": 0,
+      "gpt56sol_partial": 0.333,
       "category": "Numerical Reasoning",
       "question": "Calculate the 3 year revenue CAGR for Palantir Technologies."
     },
@@ -121,8 +121,8 @@
       "gpt55_partial": 0.818,
       "fable5_strict": 0,
       "fable5_partial": 0.909,
-      "sonnet45_strict": 0,
-      "sonnet45_partial": 0.818,
+      "gpt56sol_strict": 0,
+      "gpt56sol_partial": 0.818,
       "category": "Complex Retrieval",
       "question": "Summarize the key terms of the Series D mandatory convertible preferred stock (size of offering, closing date, price, liquidation preference"
     },
@@ -132,8 +132,8 @@
       "gpt55_partial": 1.0,
       "fable5_strict": 1,
       "fable5_partial": 1.0,
-      "sonnet45_strict": 1,
-      "sonnet45_partial": 1.0,
+      "gpt56sol_strict": 1,
+      "gpt56sol_partial": 1.0,
       "category": "Qualitative Retrieval",
       "question": "What is Shift4's vendor concentration risk as of Dec 31, 2024? "
     },
@@ -143,8 +143,8 @@
       "gpt55_partial": 1.0,
       "fable5_strict": 1,
       "fable5_partial": 1.0,
-      "sonnet45_strict": 1,
-      "sonnet45_partial": 1.0,
+      "gpt56sol_strict": 1,
+      "gpt56sol_partial": 1.0,
       "category": "Numerical Reasoning",
       "question": "As of March 10, 2025, what is the face value of Salesforce's debt excluding their sustainability notes?"
     },
@@ -154,8 +154,8 @@
       "gpt55_partial": 1.0,
       "fable5_strict": 1,
       "fable5_partial": 1.0,
-      "sonnet45_strict": 1,
-      "sonnet45_partial": 1.0,
+      "gpt56sol_strict": 1,
+      "gpt56sol_partial": 1.0,
       "category": "Numerical Reasoning",
       "question": "As of June 30, 2024, what % of Microsoft's (NASDAQ: MSFT) full-time employees are located outside of the United State? (give the numbers tha"
     },
@@ -165,8 +165,8 @@
       "gpt55_partial": 1.0,
       "fable5_strict": 1,
       "fable5_partial": 1.0,
-      "sonnet45_strict": 0,
-      "sonnet45_partial": 0.0,
+      "gpt56sol_strict": 1,
+      "gpt56sol_partial": 1.0,
       "category": "Financial Modeling",
       "question": "What is the maximum dilutive impact in number of shares of Snapchat's outstanding convertible notes as of 12/31/2024?"
     },
@@ -176,8 +176,8 @@
       "gpt55_partial": 1.0,
       "fable5_strict": 1,
       "fable5_partial": 1.0,
-      "sonnet45_strict": 1,
-      "sonnet45_partial": 1.0,
+      "gpt56sol_strict": 1,
+      "gpt56sol_partial": 1.0,
       "category": "Financial Modeling",
       "question": "Assume BROS grows revenue by 30% CAGR and gross margins compress by 500bps from YE 2024. What is BROS gross profit in 2026? Round answer to "
     },
@@ -187,8 +187,8 @@
       "gpt55_partial": 0.0,
       "fable5_strict": 0,
       "fable5_partial": 0.0,
-      "sonnet45_strict": 0,
-      "sonnet45_partial": 0.0,
+      "gpt56sol_strict": 0,
+      "gpt56sol_partial": 0.0,
       "category": "Adjustments",
       "question": "What would be the impact to net income in dollars and percent if all debt for Boeing in 2024 were refinanced at 3% higher interest rates tha"
     },
@@ -198,8 +198,8 @@
       "gpt55_partial": 1.0,
       "fable5_strict": 1,
       "fable5_partial": 1.0,
-      "sonnet45_strict": 0,
-      "sonnet45_partial": 0.0,
+      "gpt56sol_strict": 0,
+      "gpt56sol_partial": 0.0,
       "category": "Quantitative Retrieval",
       "question": "In fiscal 2024, what percentage of Cloudflare's (NYSE: NET) customers were derived from channel partners?"
     },
@@ -209,8 +209,8 @@
       "gpt55_partial": 1.0,
       "fable5_strict": 1,
       "fable5_partial": 1.0,
-      "sonnet45_strict": 1,
-      "sonnet45_partial": 1.0,
+      "gpt56sol_strict": 1,
+      "gpt56sol_partial": 1.0,
       "category": "Beat or Miss",
       "question": "How did Lyft's Q4'24 Adjusted EBITDA margin (adjusted EBITDA / Gross Bookings) compare to management guidance at midpoint in Q3'24? Express "
     },
@@ -220,8 +220,8 @@
       "gpt55_partial": 1.0,
       "fable5_strict": 0,
       "fable5_partial": 0.833,
-      "sonnet45_strict": 0,
-      "sonnet45_partial": 0.667,
+      "gpt56sol_strict": 0,
+      "gpt56sol_partial": 0.833,
       "category": "Qualitative Retrieval",
       "question": "What financial metrics does Delta Airlines (NYSE: DAL) guide on in its quarterly earnings reports? "
     },
@@ -231,8 +231,8 @@
       "gpt55_partial": 1.0,
       "fable5_strict": 1,
       "fable5_partial": 1.0,
-      "sonnet45_strict": 1,
-      "sonnet45_partial": 1.0,
+      "gpt56sol_strict": 1,
+      "gpt56sol_partial": 1.0,
       "category": "Quantitative Retrieval",
       "question": "In 2024, what was the Average Nights per Booking for Airbnb (NASDAQ: ABNB) in the Asia Pacific region?"
     },
@@ -242,8 +242,8 @@
       "gpt55_partial": 1.0,
       "fable5_strict": 1,
       "fable5_partial": 1.0,
-      "sonnet45_strict": 1,
-      "sonnet45_partial": 1.0,
+      "gpt56sol_strict": 0,
+      "gpt56sol_partial": 0.0,
       "category": "Adjustments",
       "question": "In 2024, what was Airbnb's (NASDAQ: ABNB) adjustment for Stock-based Compensation Expense?"
     },
@@ -253,8 +253,8 @@
       "gpt55_partial": 0.833,
       "fable5_strict": 0,
       "fable5_partial": 0.833,
-      "sonnet45_strict": 0,
-      "sonnet45_partial": 0.167,
+      "gpt56sol_strict": 0,
+      "gpt56sol_partial": 0.333,
       "category": "Market Analysis",
       "question": "As of December 2024, what has been Zillow's (NASDAQ:Z) acquisition strategy over the past 2 years and how does it align with the company's e"
     },
@@ -264,8 +264,8 @@
       "gpt55_partial": 0.75,
       "fable5_strict": 0,
       "fable5_partial": 0.5,
-      "sonnet45_strict": 0,
-      "sonnet45_partial": 0.0,
+      "gpt56sol_strict": 0,
+      "gpt56sol_partial": 0.5,
       "category": "Beat or Miss",
       "question": "How many times has General Mills beaten Adjusted Diluted EPS guidance in the past 2 years and what is the guidance for 2025?"
     }
