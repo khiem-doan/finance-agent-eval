@@ -1,0 +1,71 @@
+{
+  "defects": {
+    "0": {
+      "type": "key",
+      "note": "US Steel stale reference (Dec-2023 framing vs Jun-2025 close)"
+    },
+    "11": {
+      "type": "key",
+      "note": "TSMC Q1'25 guidance midpoint mislabeled as range top; FX 32.9 vs real 32.8"
+    },
+    "14": {
+      "type": "key",
+      "note": "US Steel inventory 'Avg.' key is actually ending inventory (mislabeled)"
+    },
+    "28": {
+      "type": "key",
+      "note": "Spirit TRASM + Adj CASM ex-fuel keys off by 10x; internally self-contradictory"
+    },
+    "41": {
+      "type": "spec",
+      "note": "KO 'competitors' unstated; key silently requires KHC+SJM (packaged foods, not beverage rivals)"
+    },
+    "42": {
+      "type": "spec",
+      "note": "Uber take-rate: checks demand verbatim segment color the question never asks for; model correct"
+    }
+  },
+  "genuine_failures_adjudicated": {
+    "47": {
+      "type": "completeness",
+      "note": "Lemonade: flagged 'high end' check IS a spec defect, but answer omits SBC/capex/shares"
+    },
+    "21": {
+      "type": "model-miss",
+      "note": "Airbnb GBV/night: key triple-verified correct; model FY2022 genuinely wrong"
+    }
+  },
+  "models": {
+    "GPT-5.5": {
+      "run_tag": "gpt55-full",
+      "raw_passed": 33,
+      "raw_graded": 49,
+      "raw_strict": 0.6735,
+      "clean_passed": 33,
+      "clean_graded": 43,
+      "clean_strict": 0.7674,
+      "defect_items_failed": 6
+    },
+    "Claude Fable 5": {
+      "run_tag": "fable5-full",
+      "raw_passed": 31,
+      "raw_graded": 50,
+      "raw_strict": 0.62,
+      "clean_passed": 31,
+      "clean_graded": 44,
+      "clean_strict": 0.7045,
+      "defect_items_failed": 6
+    },
+    "GPT-5.6 Sol": {
+      "run_tag": "gpt56sol-full",
+      "raw_passed": 26,
+      "raw_graded": 49,
+      "raw_strict": 0.5306,
+      "clean_passed": 26,
+      "clean_graded": 43,
+      "clean_strict": 0.6047,
+      "defect_items_failed": 6
+    }
+  },
+  "note": "Adjudicated 6 candidate-defect tasks against primary SEC filings (2026-07-13): 4 confirmed benchmark key/spec defects (idx 11,28,41,42) + 2 pre-known (idx 0,14) excluded as unscoreable; 2 adjudicated as genuine model failures (idx 21,47) kept. Clean-subset = strict over the graded tasks minus the 6 defect items. NOT a full adjudication: the remaining unflagged failures (idx 5,13,24,31,35,46,49) are not yet primary-source verified, so clean-subset is a conservative floor on true performance."
+}

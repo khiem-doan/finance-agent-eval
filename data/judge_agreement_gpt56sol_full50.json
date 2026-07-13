@@ -1,0 +1,388 @@
+{
+  "run": "gpt56sol-full",
+  "n": 47,
+  "strict_agreement": 0.872,
+  "mean_abs_partial_diff": 0.125,
+  "judges": {
+    "primary": "openai/gpt-5.4-mini",
+    "second": "gemini-2.5-flash"
+  },
+  "rows": [
+    {
+      "question": "As of Dec 31, 2024, what was Warner Discovery's (NASDQ: WBD) Total Restructuring",
+      "category": "Quantitative Retrieval",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "As of March 10, 2025, what is the face value of Salesforce's debt excluding thei",
+      "category": "Numerical Reasoning",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "As of December 2024, what has been Zillow's (NASDAQ:Z) acquisition strategy over",
+      "category": "Market Analysis",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.333,
+      "gemini_partial": 0.333
+    },
+    {
+      "question": "In 2024, what was the Average Nights per Booking for Airbnb (NASDAQ: ABNB) in th",
+      "category": "Quantitative Retrieval",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "What financial metrics does Delta Airlines (NYSE: DAL) guide on in its quarterly",
+      "category": "Qualitative Retrieval",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.833,
+      "gemini_partial": 0.833
+    },
+    {
+      "question": "As of June 30, 2024, what % of Microsoft's (NASDAQ: MSFT) full-time employees ar",
+      "category": "Numerical Reasoning",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "Summarize the key terms of the Series D mandatory convertible preferred stock (s",
+      "category": "Complex Retrieval",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.818,
+      "gemini_partial": 0.818
+    },
+    {
+      "question": "As of FY 2024, what are the terms of the Junior Subordinated Debentures in the A",
+      "category": "Qualitative Retrieval",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "Calculate the 3 year revenue CAGR for Palantir Technologies.",
+      "category": "Numerical Reasoning",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.333,
+      "gemini_partial": 0.0
+    },
+    {
+      "question": "For loanDepot (NYSE: LDI) what is the breakdown of loan originations between pur",
+      "category": "Quantitative Retrieval",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.0,
+      "gemini_partial": 0.0
+    },
+    {
+      "question": "Approximate Zillow's Free Cash Flow as CFO - Capex. What is the trend of FCF mar",
+      "category": "Trends",
+      "mini_strict": 0,
+      "gemini_strict": 1,
+      "mini_partial": 0.8,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "How large was the range (in % terms) for AMD's revenue guidance for Q2 2024, Q3 ",
+      "category": "Complex Retrieval",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "How did Lemonade Insurance FY2024 results compare to the prior quarter's full ye",
+      "category": "Beat or Miss",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.429,
+      "gemini_partial": 0.571
+    },
+    {
+      "question": "What price was RDFN acquired at? (include price per share, equity value and ente",
+      "category": "Quantitative Retrieval",
+      "mini_strict": 0,
+      "gemini_strict": 1,
+      "mini_partial": 0.667,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "How did Lyft's Q4'24 Adjusted EBITDA margin (adjusted EBITDA / Gross Bookings) c",
+      "category": "Beat or Miss",
+      "mini_strict": 1,
+      "gemini_strict": 0,
+      "mini_partial": 1.0,
+      "gemini_partial": 0.0
+    },
+    {
+      "question": "Compare the FY24 dividend payout ratio of Coca-Cola (KO) to that of its competit",
+      "category": "Market Analysis",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.6,
+      "gemini_partial": 0.2
+    },
+    {
+      "question": "What are Netflix's (NASDAQ: NFLX) Total Projected Material Cash Requirements for",
+      "category": "Quantitative Retrieval",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "Did FOUR beat or miss its end to end payment volume guidance at midpoint for Q3 ",
+      "category": "Beat or Miss",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.0,
+      "gemini_partial": 0.0
+    },
+    {
+      "question": "Of AMZN, META, or GOOG, who plans to spend the most in capex in 2025?",
+      "category": "Complex Retrieval",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "Did TJX beat or miss its Q4 FY 2025 pre-tax margin guidance? Express result as B",
+      "category": "Beat or Miss",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "Calculate the inventory turnover for US Steel in FY2024.",
+      "category": "Numerical Reasoning",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.333,
+      "gemini_partial": 0.333
+    },
+    {
+      "question": "What was ORCL's effective tax rate for the fiscal year ended 5/31/2024 and how d",
+      "category": "Numerical Reasoning",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "Summarize the regulatory risks Paylocity's (NASDAQ: PCTY) lists in its FY 2024 1",
+      "category": "Qualitative Retrieval",
+      "mini_strict": 1,
+      "gemini_strict": 0,
+      "mini_partial": 1.0,
+      "gemini_partial": 0.875
+    },
+    {
+      "question": "By how much did AMD beat/miss its non-GAAP gross profit guide (implied by its no",
+      "category": "Beat or Miss",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.2,
+      "gemini_partial": 0.2
+    },
+    {
+      "question": "When is production expected to begin in J M Smucker's (NYSE: SJ) new distributio",
+      "category": "Qualitative Retrieval",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "How many times has General Mills beaten Adjusted Diluted EPS guidance in the pas",
+      "category": "Beat or Miss",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.5,
+      "gemini_partial": 0.75
+    },
+    {
+      "question": "What was FND same-store sales growth in Q4 2024?",
+      "category": "Quantitative Retrieval",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "How has US Steel addressed its planned merger with Nippton Steel and its effect ",
+      "category": "Market Analysis",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.5,
+      "gemini_partial": 0.25
+    },
+    {
+      "question": "Does Workday (NASDAQ: WDAY) report a gross or net retention metric in its annual",
+      "category": "Qualitative Retrieval",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "How many common stock shares are outstanding for ABNB? Format \"Class X: X shares",
+      "category": "Quantitative Retrieval",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "Assume BROS grows revenue by 30% CAGR and gross margins compress by 500bps from ",
+      "category": "Financial Modeling",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "For the fiscal year ended 12/31/2023, what was Uber's (NYSE: UBER) largest adjus",
+      "category": "Adjustments",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "List the Operating KPIs Spirit Airlines (NYSE: SAVE) tracked in FY 2024. Provide",
+      "category": "Qualitative Retrieval",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.688,
+      "gemini_partial": 0.688
+    },
+    {
+      "question": "Who is the current CFO of Airbnb (NASDAQ: ABNB)?",
+      "category": "Qualitative Retrieval",
+      "mini_strict": 1,
+      "gemini_strict": 0,
+      "mini_partial": 1.0,
+      "gemini_partial": 0.0
+    },
+    {
+      "question": "In fiscal 2024, what percentage of Cloudflare's (NYSE: NET) customers were deriv",
+      "category": "Quantitative Retrieval",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.0,
+      "gemini_partial": 0.0
+    },
+    {
+      "question": "In 2024, who was Nominated to Serve on BBSI's (NASDAQ: BBSI) Board of Directors?",
+      "category": "Qualitative Retrieval",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "What was ABNB's gross booking per room night (gross booking value divided by num",
+      "category": "Numerical Reasoning",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.0,
+      "gemini_partial": 0.333
+    },
+    {
+      "question": "In 2024, what was Airbnb's (NASDAQ: ABNB) adjustment for Stock-based Compensatio",
+      "category": "Adjustments",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.0,
+      "gemini_partial": 0.0
+    },
+    {
+      "question": "How has Airbnb's Annual Take Rate (Revenue/Gross Booking Value) Trended from FY ",
+      "category": "Trends",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "What is the maximum dilutive impact in number of shares of Snapchat's outstandin",
+      "category": "Financial Modeling",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "What is the total amount of director compensation (in dollars) that was paid to ",
+      "category": "Numerical Reasoning",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "What portion of Uber’s 2024 revenue growth was driven by take-rate expansion ver",
+      "category": "Financial Modeling",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.444,
+      "gemini_partial": 0.667
+    },
+    {
+      "question": "What was the total consideration cost TKO paid to acquired Endeavor assets measu",
+      "category": "Quantitative Retrieval",
+      "mini_strict": 0,
+      "gemini_strict": 1,
+      "mini_partial": 0.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "What would be the impact to net income in dollars and percent if all debt for Bo",
+      "category": "Adjustments",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.0,
+      "gemini_partial": 0.0
+    },
+    {
+      "question": "What is Shift4's vendor concentration risk as of Dec 31, 2024? ",
+      "category": "Qualitative Retrieval",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "How many basis points did MU beat or miss its Q3 2024 GAAP gross margin guidance",
+      "category": "Beat or Miss",
+      "mini_strict": 1,
+      "gemini_strict": 1,
+      "mini_partial": 1.0,
+      "gemini_partial": 1.0
+    },
+    {
+      "question": "Assuming normal March seasonality over last three years, will TSM beat or miss Q",
+      "category": "Financial Modeling",
+      "mini_strict": 0,
+      "gemini_strict": 0,
+      "mini_partial": 0.5,
+      "gemini_partial": 0.8
+    }
+  ]
+}

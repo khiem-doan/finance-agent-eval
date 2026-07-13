@@ -1,29 +1,20 @@
 {
-  "generated_note": "analysis/extract_costs.py over runs/*/manifest.jsonl (latest record per idx). Aggregates include every latest recorded attempt with a recoverable cost: successful completions use final aggregated metadata; failed attempts use recorded turn costs.",
+  "generated_note": "analysis/extract_costs.py over runs/*/manifest.jsonl (latest record per idx) -> harness final_aggregated_metadata. Aggregates over successful completions only.",
   "runs": {
     "gpt55-full": {
-      "n_attempted": 47,
       "n_completed": 29,
-      "n_incomplete": 18,
-      "n_with_cost": 30,
+      "n_with_cost": 29,
       "missing_results": [],
       "methods": [
         "api-reported"
       ],
-      "cost_total_attempted_usd": 9.4249,
-      "cost_mean_attempted_usd": 0.3142,
-      "cost_median_attempted_usd": 0.2292,
-      "cost_total_completed_usd": 8.9163,
-      "cost_mean_completed_usd": 0.3075,
-      "cost_total_incomplete_usd": 0.5087,
-      "n_incomplete_with_cost": 1,
-      "cost_total_usd": 9.4249,
+      "cost_total_usd": 8.9163,
       "cost_mean_usd": 0.3075,
       "cost_median_usd": 0.2279,
       "cost_min_usd": 0.0273,
       "cost_max_usd": 2.1711,
-      "duration_mean_s": 113.2,
-      "duration_median_s": 64.2,
+      "duration_mean_s": 176.0,
+      "duration_median_s": 123.2,
       "per_task": {
         "0": {
           "cost_usd": 0.269429,
@@ -31,9 +22,7 @@
           "out_tokens": 1935,
           "duration_s": 226.297,
           "turns": 14,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "1": {
           "cost_usd": 0.25927,
@@ -41,9 +30,7 @@
           "out_tokens": 1395,
           "duration_s": 123.234,
           "turns": 12,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "2": {
           "cost_usd": 0.157778,
@@ -51,9 +38,7 @@
           "out_tokens": 1043,
           "duration_s": 189.703,
           "turns": 11,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "3": {
           "cost_usd": 0.230502,
@@ -61,29 +46,7 @@
           "out_tokens": 960,
           "duration_s": 51.25,
           "turns": 5,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "4": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 4.5,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "5": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.984,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         },
         "6": {
           "cost_usd": 0.130743,
@@ -91,9 +54,7 @@
           "out_tokens": 681,
           "duration_s": 48.75,
           "turns": 11,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "7": {
           "cost_usd": 1.035736,
@@ -101,19 +62,7 @@
           "out_tokens": 2822,
           "duration_s": 547.922,
           "turns": 43,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "8": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 4.219,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         },
         "9": {
           "cost_usd": 0.258946,
@@ -121,59 +70,7 @@
           "out_tokens": 1332,
           "duration_s": 145.078,
           "turns": 15,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "10": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.375,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "11": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.89,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "12": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.907,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "13": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.281,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "14": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.766,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         },
         "15": {
           "cost_usd": 0.125766,
@@ -181,49 +78,7 @@
           "out_tokens": 1993,
           "duration_s": 100.328,
           "turns": 6,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "16": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.453,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "17": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.187,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "18": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 5.531,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "19": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 6.719,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         },
         "20": {
           "cost_usd": 0.227912,
@@ -231,9 +86,7 @@
           "out_tokens": 1423,
           "duration_s": 144.453,
           "turns": 14,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "21": {
           "cost_usd": 0.376501,
@@ -241,9 +94,7 @@
           "out_tokens": 1407,
           "duration_s": 198.437,
           "turns": 21,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "22": {
           "cost_usd": 0.027276,
@@ -251,9 +102,7 @@
           "out_tokens": 305,
           "duration_s": 20.312,
           "turns": 2,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "23": {
           "cost_usd": 0.325522,
@@ -261,9 +110,7 @@
           "out_tokens": 1316,
           "duration_s": 204.594,
           "turns": 18,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "24": {
           "cost_usd": 0.251165,
@@ -271,9 +118,7 @@
           "out_tokens": 2111,
           "duration_s": 354.36,
           "turns": 14,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "25": {
           "cost_usd": 0.067025,
@@ -281,9 +126,7 @@
           "out_tokens": 639,
           "duration_s": 62.36,
           "turns": 9,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "26": {
           "cost_usd": 0.292926,
@@ -291,29 +134,7 @@
           "out_tokens": 2016,
           "duration_s": 217.734,
           "turns": 17,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "27": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 7.797,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "28": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 7.031,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         },
         "29": {
           "cost_usd": 0.189802,
@@ -321,9 +142,7 @@
           "out_tokens": 1064,
           "duration_s": 90.656,
           "turns": 9,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "30": {
           "cost_usd": 0.090413,
@@ -331,19 +150,7 @@
           "out_tokens": 766,
           "duration_s": 64.25,
           "turns": 7,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "31": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.109,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         },
         "32": {
           "cost_usd": 0.540775,
@@ -351,9 +158,7 @@
           "out_tokens": 2032,
           "duration_s": 713.687,
           "turns": 22,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "33": {
           "cost_usd": 0.124248,
@@ -361,29 +166,7 @@
           "out_tokens": 836,
           "duration_s": 86.437,
           "turns": 12,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "34": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 2.828,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "35": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 2.89,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         },
         "36": {
           "cost_usd": 0.157537,
@@ -391,9 +174,7 @@
           "out_tokens": 1164,
           "duration_s": 145.687,
           "turns": 12,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "37": {
           "cost_usd": 0.10408,
@@ -401,9 +182,7 @@
           "out_tokens": 849,
           "duration_s": 52.313,
           "turns": 5,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "38": {
           "cost_usd": 0.15196,
@@ -411,9 +190,7 @@
           "out_tokens": 1625,
           "duration_s": 101.985,
           "turns": 8,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "39": {
           "cost_usd": 0.217292,
@@ -421,9 +198,7 @@
           "out_tokens": 1447,
           "duration_s": 118.172,
           "turns": 16,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "40": {
           "cost_usd": 0.063383,
@@ -431,9 +206,7 @@
           "out_tokens": 412,
           "duration_s": 25.641,
           "turns": 5,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "41": {
           "cost_usd": 0.33798,
@@ -441,9 +214,7 @@
           "out_tokens": 2197,
           "duration_s": 108.328,
           "turns": 11,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "42": {
           "cost_usd": 0.340753,
@@ -451,9 +222,7 @@
           "out_tokens": 1456,
           "duration_s": 122.266,
           "turns": 16,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "43": {
           "cost_usd": 2.171065,
@@ -461,9 +230,7 @@
           "out_tokens": 2337,
           "duration_s": 469.39,
           "turns": 45,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "44": {
           "cost_usd": 0.049684,
@@ -471,9 +238,7 @@
           "out_tokens": 477,
           "duration_s": 174.672,
           "turns": 6,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "45": {
           "cost_usd": 0.340811,
@@ -481,38 +246,17 @@
           "out_tokens": 1236,
           "duration_s": 196.468,
           "turns": 14,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "48": {
-          "cost_usd": 0.50866,
-          "in_tokens": 50152,
-          "out_tokens": 1197,
-          "duration_s": 141.797,
-          "turns": 19,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         }
       }
     },
     "fable5-subset20": {
-      "n_attempted": 20,
       "n_completed": 20,
-      "n_incomplete": 0,
       "n_with_cost": 20,
       "missing_results": [],
       "methods": [
         "api-reported"
       ],
-      "cost_total_attempted_usd": 20.2095,
-      "cost_mean_attempted_usd": 1.0105,
-      "cost_median_attempted_usd": 0.5382,
-      "cost_total_completed_usd": 20.2095,
-      "cost_mean_completed_usd": 1.0105,
-      "cost_total_incomplete_usd": 0.0,
-      "n_incomplete_with_cost": 0,
       "cost_total_usd": 20.2095,
       "cost_mean_usd": 1.0105,
       "cost_median_usd": 0.5382,
@@ -527,9 +271,7 @@
           "out_tokens": 4759,
           "duration_s": 201.39,
           "turns": 7,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "1": {
           "cost_usd": 0.44828,
@@ -537,9 +279,7 @@
           "out_tokens": 3442,
           "duration_s": 91.188,
           "turns": 5,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "3": {
           "cost_usd": 0.36549,
@@ -547,9 +287,7 @@
           "out_tokens": 2503,
           "duration_s": 38.344,
           "turns": 3,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "6": {
           "cost_usd": 0.164,
@@ -557,9 +295,7 @@
           "out_tokens": 911,
           "duration_s": 22.156,
           "turns": 2,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "7": {
           "cost_usd": 1.26426,
@@ -567,9 +303,7 @@
           "out_tokens": 4691,
           "duration_s": 148.063,
           "turns": 10,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "9": {
           "cost_usd": 0.76879,
@@ -577,9 +311,7 @@
           "out_tokens": 3423,
           "duration_s": 105.438,
           "turns": 9,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "15": {
           "cost_usd": 1.0814,
@@ -587,9 +319,7 @@
           "out_tokens": 4437,
           "duration_s": 169.297,
           "turns": 8,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "20": {
           "cost_usd": 0.56655,
@@ -597,9 +327,7 @@
           "out_tokens": 2236,
           "duration_s": 86.86,
           "turns": 6,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "23": {
           "cost_usd": 0.73848,
@@ -607,9 +335,7 @@
           "out_tokens": 2909,
           "duration_s": 81.281,
           "turns": 7,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "25": {
           "cost_usd": 0.20211,
@@ -617,9 +343,7 @@
           "out_tokens": 953,
           "duration_s": 32.297,
           "turns": 4,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "29": {
           "cost_usd": 0.28093,
@@ -627,9 +351,7 @@
           "out_tokens": 2196,
           "duration_s": 78.672,
           "turns": 4,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "30": {
           "cost_usd": 0.19531,
@@ -637,9 +359,7 @@
           "out_tokens": 1722,
           "duration_s": 27.828,
           "turns": 2,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "32": {
           "cost_usd": 0.44314,
@@ -647,9 +367,7 @@
           "out_tokens": 3193,
           "duration_s": 84.468,
           "turns": 4,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "33": {
           "cost_usd": 0.50975,
@@ -657,9 +375,7 @@
           "out_tokens": 2059,
           "duration_s": 85.688,
           "turns": 6,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "37": {
           "cost_usd": 0.45082,
@@ -667,9 +383,7 @@
           "out_tokens": 2957,
           "duration_s": 46.406,
           "turns": 3,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "38": {
           "cost_usd": 0.73083,
@@ -677,9 +391,7 @@
           "out_tokens": 3311,
           "duration_s": 127.14,
           "turns": 6,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "43": {
           "cost_usd": 0.79786,
@@ -687,9 +399,7 @@
           "out_tokens": 2024,
           "duration_s": 79.734,
           "turns": 7,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "44": {
           "cost_usd": 0.29445,
@@ -697,9 +407,7 @@
           "out_tokens": 1209,
           "duration_s": 46.14,
           "turns": 5,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "45": {
           "cost_usd": 1.09143,
@@ -707,9 +415,7 @@
           "out_tokens": 5371,
           "duration_s": 133.0,
           "turns": 6,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "48": {
           "cost_usd": 8.8594,
@@ -717,35 +423,24 @@
           "out_tokens": 14047,
           "duration_s": 415.0,
           "turns": 20,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         }
       }
     },
     "gemini35-subset20": {
-      "n_attempted": 20,
       "n_completed": 7,
-      "n_incomplete": 13,
-      "n_with_cost": 11,
+      "n_with_cost": 7,
       "missing_results": [],
       "methods": [
         "api-reported"
       ],
-      "cost_total_attempted_usd": 5.4673,
-      "cost_mean_attempted_usd": 0.497,
-      "cost_median_attempted_usd": 0.2039,
-      "cost_total_completed_usd": 1.6426,
-      "cost_mean_completed_usd": 0.2347,
-      "cost_total_incomplete_usd": 3.8247,
-      "n_incomplete_with_cost": 4,
-      "cost_total_usd": 5.4673,
+      "cost_total_usd": 1.6426,
       "cost_mean_usd": 0.2347,
       "cost_median_usd": 0.1546,
       "cost_min_usd": 0.0517,
-      "cost_max_usd": 1.4829,
-      "duration_mean_s": 111.8,
-      "duration_median_s": 39.4,
+      "cost_max_usd": 0.804,
+      "duration_mean_s": 175.4,
+      "duration_median_s": 188.7,
       "per_task": {
         "0": {
           "cost_usd": 0.154619,
@@ -753,9 +448,7 @@
           "out_tokens": 2350,
           "duration_s": 91.187,
           "turns": 15,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "1": {
           "cost_usd": 0.225282,
@@ -763,19 +456,7 @@
           "out_tokens": 3650,
           "duration_s": 223.172,
           "turns": 17,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "3": {
-          "cost_usd": 1.273743,
-          "in_tokens": 563113,
-          "out_tokens": 2858,
-          "duration_s": 233.203,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         },
         "6": {
           "cost_usd": 0.10512,
@@ -783,119 +464,7 @@
           "out_tokens": 900,
           "duration_s": 22.485,
           "turns": 10,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "7": {
-          "cost_usd": 1.482901,
-          "in_tokens": 602120,
-          "out_tokens": 2797,
-          "duration_s": 317.375,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "9": {
-          "cost_usd": 0.958788,
-          "in_tokens": 457223,
-          "out_tokens": 3907,
-          "duration_s": 225.453,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "15": {
-          "cost_usd": 0.109232,
-          "in_tokens": 53974,
-          "out_tokens": 1331,
-          "duration_s": 188.437,
-          "turns": 20,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "20": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 7.172,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "23": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 7.109,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "25": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 6.625,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "29": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.093,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "30": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.0,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "32": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 6.672,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "33": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.547,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "37": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 2.813,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         },
         "38": {
           "cost_usd": 0.804034,
@@ -903,9 +472,7 @@
           "out_tokens": 5959,
           "duration_s": 369.735,
           "turns": 49,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "43": {
           "cost_usd": 0.051727,
@@ -913,9 +480,7 @@
           "out_tokens": 1016,
           "duration_s": 56.25,
           "turns": 6,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "44": {
           "cost_usd": 0.097885,
@@ -923,9 +488,7 @@
           "out_tokens": 1838,
           "duration_s": 188.734,
           "turns": 12,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "45": {
           "cost_usd": 0.203919,
@@ -933,38 +496,17 @@
           "out_tokens": 2993,
           "duration_s": 276.406,
           "turns": 14,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "48": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.234,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         }
       }
     },
     "nano-full": {
-      "n_attempted": 50,
       "n_completed": 50,
-      "n_incomplete": 0,
       "n_with_cost": 50,
       "missing_results": [],
       "methods": [
         "api-reported"
       ],
-      "cost_total_attempted_usd": 0.6634,
-      "cost_mean_attempted_usd": 0.0133,
-      "cost_median_attempted_usd": 0.0054,
-      "cost_total_completed_usd": 0.6634,
-      "cost_mean_completed_usd": 0.0133,
-      "cost_total_incomplete_usd": 0.0,
-      "n_incomplete_with_cost": 0,
       "cost_total_usd": 0.6634,
       "cost_mean_usd": 0.0133,
       "cost_median_usd": 0.0054,
@@ -979,9 +521,7 @@
           "out_tokens": 1745,
           "duration_s": 65.515,
           "turns": 8,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "1": {
           "cost_usd": 0.009753,
@@ -989,9 +529,7 @@
           "out_tokens": 1067,
           "duration_s": 75.735,
           "turns": 8,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "2": {
           "cost_usd": 0.008522,
@@ -999,9 +537,7 @@
           "out_tokens": 926,
           "duration_s": 57.75,
           "turns": 8,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "3": {
           "cost_usd": 0.006812,
@@ -1009,9 +545,7 @@
           "out_tokens": 784,
           "duration_s": 47.531,
           "turns": 4,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "4": {
           "cost_usd": 0.00215,
@@ -1019,9 +553,7 @@
           "out_tokens": 629,
           "duration_s": 22.735,
           "turns": 6,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "5": {
           "cost_usd": 0.00248,
@@ -1029,9 +561,7 @@
           "out_tokens": 681,
           "duration_s": 15.422,
           "turns": 3,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "6": {
           "cost_usd": 0.002917,
@@ -1039,9 +569,7 @@
           "out_tokens": 570,
           "duration_s": 22.078,
           "turns": 6,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "7": {
           "cost_usd": 0.008859,
@@ -1049,9 +577,7 @@
           "out_tokens": 989,
           "duration_s": 83.063,
           "turns": 13,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "8": {
           "cost_usd": 0.008717,
@@ -1059,9 +585,7 @@
           "out_tokens": 1204,
           "duration_s": 62.984,
           "turns": 10,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "9": {
           "cost_usd": 0.004585,
@@ -1069,9 +593,7 @@
           "out_tokens": 968,
           "duration_s": 49.953,
           "turns": 6,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "10": {
           "cost_usd": 0.001655,
@@ -1079,9 +601,7 @@
           "out_tokens": 401,
           "duration_s": 21.422,
           "turns": 4,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "11": {
           "cost_usd": 0.050098,
@@ -1089,9 +609,7 @@
           "out_tokens": 4491,
           "duration_s": 285.344,
           "turns": 16,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "12": {
           "cost_usd": 0.00295,
@@ -1099,9 +617,7 @@
           "out_tokens": 869,
           "duration_s": 51.531,
           "turns": 6,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "13": {
           "cost_usd": 0.021549,
@@ -1109,9 +625,7 @@
           "out_tokens": 5015,
           "duration_s": 269.187,
           "turns": 17,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "14": {
           "cost_usd": 0.005676,
@@ -1119,9 +633,7 @@
           "out_tokens": 1146,
           "duration_s": 64.125,
           "turns": 11,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "15": {
           "cost_usd": 0.011103,
@@ -1129,9 +641,7 @@
           "out_tokens": 3068,
           "duration_s": 249.234,
           "turns": 7,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "16": {
           "cost_usd": 0.004963,
@@ -1139,9 +649,7 @@
           "out_tokens": 1049,
           "duration_s": 58.938,
           "turns": 5,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "17": {
           "cost_usd": 0.007882,
@@ -1149,9 +657,7 @@
           "out_tokens": 1549,
           "duration_s": 118.609,
           "turns": 13,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "18": {
           "cost_usd": 0.022118,
@@ -1159,9 +665,7 @@
           "out_tokens": 2180,
           "duration_s": 223.344,
           "turns": 27,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "19": {
           "cost_usd": 0.003284,
@@ -1169,9 +673,7 @@
           "out_tokens": 752,
           "duration_s": 33.469,
           "turns": 7,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "20": {
           "cost_usd": 0.006906,
@@ -1179,9 +681,7 @@
           "out_tokens": 1488,
           "duration_s": 82.844,
           "turns": 10,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "21": {
           "cost_usd": 0.00505,
@@ -1189,9 +689,7 @@
           "out_tokens": 1569,
           "duration_s": 87.063,
           "turns": 6,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "22": {
           "cost_usd": 0.003248,
@@ -1199,9 +697,7 @@
           "out_tokens": 1080,
           "duration_s": 74.782,
           "turns": 6,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "23": {
           "cost_usd": 0.009685,
@@ -1209,9 +705,7 @@
           "out_tokens": 1104,
           "duration_s": 106.704,
           "turns": 12,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "24": {
           "cost_usd": 0.033347,
@@ -1219,9 +713,7 @@
           "out_tokens": 4074,
           "duration_s": 374.265,
           "turns": 37,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "25": {
           "cost_usd": 0.001534,
@@ -1229,9 +721,7 @@
           "out_tokens": 548,
           "duration_s": 27.187,
           "turns": 4,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "26": {
           "cost_usd": 0.01427,
@@ -1239,9 +729,7 @@
           "out_tokens": 4252,
           "duration_s": 218.921,
           "turns": 17,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "27": {
           "cost_usd": 0.047597,
@@ -1249,9 +737,7 @@
           "out_tokens": 3412,
           "duration_s": 272.5,
           "turns": 45,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "28": {
           "cost_usd": 0.020578,
@@ -1259,9 +745,7 @@
           "out_tokens": 2235,
           "duration_s": 185.125,
           "turns": 27,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "29": {
           "cost_usd": 0.003845,
@@ -1269,9 +753,7 @@
           "out_tokens": 920,
           "duration_s": 76.704,
           "turns": 5,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "30": {
           "cost_usd": 0.002985,
@@ -1279,9 +761,7 @@
           "out_tokens": 718,
           "duration_s": 36.469,
           "turns": 5,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "31": {
           "cost_usd": 0.003189,
@@ -1289,9 +769,7 @@
           "out_tokens": 638,
           "duration_s": 36.219,
           "turns": 4,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "32": {
           "cost_usd": 0.004989,
@@ -1299,9 +777,7 @@
           "out_tokens": 1092,
           "duration_s": 59.656,
           "turns": 5,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "33": {
           "cost_usd": 0.003855,
@@ -1309,9 +785,7 @@
           "out_tokens": 1019,
           "duration_s": 81.282,
           "turns": 7,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "34": {
           "cost_usd": 0.004768,
@@ -1319,9 +793,7 @@
           "out_tokens": 1114,
           "duration_s": 89.218,
           "turns": 9,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "35": {
           "cost_usd": 0.012418,
@@ -1329,9 +801,7 @@
           "out_tokens": 1219,
           "duration_s": 87.016,
           "turns": 14,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "36": {
           "cost_usd": 0.002369,
@@ -1339,9 +809,7 @@
           "out_tokens": 628,
           "duration_s": 57.937,
           "turns": 6,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "37": {
           "cost_usd": 0.002547,
@@ -1349,9 +817,7 @@
           "out_tokens": 631,
           "duration_s": 16.156,
           "turns": 2,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "38": {
           "cost_usd": 0.004998,
@@ -1359,9 +825,7 @@
           "out_tokens": 1000,
           "duration_s": 116.859,
           "turns": 7,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "39": {
           "cost_usd": 0.003,
@@ -1369,9 +833,7 @@
           "out_tokens": 702,
           "duration_s": 44.906,
           "turns": 6,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "40": {
           "cost_usd": 0.001777,
@@ -1379,9 +841,7 @@
           "out_tokens": 369,
           "duration_s": 14.187,
           "turns": 3,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "41": {
           "cost_usd": 0.016247,
@@ -1389,9 +849,7 @@
           "out_tokens": 1692,
           "duration_s": 129.313,
           "turns": 12,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "42": {
           "cost_usd": 0.00937,
@@ -1399,9 +857,7 @@
           "out_tokens": 1785,
           "duration_s": 120.141,
           "turns": 11,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "43": {
           "cost_usd": 0.001837,
@@ -1409,9 +865,7 @@
           "out_tokens": 518,
           "duration_s": 25.703,
           "turns": 5,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "44": {
           "cost_usd": 0.001924,
@@ -1419,9 +873,7 @@
           "out_tokens": 553,
           "duration_s": 22.016,
           "turns": 5,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "45": {
           "cost_usd": 0.011606,
@@ -1429,9 +881,7 @@
           "out_tokens": 2820,
           "duration_s": 127.297,
           "turns": 8,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "46": {
           "cost_usd": 0.003283,
@@ -1439,9 +889,7 @@
           "out_tokens": 900,
           "duration_s": 32.172,
           "turns": 5,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "47": {
           "cost_usd": 0.032747,
@@ -1449,9 +897,7 @@
           "out_tokens": 3546,
           "duration_s": 253.047,
           "turns": 23,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "48": {
           "cost_usd": 0.026838,
@@ -1459,9 +905,7 @@
           "out_tokens": 1950,
           "duration_s": 179.781,
           "turns": 13,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "49": {
           "cost_usd": 0.174433,
@@ -1469,28 +913,17 @@
           "out_tokens": 8925,
           "duration_s": 561.453,
           "turns": 37,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         }
       }
     },
     "claude-subset20": {
-      "n_attempted": 20,
       "n_completed": 20,
-      "n_incomplete": 0,
       "n_with_cost": 20,
       "missing_results": [],
       "methods": [
         "api-reported"
       ],
-      "cost_total_attempted_usd": 3.0975,
-      "cost_mean_attempted_usd": 0.1549,
-      "cost_median_attempted_usd": 0.105,
-      "cost_total_completed_usd": 3.0975,
-      "cost_mean_completed_usd": 0.1549,
-      "cost_total_incomplete_usd": 0.0,
-      "n_incomplete_with_cost": 0,
       "cost_total_usd": 3.0975,
       "cost_mean_usd": 0.1549,
       "cost_median_usd": 0.105,
@@ -1505,9 +938,7 @@
           "out_tokens": 4878,
           "duration_s": 139.437,
           "turns": 13,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "1": {
           "cost_usd": 0.093855,
@@ -1515,9 +946,7 @@
           "out_tokens": 3495,
           "duration_s": 139.5,
           "turns": 4,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "3": {
           "cost_usd": 0.269017,
@@ -1525,9 +954,7 @@
           "out_tokens": 3657,
           "duration_s": 90.437,
           "turns": 11,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "6": {
           "cost_usd": 0.049684,
@@ -1535,9 +962,7 @@
           "out_tokens": 1173,
           "duration_s": 23.109,
           "turns": 4,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "7": {
           "cost_usd": 0.102949,
@@ -1545,9 +970,7 @@
           "out_tokens": 2276,
           "duration_s": 101.516,
           "turns": 12,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "9": {
           "cost_usd": 0.114654,
@@ -1555,9 +978,7 @@
           "out_tokens": 2448,
           "duration_s": 83.0,
           "turns": 10,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "15": {
           "cost_usd": 0.084484,
@@ -1565,9 +986,7 @@
           "out_tokens": 2736,
           "duration_s": 106.922,
           "turns": 6,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "20": {
           "cost_usd": 0.065297,
@@ -1575,9 +994,7 @@
           "out_tokens": 1971,
           "duration_s": 117.156,
           "turns": 6,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "23": {
           "cost_usd": 0.101951,
@@ -1585,9 +1002,7 @@
           "out_tokens": 1862,
           "duration_s": 74.5,
           "turns": 7,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "25": {
           "cost_usd": 0.039416,
@@ -1595,9 +1010,7 @@
           "out_tokens": 1008,
           "duration_s": 36.328,
           "turns": 4,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "29": {
           "cost_usd": 0.060076,
@@ -1605,9 +1018,7 @@
           "out_tokens": 1917,
           "duration_s": 79.172,
           "turns": 5,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "30": {
           "cost_usd": 0.217274,
@@ -1615,9 +1026,7 @@
           "out_tokens": 3365,
           "duration_s": 102.531,
           "turns": 14,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "32": {
           "cost_usd": 0.124988,
@@ -1625,9 +1034,7 @@
           "out_tokens": 3721,
           "duration_s": 158.797,
           "turns": 15,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "33": {
           "cost_usd": 0.367242,
@@ -1635,9 +1042,7 @@
           "out_tokens": 4666,
           "duration_s": 223.89,
           "turns": 30,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "37": {
           "cost_usd": 0.107133,
@@ -1645,9 +1050,7 @@
           "out_tokens": 2181,
           "duration_s": 65.516,
           "turns": 8,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "38": {
           "cost_usd": 0.305434,
@@ -1655,9 +1058,7 @@
           "out_tokens": 4722,
           "duration_s": 233.39,
           "turns": 17,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "43": {
           "cost_usd": 0.041343,
@@ -1665,9 +1066,7 @@
           "out_tokens": 1172,
           "duration_s": 45.234,
           "turns": 5,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "44": {
           "cost_usd": 0.05122,
@@ -1675,9 +1074,7 @@
           "out_tokens": 1379,
           "duration_s": 60.828,
           "turns": 6,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "45": {
           "cost_usd": 0.332394,
@@ -1685,9 +1082,7 @@
           "out_tokens": 5266,
           "duration_s": 147.812,
           "turns": 12,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "48": {
           "cost_usd": 0.295324,
@@ -1695,35 +1090,24 @@
           "out_tokens": 5637,
           "duration_s": 185.109,
           "turns": 11,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         }
       }
     },
     "geminipro-probe15": {
-      "n_attempted": 15,
       "n_completed": 14,
-      "n_incomplete": 1,
-      "n_with_cost": 15,
+      "n_with_cost": 14,
       "missing_results": [],
       "methods": [
         "api-reported"
       ],
-      "cost_total_attempted_usd": 2.8142,
-      "cost_mean_attempted_usd": 0.1876,
-      "cost_median_attempted_usd": 0.1382,
-      "cost_total_completed_usd": 2.5296,
-      "cost_mean_completed_usd": 0.1807,
-      "cost_total_incomplete_usd": 0.2846,
-      "n_incomplete_with_cost": 1,
-      "cost_total_usd": 2.8142,
+      "cost_total_usd": 2.5296,
       "cost_mean_usd": 0.1807,
       "cost_median_usd": 0.126,
       "cost_min_usd": 0.0151,
       "cost_max_usd": 0.6928,
-      "duration_mean_s": 133.5,
-      "duration_median_s": 93.3,
+      "duration_mean_s": 128.6,
+      "duration_median_s": 86.1,
       "per_task": {
         "0": {
           "cost_usd": 0.0984,
@@ -1731,9 +1115,7 @@
           "out_tokens": 1665,
           "duration_s": 69.75,
           "turns": 9,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "1": {
           "cost_usd": 0.138205,
@@ -1741,9 +1123,7 @@
           "out_tokens": 2343,
           "duration_s": 107.265,
           "turns": 17,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "2": {
           "cost_usd": 0.019346,
@@ -1751,9 +1131,7 @@
           "out_tokens": 526,
           "duration_s": 16.328,
           "turns": 2,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "3": {
           "cost_usd": 0.017416,
@@ -1761,9 +1139,7 @@
           "out_tokens": 202,
           "duration_s": 13.703,
           "turns": 2,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "6": {
           "cost_usd": 0.016303,
@@ -1771,9 +1147,7 @@
           "out_tokens": 612,
           "duration_s": 13.328,
           "turns": 3,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "8": {
           "cost_usd": 0.142905,
@@ -1781,9 +1155,7 @@
           "out_tokens": 1261,
           "duration_s": 138.125,
           "turns": 10,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "10": {
           "cost_usd": 0.351164,
@@ -1791,9 +1163,7 @@
           "out_tokens": 2283,
           "duration_s": 242.985,
           "turns": 15,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "11": {
           "cost_usd": 0.14117,
@@ -1801,9 +1171,7 @@
           "out_tokens": 2272,
           "duration_s": 93.266,
           "turns": 8,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "12": {
           "cost_usd": 0.309022,
@@ -1811,9 +1179,7 @@
           "out_tokens": 1293,
           "duration_s": 196.36,
           "turns": 24,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "18": {
           "cost_usd": 0.091363,
@@ -1821,9 +1187,7 @@
           "out_tokens": 1326,
           "duration_s": 78.922,
           "turns": 8,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "22": {
           "cost_usd": 0.015095,
@@ -1831,9 +1195,7 @@
           "out_tokens": 365,
           "duration_s": 13.125,
           "turns": 2,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "30": {
           "cost_usd": 0.113732,
@@ -1841,9 +1203,7 @@
           "out_tokens": 1027,
           "duration_s": 73.344,
           "turns": 10,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "39": {
           "cost_usd": 0.692801,
@@ -1851,19 +1211,7 @@
           "out_tokens": 5417,
           "duration_s": 485.531,
           "turns": 35,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "46": {
-          "cost_usd": 0.284631,
-          "in_tokens": 36292,
-          "out_tokens": 370,
-          "duration_s": 200.985,
-          "turns": 13,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         },
         "47": {
           "cost_usd": 0.382678,
@@ -1871,36 +1219,25 @@
           "out_tokens": 4244,
           "duration_s": 258.953,
           "turns": 20,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         }
       }
     },
     "gptoss-paid": {
-      "n_attempted": 50,
       "n_completed": 8,
-      "n_incomplete": 42,
-      "n_with_cost": 26,
+      "n_with_cost": 8,
       "missing_results": [],
       "methods": [
         "api-reported",
         "tokens x list price (openrouter catalog (live))"
       ],
-      "cost_total_attempted_usd": 0.557,
-      "cost_mean_attempted_usd": 0.0214,
-      "cost_median_attempted_usd": 0.0155,
-      "cost_total_completed_usd": 0.0307,
-      "cost_mean_completed_usd": 0.0038,
-      "cost_total_incomplete_usd": 0.5263,
-      "n_incomplete_with_cost": 18,
-      "cost_total_usd": 0.557,
+      "cost_total_usd": 0.0307,
       "cost_mean_usd": 0.0038,
       "cost_median_usd": 0.0025,
       "cost_min_usd": 0.0004,
-      "cost_max_usd": 0.0621,
-      "duration_mean_s": 126.7,
-      "duration_median_s": 38.5,
+      "cost_max_usd": 0.0093,
+      "duration_mean_s": 85.1,
+      "duration_median_s": 84.5,
       "per_task": {
         "0": {
           "cost_usd": 0.001371,
@@ -1908,19 +1245,7 @@
           "out_tokens": 1562,
           "duration_s": 69.125,
           "turns": 7,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "tokens x list price (openrouter catalog (live))",
-          "outcome": "success"
-        },
-        "1": {
-          "cost_usd": 0.055784,
-          "in_tokens": 1546035,
-          "out_tokens": 68476,
-          "duration_s": 406.344,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "tokens x list price (openrouter catalog (live))"
         },
         "2": {
           "cost_usd": 0.00039,
@@ -1928,9 +1253,7 @@
           "out_tokens": 987,
           "duration_s": 115.094,
           "turns": 13,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "3": {
           "cost_usd": 0.006082,
@@ -1938,19 +1261,7 @@
           "out_tokens": 2305,
           "duration_s": 93.047,
           "turns": 16,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "tokens x list price (openrouter catalog (live))",
-          "outcome": "success"
-        },
-        "4": {
-          "cost_usd": 0.03893,
-          "in_tokens": 1216414,
-          "out_tokens": 12368,
-          "duration_s": 261.125,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "tokens x list price (openrouter catalog (live))"
         },
         "5": {
           "cost_usd": 0.001988,
@@ -1958,9 +1269,7 @@
           "out_tokens": 775,
           "duration_s": 48.984,
           "turns": 14,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "6": {
           "cost_usd": 0.00931,
@@ -1968,19 +1277,7 @@
           "out_tokens": 1482,
           "duration_s": 81.703,
           "turns": 18,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "tokens x list price (openrouter catalog (live))",
-          "outcome": "success"
-        },
-        "7": {
-          "cost_usd": 0.006251,
-          "in_tokens": 223907,
-          "out_tokens": 1492,
-          "duration_s": 113.578,
-          "turns": 25,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "tokens x list price (openrouter catalog (live))"
         },
         "8": {
           "cost_usd": 0.00256,
@@ -1988,9 +1285,7 @@
           "out_tokens": 918,
           "duration_s": 38.453,
           "turns": 9,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "tokens x list price (openrouter catalog (live))",
-          "outcome": "success"
+          "method": "tokens x list price (openrouter catalog (live))"
         },
         "9": {
           "cost_usd": 0.006602,
@@ -1998,9 +1293,7 @@
           "out_tokens": 6871,
           "duration_s": 146.891,
           "turns": 21,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "10": {
           "cost_usd": 0.002421,
@@ -2008,425 +1301,24 @@
           "out_tokens": 1016,
           "duration_s": 87.375,
           "turns": 11,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "tokens x list price (openrouter catalog (live))",
-          "outcome": "success"
-        },
-        "11": {
-          "cost_usd": 0.027089,
-          "in_tokens": 1364391,
-          "out_tokens": 18742,
-          "duration_s": 328.063,
-          "turns": 38,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "12": {
-          "cost_usd": 0.0368,
-          "in_tokens": 1025303,
-          "out_tokens": 35738,
-          "duration_s": 433.562,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "13": {
-          "cost_usd": 0.056848,
-          "in_tokens": 1555762,
-          "out_tokens": 4672,
-          "duration_s": 423.437,
-          "turns": 50,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "tokens x list price (openrouter catalog (live))",
-          "outcome": "fail"
-        },
-        "14": {
-          "cost_usd": 0.01358,
-          "in_tokens": 589222,
-          "out_tokens": 5352,
-          "duration_s": 296.937,
-          "turns": 36,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "15": {
-          "cost_usd": 0.006772,
-          "in_tokens": 225514,
-          "out_tokens": 2987,
-          "duration_s": 120.844,
-          "turns": 23,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "16": {
-          "cost_usd": 0.028345,
-          "in_tokens": 1115041,
-          "out_tokens": 33842,
-          "duration_s": 342.391,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "17": {
-          "cost_usd": 0.010794,
-          "in_tokens": 406451,
-          "out_tokens": 3412,
-          "duration_s": 198.219,
-          "turns": 29,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "18": {
-          "cost_usd": 0.022615,
-          "in_tokens": 1592663,
-          "out_tokens": 5527,
-          "duration_s": 341.266,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "19": {
-          "cost_usd": 0.017481,
-          "in_tokens": 885685,
-          "out_tokens": 5033,
-          "duration_s": 336.797,
-          "turns": 39,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "20": {
-          "cost_usd": 0.062115,
-          "in_tokens": 1783480,
-          "out_tokens": 61480,
-          "duration_s": 361.594,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "21": {
-          "cost_usd": 0.017361,
-          "in_tokens": 1208277,
-          "out_tokens": 9849,
-          "duration_s": 451.156,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "22": {
-          "cost_usd": 0.001785,
-          "in_tokens": 67781,
-          "out_tokens": 498,
-          "duration_s": 28.969,
-          "turns": 13,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "23": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 38.578,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "24": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.812,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "25": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.531,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "26": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.703,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "27": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.734,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "28": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.703,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "29": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 4.125,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "30": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.532,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "31": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.625,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "32": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.703,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "33": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.172,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "34": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.234,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "35": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.157,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "36": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.203,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "37": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.109,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "38": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.125,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "39": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 6.719,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "40": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 6.469,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "41": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 2.984,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "42": {
-          "cost_usd": 0.054614,
-          "in_tokens": 1929535,
-          "out_tokens": 40163,
-          "duration_s": 404.875,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "43": {
-          "cost_usd": 0.035375,
-          "in_tokens": 1417003,
-          "out_tokens": 5990,
-          "duration_s": 372.313,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "44": {
-          "cost_usd": 0.033758,
-          "in_tokens": 1078781,
-          "out_tokens": 10756,
-          "duration_s": 294.922,
-          "turns": 47,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "45": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 6.797,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "46": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 7.015,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "47": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 7.532,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "48": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 6.422,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "49": {
-          "cost_usd": null,
-          "in_tokens": null,
-          "out_tokens": null,
-          "duration_s": 3.172,
-          "turns": 1,
-          "cost_source": "sum-of-recorded-turn-costs",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "tokens x list price (openrouter catalog (live))"
         }
       }
     },
     "gemini-or-full": {
-      "n_attempted": 50,
       "n_completed": 25,
-      "n_incomplete": 25,
-      "n_with_cost": 50,
+      "n_with_cost": 25,
       "missing_results": [],
       "methods": [
         "api-reported"
       ],
-      "cost_total_attempted_usd": 4.9025,
-      "cost_mean_attempted_usd": 0.098,
-      "cost_median_attempted_usd": 0.056,
-      "cost_total_completed_usd": 1.2553,
-      "cost_mean_completed_usd": 0.0502,
-      "cost_total_incomplete_usd": 3.6472,
-      "n_incomplete_with_cost": 25,
-      "cost_total_usd": 4.9025,
+      "cost_total_usd": 1.2553,
       "cost_mean_usd": 0.0502,
       "cost_median_usd": 0.0296,
       "cost_min_usd": 0.0046,
-      "cost_max_usd": 0.5267,
-      "duration_mean_s": 357.2,
-      "duration_median_s": 95.4,
+      "cost_max_usd": 0.2669,
+      "duration_mean_s": 89.2,
+      "duration_median_s": 74.6,
       "per_task": {
         "0": {
           "cost_usd": 0.011796,
@@ -2434,19 +1326,7 @@
           "out_tokens": 2950,
           "duration_s": 29.64,
           "turns": 6,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "1": {
-          "cost_usd": 0.096925,
-          "in_tokens": 132066,
-          "out_tokens": 4654,
-          "duration_s": 140.906,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         },
         "2": {
           "cost_usd": 0.021227,
@@ -2454,9 +1334,7 @@
           "out_tokens": 1684,
           "duration_s": 38.468,
           "turns": 9,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "3": {
           "cost_usd": 0.037112,
@@ -2464,9 +1342,7 @@
           "out_tokens": 2530,
           "duration_s": 98.0,
           "turns": 10,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "4": {
           "cost_usd": 0.007729,
@@ -2474,29 +1350,7 @@
           "out_tokens": 1210,
           "duration_s": 14.015,
           "turns": 4,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "5": {
-          "cost_usd": 0.479645,
-          "in_tokens": 1141996,
-          "out_tokens": 1911,
-          "duration_s": 230.735,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "6": {
-          "cost_usd": 0.057293,
-          "in_tokens": 143964,
-          "out_tokens": 2733,
-          "duration_s": 62.281,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         },
         "7": {
           "cost_usd": 0.051422,
@@ -2504,19 +1358,7 @@
           "out_tokens": 2411,
           "duration_s": 84.078,
           "turns": 16,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "8": {
-          "cost_usd": 0.039659,
-          "in_tokens": 53899,
-          "out_tokens": 3074,
-          "duration_s": 62.172,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         },
         "9": {
           "cost_usd": 0.010887,
@@ -2524,19 +1366,7 @@
           "out_tokens": 1041,
           "duration_s": 24.922,
           "turns": 6,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "10": {
-          "cost_usd": 0.154114,
-          "in_tokens": 161571,
-          "out_tokens": 1996,
-          "duration_s": 290.094,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         },
         "11": {
           "cost_usd": 0.26693,
@@ -2544,9 +1374,7 @@
           "out_tokens": 9967,
           "duration_s": 259.235,
           "turns": 43,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "12": {
           "cost_usd": 0.05653,
@@ -2554,19 +1382,7 @@
           "out_tokens": 2396,
           "duration_s": 116.812,
           "turns": 28,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "13": {
-          "cost_usd": 0.099004,
-          "in_tokens": 177459,
-          "out_tokens": 4881,
-          "duration_s": 128.578,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         },
         "14": {
           "cost_usd": 0.029559,
@@ -2574,9 +1390,7 @@
           "out_tokens": 1853,
           "duration_s": 56.843,
           "turns": 8,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "15": {
           "cost_usd": 0.017251,
@@ -2584,19 +1398,7 @@
           "out_tokens": 2776,
           "duration_s": 29.031,
           "turns": 9,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "16": {
-          "cost_usd": 0.280682,
-          "in_tokens": 833953,
-          "out_tokens": 3740,
-          "duration_s": 118.969,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         },
         "17": {
           "cost_usd": 0.00829,
@@ -2604,19 +1406,7 @@
           "out_tokens": 1192,
           "duration_s": 15.796,
           "turns": 4,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "18": {
-          "cost_usd": 0.238322,
-          "in_tokens": 600448,
-          "out_tokens": 550,
-          "duration_s": 94.25,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         },
         "19": {
           "cost_usd": 0.101613,
@@ -2624,9 +1414,7 @@
           "out_tokens": 4042,
           "duration_s": 219.422,
           "turns": 34,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "20": {
           "cost_usd": 0.064444,
@@ -2634,9 +1422,7 @@
           "out_tokens": 1463,
           "duration_s": 117.531,
           "turns": 16,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "21": {
           "cost_usd": 0.14225,
@@ -2644,59 +1430,7 @@
           "out_tokens": 2923,
           "duration_s": 224.0,
           "turns": 39,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "22": {
-          "cost_usd": 0.031221,
-          "in_tokens": 52823,
-          "out_tokens": 2946,
-          "duration_s": 12482.094,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "23": {
-          "cost_usd": 0.122866,
-          "in_tokens": 306070,
-          "out_tokens": 3332,
-          "duration_s": 101.343,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "24": {
-          "cost_usd": 0.114979,
-          "in_tokens": 100629,
-          "out_tokens": 4228,
-          "duration_s": 178.031,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "25": {
-          "cost_usd": 0.159019,
-          "in_tokens": 322609,
-          "out_tokens": 500,
-          "duration_s": 117.031,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "26": {
-          "cost_usd": 0.156187,
-          "in_tokens": 187662,
-          "out_tokens": 3048,
-          "duration_s": 273.0,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         },
         "27": {
           "cost_usd": 0.086201,
@@ -2704,9 +1438,7 @@
           "out_tokens": 2264,
           "duration_s": 203.343,
           "turns": 21,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "28": {
           "cost_usd": 0.016799,
@@ -2714,9 +1446,7 @@
           "out_tokens": 1136,
           "duration_s": 48.485,
           "turns": 11,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "29": {
           "cost_usd": 0.009643,
@@ -2724,19 +1454,7 @@
           "out_tokens": 1973,
           "duration_s": 50.828,
           "turns": 4,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "30": {
-          "cost_usd": 0.055419,
-          "in_tokens": 59704,
-          "out_tokens": 3200,
-          "duration_s": 101.922,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         },
         "31": {
           "cost_usd": 0.074622,
@@ -2744,69 +1462,7 @@
           "out_tokens": 4168,
           "duration_s": 118.688,
           "turns": 20,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "32": {
-          "cost_usd": 0.066689,
-          "in_tokens": 107538,
-          "out_tokens": 3360,
-          "duration_s": 100.156,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "33": {
-          "cost_usd": 0.032187,
-          "in_tokens": 50362,
-          "out_tokens": 2199,
-          "duration_s": 78.547,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "34": {
-          "cost_usd": 0.08772,
-          "in_tokens": 253882,
-          "out_tokens": 2514,
-          "duration_s": 83.015,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "35": {
-          "cost_usd": 0.037987,
-          "in_tokens": 61885,
-          "out_tokens": 3422,
-          "duration_s": 62.172,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "36": {
-          "cost_usd": 0.261444,
-          "in_tokens": 633719,
-          "out_tokens": 2873,
-          "duration_s": 177.281,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "37": {
-          "cost_usd": 0.029659,
-          "in_tokens": 44591,
-          "out_tokens": 1895,
-          "duration_s": 74.657,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         },
         "38": {
           "cost_usd": 0.028781,
@@ -2814,39 +1470,7 @@
           "out_tokens": 4592,
           "duration_s": 75.625,
           "turns": 14,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "39": {
-          "cost_usd": 0.048999,
-          "in_tokens": 80517,
-          "out_tokens": 3127,
-          "duration_s": 91.625,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "40": {
-          "cost_usd": 0.326726,
-          "in_tokens": 859815,
-          "out_tokens": 2640,
-          "duration_s": 188.171,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "41": {
-          "cost_usd": 0.526654,
-          "in_tokens": 1651924,
-          "out_tokens": 4013,
-          "duration_s": 210.64,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         },
         "42": {
           "cost_usd": 0.046278,
@@ -2854,9 +1478,7 @@
           "out_tokens": 1460,
           "duration_s": 74.609,
           "turns": 16,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "43": {
           "cost_usd": 0.035131,
@@ -2864,9 +1486,7 @@
           "out_tokens": 2627,
           "duration_s": 154.204,
           "turns": 15,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "44": {
           "cost_usd": 0.004605,
@@ -2874,9 +1494,7 @@
           "out_tokens": 506,
           "duration_s": 10.765,
           "turns": 4,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "45": {
           "cost_usd": 0.026091,
@@ -2884,29 +1502,7 @@
           "out_tokens": 4909,
           "duration_s": 45.172,
           "turns": 8,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
-        },
-        "46": {
-          "cost_usd": 0.089224,
-          "in_tokens": 218668,
-          "out_tokens": 3563,
-          "duration_s": 94.75,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
-        },
-        "47": {
-          "cost_usd": 0.05462,
-          "in_tokens": 113544,
-          "out_tokens": 2656,
-          "duration_s": 86.484,
-          "turns": 50,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "fail"
+          "method": "api-reported"
         },
         "48": {
           "cost_usd": 0.012927,
@@ -2914,9 +1510,7 @@
           "out_tokens": 1398,
           "duration_s": 24.281,
           "turns": 5,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "49": {
           "cost_usd": 0.087135,
@@ -2924,28 +1518,17 @@
           "out_tokens": 3579,
           "duration_s": 96.125,
           "turns": 11,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         }
       }
     },
     "gpt56sol-subset20": {
-      "n_attempted": 20,
       "n_completed": 20,
-      "n_incomplete": 0,
       "n_with_cost": 20,
       "missing_results": [],
       "methods": [
         "api-reported"
       ],
-      "cost_total_attempted_usd": 5.3829,
-      "cost_mean_attempted_usd": 0.2691,
-      "cost_median_attempted_usd": 0.2352,
-      "cost_total_completed_usd": 5.3829,
-      "cost_mean_completed_usd": 0.2691,
-      "cost_total_incomplete_usd": 0.0,
-      "n_incomplete_with_cost": 0,
       "cost_total_usd": 5.3829,
       "cost_mean_usd": 0.2691,
       "cost_median_usd": 0.2352,
@@ -2960,9 +1543,7 @@
           "out_tokens": 2290,
           "duration_s": 193.218,
           "turns": 7,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "1": {
           "cost_usd": 0.286038,
@@ -2970,9 +1551,7 @@
           "out_tokens": 1808,
           "duration_s": 120.109,
           "turns": 9,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "3": {
           "cost_usd": 0.231652,
@@ -2980,9 +1559,7 @@
           "out_tokens": 2007,
           "duration_s": 51.125,
           "turns": 8,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "6": {
           "cost_usd": 0.069566,
@@ -2990,9 +1567,7 @@
           "out_tokens": 525,
           "duration_s": 24.672,
           "turns": 4,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "7": {
           "cost_usd": 0.574591,
@@ -3000,9 +1575,7 @@
           "out_tokens": 2567,
           "duration_s": 278.063,
           "turns": 12,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "9": {
           "cost_usd": 0.118295,
@@ -3010,9 +1583,7 @@
           "out_tokens": 760,
           "duration_s": 29.703,
           "turns": 4,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "15": {
           "cost_usd": 0.215045,
@@ -3020,9 +1591,7 @@
           "out_tokens": 2503,
           "duration_s": 193.532,
           "turns": 6,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "20": {
           "cost_usd": 0.242408,
@@ -3030,9 +1599,7 @@
           "out_tokens": 1599,
           "duration_s": 175.781,
           "turns": 10,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "23": {
           "cost_usd": 0.173722,
@@ -3040,9 +1607,7 @@
           "out_tokens": 971,
           "duration_s": 65.078,
           "turns": 9,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "25": {
           "cost_usd": 0.084639,
@@ -3050,9 +1615,7 @@
           "out_tokens": 745,
           "duration_s": 33.265,
           "turns": 6,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "29": {
           "cost_usd": 0.215193,
@@ -3060,9 +1623,7 @@
           "out_tokens": 1378,
           "duration_s": 212.562,
           "turns": 7,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "30": {
           "cost_usd": 0.084031,
@@ -3070,9 +1631,7 @@
           "out_tokens": 793,
           "duration_s": 42.125,
           "turns": 5,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "32": {
           "cost_usd": 0.381225,
@@ -3080,9 +1639,7 @@
           "out_tokens": 2482,
           "duration_s": 122.906,
           "turns": 12,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "33": {
           "cost_usd": 0.29149,
@@ -3090,9 +1647,7 @@
           "out_tokens": 1544,
           "duration_s": 134.063,
           "turns": 15,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "37": {
           "cost_usd": 0.116027,
@@ -3100,9 +1655,7 @@
           "out_tokens": 896,
           "duration_s": 42.938,
           "turns": 5,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "38": {
           "cost_usd": 0.266622,
@@ -3110,9 +1663,7 @@
           "out_tokens": 2053,
           "duration_s": 111.61,
           "turns": 7,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "43": {
           "cost_usd": 0.943207,
@@ -3120,9 +1671,7 @@
           "out_tokens": 1858,
           "duration_s": 202.75,
           "turns": 16,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "44": {
           "cost_usd": 0.152572,
@@ -3130,9 +1679,7 @@
           "out_tokens": 1080,
           "duration_s": 182.922,
           "turns": 9,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "45": {
           "cost_usd": 0.395114,
@@ -3140,9 +1687,7 @@
           "out_tokens": 3572,
           "duration_s": 189.406,
           "turns": 8,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         },
         "48": {
           "cost_usd": 0.302808,
@@ -3150,9 +1695,7 @@
           "out_tokens": 1855,
           "duration_s": 56.094,
           "turns": 6,
-          "cost_source": "final-aggregated-metadata",
-          "method": "api-reported",
-          "outcome": "success"
+          "method": "api-reported"
         }
       }
     }

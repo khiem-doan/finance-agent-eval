@@ -1,0 +1,30 @@
+{
+  "note": "Full-50 paired clustered bootstrap (2,000 resamples) on the intersection all three models graded, three model pairs. Additive; computed from grades on disk by analysis/paired_full50_ci.py. The 20-task paired files are unchanged.",
+  "intersection_n": 48,
+  "pairs": {
+    "gpt55_vs_fable5": {
+      "n_tasks": 48,
+      "n_clusters": 37,
+      "point_pts": 6.2,
+      "ci95_lo_pts": -2.4,
+      "ci95_hi_pts": 14.5,
+      "agreement": "43/48"
+    },
+    "gpt56sol_vs_gpt55": {
+      "n_tasks": 48,
+      "n_clusters": 37,
+      "point_pts": -12.5,
+      "ci95_lo_pts": -23.9,
+      "ci95_hi_pts": 0.0,
+      "agreement": "38/48"
+    },
+    "gpt56sol_vs_fable5": {
+      "n_tasks": 48,
+      "n_clusters": 37,
+      "point_pts": -6.2,
+      "ci95_lo_pts": -17.4,
+      "ci95_hi_pts": 4.3,
+      "agreement": "41/48"
+    }
+  }
+}
