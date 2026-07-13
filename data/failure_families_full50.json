@@ -1,0 +1,353 @@
+{
+ "note": "Full-50 failure-family map, one row per (model, failed task) over each model's full graded basis (16 + 19 + 23 = 58). The 27 classified-trace rows are the hand-classified deep-dive traces (unchanged). The adjudicated-defect rows are the six benchmark key/spec defects from full50_adjudicated.json (dataset family). The adjudicated and judge-reasoning rows were classified 2026-07-13 from the adjudication record and the judge's per-check reasoning with the same two-question decision tree as the original instances.",
+ "families": [
+  {
+   "model_key": "gpt55",
+   "idx": 0,
+   "mode": "stale-reference-answer",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "fable5",
+   "idx": 0,
+   "mode": "stale-reference-answer",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "gpt55",
+   "idx": 1,
+   "mode": "methodology-mismatch",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "fable5",
+   "idx": 1,
+   "mode": "retrieval-miss",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "gpt55",
+   "idx": 7,
+   "mode": "methodology-mismatch",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "gpt55",
+   "idx": 9,
+   "mode": "methodology-mismatch",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "fable5",
+   "idx": 9,
+   "mode": "methodology-mismatch",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "gpt55",
+   "idx": 15,
+   "mode": "partial-answer",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "fable5",
+   "idx": 15,
+   "mode": "partial-answer",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "gpt55",
+   "idx": 32,
+   "mode": "methodology-mismatch",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "fable5",
+   "idx": 32,
+   "mode": "methodology-mismatch",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "fable5",
+   "idx": 38,
+   "mode": "partial-answer",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "gpt55",
+   "idx": 45,
+   "mode": "partial-answer",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "fable5",
+   "idx": 45,
+   "mode": "partial-answer",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "gpt55",
+   "idx": 48,
+   "mode": "methodology-mismatch",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "fable5",
+   "idx": 48,
+   "mode": "methodology-mismatch",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "gpt56sol",
+   "idx": 0,
+   "mode": "stale-reference-answer",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "gpt56sol",
+   "idx": 1,
+   "mode": "methodology-mismatch",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "gpt56sol",
+   "idx": 7,
+   "mode": "methodology-mismatch",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "gpt56sol",
+   "idx": 9,
+   "mode": "methodology-mismatch",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "gpt56sol",
+   "idx": 15,
+   "mode": "partial-answer",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "gpt56sol",
+   "idx": 32,
+   "mode": "methodology-mismatch",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "gpt56sol",
+   "idx": 33,
+   "mode": "methodology-mismatch",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "gpt56sol",
+   "idx": 38,
+   "mode": "partial-answer",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "gpt56sol",
+   "idx": 44,
+   "mode": "methodology-mismatch",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "gpt56sol",
+   "idx": 45,
+   "mode": "methodology-mismatch",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "gpt56sol",
+   "idx": 48,
+   "mode": "methodology-mismatch",
+   "source": "classified-trace"
+  },
+  {
+   "model_key": "gpt55",
+   "idx": 11,
+   "mode": "stale-reference-answer",
+   "source": "adjudicated-defect"
+  },
+  {
+   "model_key": "gpt55",
+   "idx": 14,
+   "mode": "stale-reference-answer",
+   "source": "adjudicated-defect"
+  },
+  {
+   "model_key": "gpt55",
+   "idx": 28,
+   "mode": "stale-reference-answer",
+   "source": "adjudicated-defect"
+  },
+  {
+   "model_key": "gpt55",
+   "idx": 41,
+   "mode": "stale-reference-answer",
+   "source": "adjudicated-defect"
+  },
+  {
+   "model_key": "gpt55",
+   "idx": 42,
+   "mode": "stale-reference-answer",
+   "source": "adjudicated-defect"
+  },
+  {
+   "model_key": "gpt55",
+   "idx": 5,
+   "mode": "methodology-mismatch",
+   "source": "judge-reasoning"
+  },
+  {
+   "model_key": "gpt55",
+   "idx": 13,
+   "mode": "methodology-mismatch",
+   "source": "judge-reasoning"
+  },
+  {
+   "model_key": "gpt55",
+   "idx": 24,
+   "mode": "partial-answer",
+   "source": "judge-reasoning"
+  },
+  {
+   "model_key": "fable5",
+   "idx": 11,
+   "mode": "stale-reference-answer",
+   "source": "adjudicated-defect"
+  },
+  {
+   "model_key": "fable5",
+   "idx": 14,
+   "mode": "stale-reference-answer",
+   "source": "adjudicated-defect"
+  },
+  {
+   "model_key": "fable5",
+   "idx": 28,
+   "mode": "stale-reference-answer",
+   "source": "adjudicated-defect"
+  },
+  {
+   "model_key": "fable5",
+   "idx": 41,
+   "mode": "stale-reference-answer",
+   "source": "adjudicated-defect"
+  },
+  {
+   "model_key": "fable5",
+   "idx": 42,
+   "mode": "stale-reference-answer",
+   "source": "adjudicated-defect"
+  },
+  {
+   "model_key": "fable5",
+   "idx": 5,
+   "mode": "methodology-mismatch",
+   "source": "judge-reasoning"
+  },
+  {
+   "model_key": "fable5",
+   "idx": 13,
+   "mode": "methodology-mismatch",
+   "source": "judge-reasoning"
+  },
+  {
+   "model_key": "fable5",
+   "idx": 21,
+   "mode": "methodology-mismatch",
+   "source": "adjudicated"
+  },
+  {
+   "model_key": "fable5",
+   "idx": 24,
+   "mode": "partial-answer",
+   "source": "judge-reasoning"
+  },
+  {
+   "model_key": "fable5",
+   "idx": 47,
+   "mode": "partial-answer",
+   "source": "adjudicated"
+  },
+  {
+   "model_key": "fable5",
+   "idx": 49,
+   "mode": "methodology-mismatch",
+   "source": "judge-reasoning"
+  },
+  {
+   "model_key": "gpt56sol",
+   "idx": 11,
+   "mode": "stale-reference-answer",
+   "source": "adjudicated-defect"
+  },
+  {
+   "model_key": "gpt56sol",
+   "idx": 14,
+   "mode": "stale-reference-answer",
+   "source": "adjudicated-defect"
+  },
+  {
+   "model_key": "gpt56sol",
+   "idx": 28,
+   "mode": "stale-reference-answer",
+   "source": "adjudicated-defect"
+  },
+  {
+   "model_key": "gpt56sol",
+   "idx": 41,
+   "mode": "stale-reference-answer",
+   "source": "adjudicated-defect"
+  },
+  {
+   "model_key": "gpt56sol",
+   "idx": 42,
+   "mode": "stale-reference-answer",
+   "source": "adjudicated-defect"
+  },
+  {
+   "model_key": "gpt56sol",
+   "idx": 13,
+   "mode": "methodology-mismatch",
+   "source": "judge-reasoning"
+  },
+  {
+   "model_key": "gpt56sol",
+   "idx": 21,
+   "mode": "methodology-mismatch",
+   "source": "adjudicated"
+  },
+  {
+   "model_key": "gpt56sol",
+   "idx": 31,
+   "mode": "methodology-mismatch",
+   "source": "judge-reasoning"
+  },
+  {
+   "model_key": "gpt56sol",
+   "idx": 35,
+   "mode": "methodology-mismatch",
+   "source": "judge-reasoning"
+  },
+  {
+   "model_key": "gpt56sol",
+   "idx": 46,
+   "mode": "methodology-mismatch",
+   "source": "judge-reasoning"
+  },
+  {
+   "model_key": "gpt56sol",
+   "idx": 47,
+   "mode": "partial-answer",
+   "source": "adjudicated"
+  },
+  {
+   "model_key": "gpt56sol",
+   "idx": 49,
+   "mode": "methodology-mismatch",
+   "source": "judge-reasoning"
+  }
+ ]
+}
