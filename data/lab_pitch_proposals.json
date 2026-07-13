@@ -36,6 +36,38 @@
     ],
     "success_gate": "Fifteen-point absolute lift on the sealed slice, paired 95 percent lower bound above zero, improvement across multiple subtypes, no broader regression, and lower cost among correct completions."
    },
+   "training_design": {
+    "title": "How the basis-selection pilot works",
+    "intent": "The target behavior is following the basis the prompt authorizes, not blindly copying filing values. Matched task pairs make legitimate recomputation part of the test.",
+    "steps": [
+     {"label": "Observed override", "detail": "TKO retrieves the filed consideration, then substitutes a spot-price valuation."},
+     {"label": "Matched task pairs", "detail": "One task requests the filed value. Its sibling explicitly requires recomputation."},
+     {"label": "Candidate reward", "detail": "Candidate rollouts are scored on basis, source, citation, calculation, and final value."},
+     {"label": "Development choice", "detail": "Compare reward setups and inspect exploit cases before choosing one for the sealed test."},
+     {"label": "Sealed transfer", "detail": "Test fresh issuers and filings. Filing precedence may improve only if recomputation does not regress."}
+    ],
+    "illustrative_reward": {
+     "label": "One reward design to test",
+     "note": "These weights are a starting point, not the answer. We compare this setup with strict pass-fail and other component mixes on development data. We choose one before the sealed test and do not change it after seeing those results.",
+     "components": [
+      {"label": "Requested basis", "weight": "0.35", "detail": "Wrong basis caps the outcome."},
+      {"label": "Authoritative source", "weight": "0.15", "detail": "Correct source hierarchy."},
+      {"label": "Citation support", "weight": "0.15", "detail": "Evidence supports amount and basis."},
+      {"label": "Calculation", "weight": "0.15", "detail": "Correct when calculation is required."},
+      {"label": "Units and final value", "weight": "0.10", "detail": "Correct units and submission."},
+      {"label": "Completeness", "weight": "0.05", "detail": "No unsupported contradiction."},
+      {"label": "Efficiency", "weight": "0.05 max", "detail": "Ranks only fully correct outputs."}
+     ],
+     "cap": "A wrong requested basis or unsupported contradiction caps total reward at 0.25. Both still fail the strict release gate."
+    },
+    "exploit_tests": [
+     "Copying the filing fails when the paired prompt explicitly requires recomputation.",
+     "Recomputing market value fails when the prompt asks for filing-stated consideration.",
+     "A correct number under the wrong basis receives no basis credit.",
+     "Extra citations earn no additional reward unless they support a required claim."
+    ],
+    "stop_rule": "Do not expand if strict completion does not improve on the sealed slice, if legitimate recomputation regresses, or if exploit rate rises."
+   },
    "failure_modes": [
     {
      "mode": "methodology-mismatch",
@@ -122,6 +154,37 @@
      "A decision report comparing base and tuned models on the sealed split."
     ],
     "success_gate": "Fifteen-point absolute lift on the sealed slice, paired 95 percent lower bound above zero, improvement across coverage and convention subtypes, no retrieval regression, and lower cost among correct completions."
+   },
+   "training_design": {
+    "title": "How the completeness pilot works",
+    "intent": "The target behavior is completing the decision the analyst asked for. Longer answers do not earn credit unless the required field, period, and evidence line up.",
+    "steps": [
+     {"label": "Observed omission", "detail": "Delta finds the guidance facts but omits the required prior-year EPS comparison."},
+     {"label": "Required decision", "detail": "Experts name the required fields, time periods, accepted equivalents, and supporting evidence."},
+     {"label": "Candidate reward", "detail": "Candidate rollouts receive field-level and contradiction verdicts, with a cap for a missing critical field."},
+     {"label": "Development checks", "detail": "Test field echoing, citation dumping, schema stuffing, and verbose but incomplete answers."},
+     {"label": "Sealed completion", "detail": "Test fresh issuers and filings. Strict completion must improve without unsupported claims or answer bloat."}
+    ],
+    "illustrative_reward": {
+     "label": "One reward design to test",
+     "note": "These weights are a starting point, not the answer. We compare this setup with strict pass-fail and other component mixes on development data. We choose one before the sealed test and do not change it after seeing those results.",
+     "components": [
+      {"label": "Critical fields", "weight": "0.35", "detail": "A missing critical field caps the outcome."},
+      {"label": "Remaining fields", "weight": "0.20", "detail": "Field-level semantic coverage."},
+      {"label": "Citation support", "weight": "0.15", "detail": "Source supports each claimed field."},
+      {"label": "Period and units", "weight": "0.15", "detail": "Comparable period stays explicit."},
+      {"label": "Contradiction-free", "weight": "0.10", "detail": "Correct fields cannot conflict."},
+      {"label": "Efficiency", "weight": "0.05 max", "detail": "Ranks only fully correct outputs."}
+     ],
+     "cap": "A missing decision-critical field or unsupported contradiction caps total reward at 0.25. Both still fail the strict release gate."
+    },
+    "exploit_tests": [
+     "Field echoing fails when a required value or comparison is absent.",
+     "Schema stuffing fails when one decision-critical field is wrong or omitted.",
+     "A concise complete answer beats a verbose answer that repeats the filing.",
+     "Citation dumping earns no added reward and unsupported claims count against the rollout."
+    ],
+    "stop_rule": "Do not expand if strict completion is flat, unsupported claims or contradictions rise, or the model only becomes longer."
    },
    "failure_modes": [
     {
