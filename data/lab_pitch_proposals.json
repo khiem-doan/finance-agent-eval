@@ -9,21 +9,21 @@
    "model_key": "gpt55",
    "model_label": "GPT-5.5",
    "run_tag": "gpt55-full",
-   "headline": "Start with TKO: it solved it, then lost it.",
-   "thesis": "I would lead OpenAI with TKO because the trace is clean: GPT-5.5 found the filing value, then replaced the requested basis with a plausible spot-price valuation. Sol repeated the same behavior with a different wrong number. Across the full run, basis selection accounts for 7 of GPT-5.5's 10 model-behavior misses and 14 of Sol's 17. The trace defines the intervention, and the complete stack shows it is not isolated.",
+   "headline": "TKO: it solved it, then lost it.",
+   "thesis": "TKO is the clearest OpenAI example: GPT-5.5 found the filing value, then replaced the requested basis with a plausible spot-price valuation. Sol repeated the same behavior with a different wrong number. Across the full run, basis selection accounts for 7 of GPT-5.5's 10 model-behavior misses and 14 of Sol's 17. The trace defines the intervention, and the complete stack shows it is not isolated.",
    "lead_failure": {
     "failure_id": "gpt55-idx7-methodology-mismatch",
     "title": "TKO valuation-basis precedence",
     "screen_link": "#fail7=gpt55",
     "soundbite": "Right retrieval, wrong basis, bad final decision.",
-    "why_it_matters": "This is close to a reward spec. The model had the answer in the trace, so the product is not more documents. It is a basis-preservation check that rewards the filing basis over adjacent plausible math. Two generations now make the same class of error on this task: GPT-5.5 substituted $3.92 billion, and GPT-5.6 Sol, four days after release, substituted $4.00 billion after searching the literal phrase 'aggregate value of $3.25 billion'."
+    "why_it_matters": "This is close to a reward spec. The model had the answer in the trace, so the product is not more documents. It is a basis-preservation check that rewards the filing basis over adjacent plausible math. Two generations make the same class of error on this task: GPT-5.5 substituted $3.92 billion, and GPT-5.6 Sol substituted $4.00 billion after searching the literal phrase 'aggregate value of $3.25 billion'."
    },
    "backup_failure": {
     "failure_id": "gpt55-idx48-methodology-mismatch",
     "title": "General Mills guidance vintage",
     "screen_link": "#fail48=gpt55",
     "soundbite": "It counted the beats, then used the wrong guidance vintage.",
-    "why_it_matters": "This backs up TKO with a second convention miss: the model must separate original guidance from later revised guidance before scoring beat or miss."
+    "why_it_matters": "This is a second convention miss: the model must separate original guidance from later revised guidance before scoring beat or miss."
    },
    "pilot": {
     "ask": "Run a two-week basis-selection and completeness pilot on a sealed finance-agent slice.",
@@ -128,8 +128,8 @@
    "model_key": "fable5",
    "model_label": "Claude Fable 5",
    "run_tag": "fable5-full",
-   "headline": "Start with Delta: facts landed, framing missed.",
-   "thesis": "I would lead Anthropic with Delta. Fable built a strong guidance breakdown but omitted the year-over-year EPS comparison. Across the full run, Fable has 7 basis-selection failures, 5 completeness failures, 1 retrieval miss, and 6 benchmark defects. Delta leads because it makes the completeness intervention concrete, not because completeness is the largest family.",
+   "headline": "Delta: facts landed, framing missed.",
+   "thesis": "Delta is the clearest Anthropic example. Fable built a strong guidance breakdown but omitted the year-over-year EPS comparison. Across the full run, Fable has 7 basis-selection failures, 5 completeness failures, 1 retrieval miss, and 6 benchmark defects. Delta makes the completeness intervention concrete without implying that completeness is the largest family.",
    "lead_failure": {
     "failure_id": "fable5-idx38-partial-answer",
     "title": "Delta guidance framing",
@@ -142,7 +142,7 @@
     "title": "Zillow revenue-trend direction",
     "screen_link": "#fail45=fable5",
     "soundbite": "It had the acquisition facts and rationale, then missed the trend direction.",
-    "why_it_matters": "Zillow is the backup because it shows the same coverage discipline problem without relying on a benchmark-quality story."
+    "why_it_matters": "Zillow shows the same coverage-discipline problem without relying on a benchmark-quality story."
    },
    "pilot": {
     "ask": "Run a two-week framing, coverage, and retrieval pilot on Fable 5's highest observed miss families.",
