@@ -10,13 +10,13 @@
    "model_label": "GPT-5.5",
    "run_tag": "gpt55-full",
    "headline": "Start with TKO: it solved it, then lost it.",
-   "thesis": "I would lead OpenAI with TKO because the trace is clean: GPT-5.5 found the filing value, then replaced the requested basis with a plausible spot-price valuation. That is not a retrieval problem. It is a basis-selection problem that can become a reward target. GPT-5.6 Sol, run on the identical twenty within 72 hours of its July 9 release, reproduced the map: 9/20 strict, all seven shared failures still failing, and the TKO basis substituted again with a new wrong number ($4.00B vs the filed $3.25B).",
+   "thesis": "I would lead OpenAI with TKO because the trace is clean: GPT-5.5 found the filing value, then replaced the requested basis with a plausible spot-price valuation. Evidence was in hand, so the trace motivates a basis-selection hypothesis rather than a retrieval diagnosis. GPT-5.6 Sol, run on the identical twenty within 72 hours of release, made the same TKO substitution with a different wrong number. That is a reason to test the behavior on fresh tasks, not proof of a training defect.",
    "lead_failure": {
     "failure_id": "gpt55-idx7-methodology-mismatch",
     "title": "TKO valuation-basis precedence",
     "screen_link": "#fail7=gpt55",
     "soundbite": "Right retrieval, wrong basis, bad final decision.",
-    "why_it_matters": "This is close to a reward spec. The model had the answer in the trace, so the product is not more documents. It is a basis-preservation check that rewards the filing basis over adjacent plausible math. Two generations now make the same class of error on this task: GPT-5.5 substituted $3.92 billion, and GPT-5.6 Sol, four days after release, substituted $4.00 billion after searching the literal phrase 'aggregate value of $3.25 billion'."
+    "why_it_matters": "This is a candidate reward specification. The model had the answer in the trace, so a pilot would test whether a basis-preservation check improves filing precedence without blocking legitimate recomputation. GPT-5.5 submitted $3.92 billion and GPT-5.6 Sol submitted $4.00 billion after searching the literal phrase 'aggregate value of $3.25 billion'."
    },
    "backup_failure": {
     "failure_id": "gpt55-idx48-methodology-mismatch",
@@ -26,15 +26,15 @@
     "why_it_matters": "This backs up TKO with a second convention miss: the model must separate original guidance from later revised guidance before scoring beat or miss."
    },
    "pilot": {
-    "ask": "Run a two-week basis-selection and completeness pilot on a sealed finance-agent slice.",
+    "ask": "Run a two-week design and diagnostic to define a sealed finance-agent pilot.",
     "deliverables": [
-     "A 200-task dataset with 120 train, 20 dev, and 60 sealed eval tasks.",
-     "Reference answers with atomic rubrics and expert-adjudication notes.",
-     "Labeled trajectories with tool calls, evidence, output, and cost.",
-     "A versioned verifier and reward specification for convention and coverage failures.",
-     "A decision report comparing base and tuned models on the sealed split."
+     "A proposed 200-task plan: 120 train, 20 development, and 60 sealed eval tasks.",
+     "Reference answers, atomic rubrics, and expert-adjudication notes for the agreed scope.",
+     "A labeled baseline sample with tool calls, evidence, output, and cost.",
+     "A versioned verifier and reward specification for the selected failure families.",
+     "A sealed evaluation plan. The tuned comparison follows when the customer's tuning path is ready."
     ],
-    "success_gate": "Fifteen-point absolute lift on the sealed slice, paired 95 percent lower bound above zero, improvement across multiple subtypes, no broader regression, and lower cost among correct completions."
+    "success_gate": "Proposed before tuning: a paired sealed-task lift with the 95 percent lower bound above zero, improvement across multiple subtypes, no broader regression, and no increase in unsupported citations or premature submissions. The exact threshold is agreed with the lab after the baseline."
    },
    "failure_modes": [
     {
@@ -50,7 +50,7 @@
      ],
      "product": {
       "title": "Basis-selection reward pack",
-      "what_we_build": "Tasks where the filing contains the authoritative value and the trace also contains a tempting alternate basis. The verifier checks whether the model follows the requested basis before computing. GPT-5.6 Sol reproduced this failure family on day three: the pack trains a discipline that has now outlived a model generation.",
+      "what_we_build": "Tasks where the filing contains an authoritative value and the trace also contains a tempting alternate basis. The verifier checks whether the model follows the requested basis before computing. Matched counterexamples require legitimate recomputation, so the sealed set can detect an overcorrection.",
       "fixes": [
        "Valuation-basis precedence for merger consideration.",
        "Base-year anchoring for CAGR tasks.",
@@ -110,15 +110,15 @@
     "why_it_matters": "Zillow is the backup because it shows the same coverage discipline problem without relying on a benchmark-quality story."
    },
    "pilot": {
-    "ask": "Run a two-week framing, coverage, and retrieval pilot on Fable 5's highest observed miss families.",
+    "ask": "Run a two-week design and diagnostic around Fable 5's highest observed miss families.",
     "deliverables": [
-     "A 200-task dataset with 120 train, 20 dev, and 60 sealed eval tasks.",
-     "Reference answers with investor-framing checks and omission-sensitive rubrics.",
-     "Labeled trajectories that mark where facts entered context and where framing was lost.",
-     "A verifier package for completeness, trend direction, evidence retrieval, and basis selection.",
-     "A decision report comparing base and tuned models on the sealed split."
+     "A proposed 200-task plan: 120 train, 20 development, and 60 sealed eval tasks.",
+     "Reference answers with investor-framing checks and omission-sensitive rubrics for the agreed scope.",
+     "A labeled baseline sample that marks where facts entered context and where framing was lost.",
+     "A verifier package for the selected completeness, retrieval, and basis mechanisms.",
+     "A sealed evaluation plan. The tuned comparison follows when the customer's tuning path is ready."
     ],
-    "success_gate": "Fifteen-point absolute lift on the sealed slice, paired 95 percent lower bound above zero, improvement across coverage and convention subtypes, no retrieval regression, and lower cost among correct completions."
+    "success_gate": "Proposed before tuning: a paired sealed-task lift with the 95 percent lower bound above zero, improvement across coverage and convention subtypes, no retrieval regression, and no increase in unsupported claims. The exact threshold is agreed with the lab after the baseline."
    },
    "failure_modes": [
     {
