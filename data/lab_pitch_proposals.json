@@ -10,7 +10,7 @@
    "model_label": "GPT-5.5",
    "run_tag": "gpt55-full",
    "headline": "Start with TKO: it solved it, then lost it.",
-   "thesis": "I would lead OpenAI with TKO because the trace is clean: GPT-5.5 found the filing value, then replaced the requested basis with a plausible spot-price valuation. That is not a retrieval problem. It is a basis-selection problem that can become a reward target. GPT-5.6 Sol, run on the identical twenty within 72 hours of its July 9 release, reproduced the map: 9/20 strict, all seven shared failures still failing, and the TKO basis substituted again with a new wrong number ($4.00B vs the filed $3.25B).",
+   "thesis": "I would lead OpenAI with TKO because the trace is clean: GPT-5.5 found the filing value, then replaced the requested basis with a plausible spot-price valuation. That is not a retrieval problem. It is a basis-selection problem that can become a reward target. GPT-5.6 Sol, run within 72 hours of its July 9 release and then on the full fifty, reproduced the map: all seven shared failures still failing, and the TKO basis substituted again with a new wrong number ($4.00B vs the filed $3.25B).",
    "lead_failure": {
     "failure_id": "gpt55-idx7-methodology-mismatch",
     "title": "TKO valuation-basis precedence",
