@@ -197,7 +197,7 @@
     },
     {
       "mode": "stale-reference-answer",
-      "label": "Key freshness",
+      "label": "Benchmark QA",
       "observed_frontier_examples": ["US Steel / Nippon Steel stale reference answer"],
       "candidates": [
         {

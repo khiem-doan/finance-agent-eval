@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "as_of_date": "2026-07-09",
+ "as_of_date": "2026-07-13",
  "note": "Lab-specific proposal content for the site Pitch section. Task examples reference heldout_task_candidates.json by id so SEC citations and rubric checks stay single-sourced.",
  "labs": [
   {
@@ -10,7 +10,7 @@
    "model_label": "GPT-5.5",
    "run_tag": "gpt55-full",
    "headline": "Start with TKO: it solved it, then lost it.",
-   "thesis": "I would lead OpenAI with TKO because the trace is clean: GPT-5.5 found the filing value, then replaced the requested basis with a plausible spot-price valuation. That is not a retrieval problem. It is a basis-selection problem that can become a reward target. GPT-5.6 Sol, run within 72 hours of its July 9 release and then on the full fifty, reproduced the map: all seven shared failures still failing, and the TKO basis substituted again with a new wrong number ($4.00B vs the filed $3.25B).",
+   "thesis": "I would lead OpenAI with TKO because the trace is clean: GPT-5.5 found the filing value, then replaced the requested basis with a plausible spot-price valuation. Sol repeated the same behavior with a different wrong number. Across the full run, basis selection accounts for 7 of GPT-5.5's 10 model-behavior misses and 14 of Sol's 17. The trace defines the intervention, and the complete stack shows it is not isolated.",
    "lead_failure": {
     "failure_id": "gpt55-idx7-methodology-mismatch",
     "title": "TKO valuation-basis precedence",
@@ -40,17 +40,19 @@
     {
      "mode": "methodology-mismatch",
      "label": "Basis selection",
-     "observed_count": 5,
+     "observed_count": 7,
      "observed_tasks": [
       1,
+      5,
       7,
       9,
+      13,
       32,
       48
      ],
      "product": {
       "title": "Basis-selection reward pack",
-      "what_we_build": "Tasks where the filing contains the authoritative value and the trace also contains a tempting alternate basis. The verifier checks whether the model follows the requested basis before computing. GPT-5.6 Sol reproduced this failure family on day three: the pack trains a discipline that has now outlived a model generation.",
+      "what_we_build": "Tasks where the filing contains an authoritative value and the trace also contains a tempting alternate basis. The verifier checks whether the model follows the basis requested by the prompt before computing. GPT-5.5 has 7 observed failures in this family, while Sol has 14 across the same full run.",
       "fixes": [
        "Valuation-basis precedence for merger consideration.",
        "Base-year anchoring for CAGR tasks.",
@@ -66,9 +68,10 @@
     {
      "mode": "partial-answer",
      "label": "Completeness",
-     "observed_count": 2,
+     "observed_count": 3,
      "observed_tasks": [
       15,
+      24,
       45
      ],
      "product": {
@@ -92,9 +95,9 @@
    "label": "Anthropic proposal",
    "model_key": "fable5",
    "model_label": "Claude Fable 5",
-   "run_tag": "fable5-subset20",
+   "run_tag": "fable5-full",
    "headline": "Start with Delta: facts landed, framing missed.",
-   "thesis": "I would lead Anthropic with Delta. Fable 5 built a strong guidance breakdown, but did not frame EPS guidance as year-over-year growth. The facts landed. The investor framing missed. Zillow is the backup because it shows the same omission pattern in acquisition strategy.",
+   "thesis": "I would lead Anthropic with Delta. Fable built a strong guidance breakdown but omitted the year-over-year EPS comparison. Across the full run, Fable has 7 basis-selection failures, 5 completeness failures, 1 retrieval miss, and 6 benchmark defects. Delta leads because it makes the completeness intervention concrete, not because completeness is the largest family.",
    "lead_failure": {
     "failure_id": "fable5-idx38-partial-answer",
     "title": "Delta guidance framing",
@@ -124,11 +127,13 @@
     {
      "mode": "partial-answer",
      "label": "Completeness and framing",
-     "observed_count": 3,
+     "observed_count": 5,
      "observed_tasks": [
       15,
+      24,
       38,
-      45
+      45,
+      47
      ],
      "product": {
       "title": "Investor-framing and completeness pack",
@@ -147,11 +152,15 @@
     {
      "mode": "methodology-mismatch",
      "label": "Basis selection",
-     "observed_count": 3,
+     "observed_count": 7,
      "observed_tasks": [
+      5,
       9,
+      13,
+      21,
       32,
-      48
+      48,
+      49
      ],
      "product": {
       "title": "Basis-selection eval slice",

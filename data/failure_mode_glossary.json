@@ -42,14 +42,16 @@
     },
     {
       "mode": "stale-reference-answer",
-      "short_label": "Key freshness",
-      "finance_label": "Benchmark answer key is stale or the as-of date is underspecified.",
-      "ai_lab_label": "Ground-truth drift and dataset QA defect.",
-      "plain_definition": "The model is right, the key is stale: the answer matches the current event record and still fails because the benchmark froze an older state.",
+      "short_label": "Benchmark defect",
+      "finance_label": "The benchmark key or task specification is stale, incorrect, ambiguous, or contradictory.",
+      "ai_lab_label": "Ground-truth or evaluation-specification defect.",
+      "plain_definition": "The failure belongs to the evaluation asset rather than model behavior: the key may be stale or wrong, or the task may not specify the comparison needed for one defensible answer.",
       "examples": [
-        "US Steel: models narrated the later signed-deal and regulatory timeline while the key expected an earlier rejected-offer state."
+        "US Steel: models narrated the later signed-deal and regulatory timeline while the key expected an earlier rejected-offer state.",
+        "TSMC and Spirit: primary-source values conflict with the benchmark key.",
+        "Coca-Cola and Uber: the task or checks require an unstated comparison or unasked detail."
       ],
-      "product": "Quarterly key-refresh and expert adjudication workflow with explicit as-of dates."
+      "product": "Versioned key refresh, specification review, and expert adjudication with explicit as-of dates."
     }
   ]
 }
