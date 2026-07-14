@@ -87,10 +87,8 @@
     .lab-tab[aria-selected="true"] { color: #07110f; background: var(--accent); }
     .lab-tab:focus-visible, .button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
     .pitch-panel {
-      display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(330px, .85fr);
-      gap: 26px;
-      min-height: 360px;
+      display: block;
+      min-height: 388px;
       padding: clamp(24px, 4vw, 42px);
       border: 1px solid var(--line);
       border-radius: 22px;
@@ -100,8 +98,24 @@
     .pitch-panel[hidden] { display: none; }
     .panel-kicker { margin: 0 0 12px; color: var(--accent); font: 700 12px/1.3 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .08em; text-transform: uppercase; }
     h2 { margin: 0; max-width: 650px; font-size: clamp(29px, 3.4vw, 48px); line-height: 1.02; letter-spacing: -.045em; }
-    .bullets { display: grid; gap: 12px; margin: 24px 0 0; padding: 0; list-style: none; }
-    .bullets li { position: relative; padding-left: 24px; color: #d7dce5; font-size: 15.5px; line-height: 1.48; }
+    .panel-subhead { max-width: 760px; margin: 11px 0 0; color: var(--muted); font-size: 15px; line-height: 1.45; }
+    .visual-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 24px 0 0; }
+    .visual-card { min-height: 138px; padding: 17px; border: 1px solid color-mix(in srgb, var(--accent) 26%, var(--line)); border-radius: 14px; background: var(--accent-soft); }
+    .visual-label { color: var(--muted); font: 700 10.5px/1.3 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .07em; text-transform: uppercase; }
+    .visual-value { display: block; margin-top: 12px; font-size: clamp(32px, 4vw, 48px); font-weight: 820; line-height: .92; letter-spacing: -.055em; }
+    .visual-compare { display: block; margin-top: 8px; color: var(--text); font: 750 12px/1.35 ui-monospace, SFMono-Regular, Consolas, monospace; }
+    .visual-delta { display: inline-block; margin-top: 9px; padding: 5px 8px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); font: 800 10.5px/1 ui-monospace, SFMono-Regular, Consolas, monospace; }
+    .visual-breakdown { display: grid; gap: 6px; margin-top: 11px; }
+    .visual-breakdown span { display: grid; grid-template-columns: 1fr auto; gap: 8px; color: var(--muted); font: 650 11px/1.25 ui-monospace, SFMono-Regular, Consolas, monospace; }
+    .visual-breakdown strong { color: var(--text); }
+    .visual-breakdown .accent { color: var(--accent); }
+    .family-stack { display: grid; gap: 7px; margin-top: 10px; }
+    .family-row { display: grid; grid-template-columns: 48px 1fr 18px; gap: 7px; align-items: center; color: var(--muted); font: 700 9.5px/1 ui-monospace, SFMono-Regular, Consolas, monospace; }
+    .family-track { display: flex; height: 8px; overflow: hidden; border-radius: 999px; background: rgba(255, 255, 255, .08); }
+    .family-complete { background: var(--accent); }
+    .family-other { background: #667085; }
+    .bullets { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 21px 0 0; padding: 18px 0 0; border-top: 1px solid var(--line); list-style: none; }
+    .bullets li { position: relative; padding-left: 22px; color: #d7dce5; font-size: 14px; line-height: 1.45; }
     .bullets li::before { content: ""; position: absolute; left: 0; top: .57em; width: 9px; height: 9px; border: 2px solid var(--accent); border-radius: 50%; }
     .metric-card {
       align-self: stretch;
@@ -166,7 +180,9 @@
       .hero-copy { font-size: 15px; }
       .lab-tabs { width: 100%; }
       .lab-tab { min-width: 0; }
-      .pitch-panel { grid-template-columns: 1fr; min-height: 0; padding: 22px; }
+      .pitch-panel { min-height: 0; padding: 22px; }
+      .visual-grid, .bullets { grid-template-columns: 1fr; }
+      .visual-card { min-height: 0; }
       .metric-card { min-height: 310px; }
       .turing-head, .close { align-items: flex-start; flex-direction: column; }
       .ownership { text-align: left; }
@@ -220,48 +236,73 @@
     </div>
 
     <section class="pitch-panel" id="panel-openai" role="tabpanel" aria-labelledby="tab-openai" data-lab-panel="openai">
-      <div>
+      <div class="panel-head">
         <p class="panel-kicker">OpenAI / observed release regression</p>
-        <h2>On this eval, GPT-5.6 Sol doubled basis-selection failures.</h2>
-        <ul class="bullets">
-          <li>GPT-5.6 Sol produced twice as many basis-selection failures as GPT-5.5 on each model&#x27;s full 49-grade run: 14 versus 7.</li>
-<li>On the identical 48 graded tasks, strict completion moved from 32 of 48 to 26 of 48.</li>
-<li>The added misses concentrate in specification adherence after retrieval: wrong metric, period, filing vintage, or convention.</li>
-        </ul>
+        <h2>GPT-5.6 Sol's basis-selection failure rate was 31.8%.</h2>
+        <p class="panel-subhead">GPT-5.5 baseline: 15.9% across the same 44 valid finance questions.</p>
       </div>
-      <div class="metric-card" aria-label="OpenAI basis-selection comparison">
-        <span class="metric-label">Basis-selection failures / 49 graded answers each</span>
-        <div class="transition">
-          <div><span class="metric-number">7</span><span class="metric-model">GPT-5.5</span></div>
-          <div class="arrow" aria-hidden="true"><svg viewBox="0 0 80 32" fill="none"><path d="M3 16h66M54 4l15 12-15 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div><span class="metric-number">14</span><span class="metric-model">GPT-5.6 Sol</span></div>
-        </div>
-        <span class="badge">2x observed count</span>
-        <div class="score-strip"><span>Matched strict<br><strong>32/48 to 26/48</strong></span><span>Matched basis misses<br><strong>7 to 13</strong></span></div>
-        <div class="mechanism"><span>Right fact retrieved</span><span class="chev">&gt;</span><span class="active">Wrong basis selected</span><span class="chev">&gt;</span><span>Confident strict fail</span></div>
+      <div class="visual-grid" aria-label="Three OpenAI release visuals">
+        <article class="visual-card">
+          <span class="visual-label">Basis failure rate</span>
+          <strong class="visual-value">31.8%</strong>
+          <span class="visual-compare">Sol 14/44 vs GPT-5.5 15.9% (7/44)</span>
+          <span class="visual-delta">2x rate</span>
+        </article>
+        <article class="visual-card">
+          <span class="visual-label">Strict success</span>
+          <strong class="visual-value">59.1%</strong>
+          <span class="visual-compare">Sol 26/44 vs GPT-5.5 75.0% (33/44)</span>
+          <span class="visual-delta">-15.9 points</span>
+        </article>
+        <article class="visual-card">
+          <span class="visual-label">Net failures</span>
+          <strong class="visual-value">+7</strong>
+          <span class="visual-compare">Sol 18 vs GPT-5.5 11</span>
+          <div class="visual-breakdown">
+            <span class="accent">Basis <strong>14 vs 7</strong></span>
+            <span>Completeness <strong>3 vs 3</strong></span>
+            <span>No submission <strong>1 vs 1</strong></span>
+          </div>
+        </article>
       </div>
+      <ul class="bullets"><li>The newer checkpoint delivered seven fewer strict successes across the 44 valid finance questions.</li>
+<li>The entire seven-failure increase is basis selection. Completeness and no-submission counts did not move.</li>
+<li>That makes this a targetable release risk: train and retest basis discipline without rewarding blind copying.</li></ul>
     </section>
 
     <section class="pitch-panel" id="panel-anthropic" role="tabpanel" aria-labelledby="tab-anthropic" data-lab-panel="anthropic" hidden>
-      <div>
+      <div class="panel-head">
         <p class="panel-kicker">Anthropic / differentiated failure signal</p>
-        <h2>Fable's standout risk is an incomplete answer that looks finished.</h2>
-        <ul class="bullets">
-          <li>Fable produced five completeness failures, versus three for GPT-5.5 and three for GPT-5.6 Sol.</li>
-<li>These answers often found most of the facts, then omitted one decision-critical comparison or term.</li>
-<li>The target is required-field recall, not longer answers. Unsupported claims and contradictions stay as guardrails.</li>
-        </ul>
+        <h2>Fable trails GPT-5.5 on the overall frontier benchmark.</h2>
+        <p class="panel-subhead">70.5% for Fable versus 75.0% for GPT-5.5 across the same 44 valid finance questions.</p>
       </div>
-      <div class="metric-card" aria-label="Completeness failures by model">
-        <span class="metric-label">Completeness failures / identical 48 graded tasks</span>
-        <div class="bar-list">
-          <div class="bar-row"><span>GPT-5.5</span><div class="bar-track"><div class="bar-fill" style="--bar:60%"></div></div><strong>3</strong></div>
-          <div class="bar-row highlight"><span>Fable 5</span><div class="bar-track"><div class="bar-fill" style="--bar:100%"></div></div><strong>5</strong></div>
-          <div class="bar-row"><span>GPT-5.6</span><div class="bar-track"><div class="bar-fill" style="--bar:60%"></div></div><strong>3</strong></div>
-        </div>
-        <span class="badge">Coverage and omission control</span>
-        <div class="mechanism"><span>5 of 6 checks pass</span><span class="chev">+</span><span class="active">YoY EPS frame omitted</span><span class="chev">=</span><span>Incomplete</span></div>
+      <div class="visual-grid" aria-label="Three Anthropic release visuals">
+        <article class="visual-card">
+          <span class="visual-label">Strict success</span>
+          <strong class="visual-value">70.5%</strong>
+          <span class="visual-compare">Fable 31/44 vs GPT-5.5 75.0% (33/44)</span>
+          <span class="visual-delta">-4.5 points</span>
+        </article>
+        <article class="visual-card">
+          <span class="visual-label">Total failures</span>
+          <strong class="visual-value">13</strong>
+          <span class="visual-compare">Fable 13/44 vs GPT-5.5 11/44</span>
+          <span class="visual-delta">+2 answers</span>
+        </article>
+        <article class="visual-card">
+          <span class="visual-label">Completeness failures</span>
+          <strong class="visual-value">5</strong>
+          <span class="visual-compare">Fable 5 vs GPT-5.5 3</span>
+          <div class="family-stack" aria-label="Completeness highlighted within total failures">
+            <div class="family-row"><span>Fable</span><span class="family-track"><i class="family-complete" style="width:38.46%"></i><i class="family-other" style="width:61.54%"></i></span><strong>13</strong></div>
+            <div class="family-row"><span>GPT-5.5</span><span class="family-track"><i class="family-complete" style="width:27.27%"></i><i class="family-other" style="width:72.73%"></i></span><strong>11</strong></div>
+          </div>
+          <span class="visual-delta">+66.7% and the full 2-answer gap</span>
+        </article>
       </div>
+      <ul class="bullets"><li>Fable trails GPT-5.5 by two strict answers across the 44 valid finance questions.</li>
+<li>Those two additional misses are both completeness. All other failure types total eight for each model.</li>
+<li>These are polished answers that omit a decision-critical field. The target is required-field recall, not length.</li></ul>
     </section>
 
     <section class="turing" aria-labelledby="turing-title">
@@ -284,7 +325,7 @@
 
   <footer class="shell">
     <div class="source"><a id="evidence-link" href="../#traj=f7s&amp;step=41">Inspect the OpenAI trace</a></div>
-    <div>Single-run evaluation; two no-submission tasks were retried. All models attempted 50 tasks; graded bases were 49, 50, and 49. Direct comparisons use the 48 tasks graded by all three. Six shared benchmark defects are separated from model behavior. The paired Sol versus GPT-5.5 interval touches zero, so this is a release signal from this run, not a general model ranking.</div>
+    <div>Valid 44 removes six confirmed benchmark key or specification defects from the 50 attempted tasks. Strict success uses all 44 attempted valid questions, so a no-submission counts against success and remains separately labeled. GPT-5.5 and Sol each have one no-submission. This is a release signal from one run, not a general model ranking.</div>
   </footer>
 
   <script>

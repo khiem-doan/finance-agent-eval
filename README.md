@@ -8,6 +8,7 @@ failure taxonomy with full trajectory evidence, and measured per-task costs.
 Live site: https://khiem-doan.github.io/finance-agent-eval/
 
 - `index.html` - the full interactive report (static, no build step; view source)
+- `lab-brief/` - the one-minute OpenAI and Anthropic release brief plus PDF
 - `slides.pdf` - the 5-slide walkthrough deck
 - `data/` - the evidence files every number on the site traces to: per-run
   summaries and cluster-bootstrap CIs, per-task costs, the identical-20-task
