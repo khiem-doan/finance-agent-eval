@@ -98,6 +98,7 @@
     .pitch-panel[hidden] { display: none; }
     .panel-kicker { margin: 0 0 12px; color: var(--accent); font: 700 12px/1.3 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .08em; text-transform: uppercase; }
     h2 { margin: 0; max-width: 650px; font-size: clamp(29px, 3.4vw, 48px); line-height: 1.02; letter-spacing: -.045em; }
+    #panel-openai h2 { color: #f04438; }
     .panel-subhead { max-width: 760px; margin: 11px 0 0; color: var(--muted); font-size: 15px; line-height: 1.45; }
     .visual-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 24px 0 0; }
     .visual-card { min-height: 138px; padding: 17px; border: 1px solid color-mix(in srgb, var(--accent) 26%, var(--line)); border-radius: 14px; background: var(--accent-soft); }
@@ -245,15 +246,15 @@
     <section class="pitch-panel" id="panel-openai" role="tabpanel" aria-labelledby="tab-openai" data-lab-panel="openai">
       <div class="panel-head">
         <p class="panel-kicker">OpenAI / observed release regression</p>
-        <h2>59.1%</h2>
+        <h2>-16%</h2>
         <p class="panel-subhead">Sol 26/44 vs GPT-5.5 75.0%.</p>
       </div>
       <div class="visual-grid" aria-label="Three OpenAI release visuals">
-        <article class="visual-card">
-          <span class="visual-label">Strict success</span>
-          <strong class="visual-value">59.1%</strong>
-          <span class="visual-compare">Sol 26/44 vs GPT-5.5 75.0% (33/44)</span>
-          <span class="visual-delta">-15.9 points</span>
+        <article class="visual-card failure">
+          <span class="visual-label">Strict completion regression</span>
+          <strong class="visual-value">-16%</strong>
+          <span class="visual-compare">Sol 59.1% vs GPT-5.5 75.0%</span>
+          <span class="visual-delta">26/44 vs 33/44</span>
         </article>
         <article class="visual-card failure">
           <span class="visual-label">Net failures</span>
